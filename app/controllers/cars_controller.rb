@@ -22,7 +22,7 @@ class CarsController < ApplicationController
     end
 
     def sp
-    @cars = Car.find_by_sql('exec select_total 0')
+      @cars = Car.find_by_sql('exec select_total 0' )
 
     respond_to do |format|
       format.html # index.html.erb
