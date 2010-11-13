@@ -1,0 +1,26 @@
+#  MySQL.  Versions 4.1 and 5.0 are recommended.
+#
+# Install the MySQL driver:
+#   gem install mysql2
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+
+
+development:
+  adapter: sqlserver
+  mode: odbc
+  dsn: 192.168.0.130
+  username: testsql
+  password: testsql
+  host: UMPC
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: sqlservapp_development
+  pool: 5
+  username: root
+  password: "*hapoalim2005" 
+  socket: /var/run/mysqld/mysqld.sock
