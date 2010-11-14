@@ -15,12 +15,3 @@ development:
   password: testsql
   host: UMPC
 
-production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: sqlservapp_development
-  pool: 5
-  username: root
-  password: "*hapoalim2005" 
-  socket: /var/run/mysqld/mysqld.sock
