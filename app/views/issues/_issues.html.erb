@@ -1,0 +1,27 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+<table class="pretty">
+  <tr>
+    <th><%= sortable 'title' %></th>
+    <th><%= sortable 'date_opened' %></th>
+    <th><%= sortable 'date_fixed' %></th>
+    <th><%= sortable 'status'%></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @issues.each do |issue| %>
+  <tr>
+    <td><%= issue.title %></td>
+    <td><%= issue.date_opened %></td>
+    <td><%= issue.date_fixed %></td>
+    <td><%= issue.status %></td>
+    <td><%= link_to 'Show', issue %></td>
+    <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
+    <td><%= link_to 'Destroy', issue, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @issues %>

@@ -2,7 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8816f9c-4e4f-4c6a-adaf-0c3ffefcdab6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/block_h.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/block_s.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/block_v.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blockcontentbullets.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/contact.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/footer_b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/footer_s.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/footer_t.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/header.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/menuitem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/nav.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/page_g.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/page_t.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/postbullets.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/postheadericon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/postquote.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/rssicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sheet_h.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sheet_s.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sheet_v.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/spacer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/subitem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/vmenublock_h.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/vmenublock_s.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/vmenublock_v.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/vmenuitem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/vsubitem.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/error_messages_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/layout_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/issues/_issues.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/issues/index.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/application_old.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/page.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/application.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/style.ie6.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/style.ie7.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/issues_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/issues_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/issue.rb" afterPath="$PROJECT_DIR$/app/models/issue.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/issues/index.html.erb" afterPath="$PROJECT_DIR$/app/views/issues/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/application.js" afterPath="$PROJECT_DIR$/public/javascripts/application.js" />
     </list>
     <ignored path="sqlservapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,17 +113,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/cars/index.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/cars/sp.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/cars/list.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/cars_controller.rb" />
-        <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="/var/www/dotfiles/Gemfile_example" />
-        <option value="$PROJECT_DIR$/Gemfile.lock" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/models/issue.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/page.html" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/issues/issues.js.erb.js" />
+        <option value="$PROJECT_DIR$/app/views/issues/index.js.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/issues_controller.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/layout.helper.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/error_messages_helper.rb" />
+        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application_full.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/issues/_issues.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/issues/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -139,6 +192,42 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sqlservapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sqlservapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sqlservapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sqlservapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -154,6 +243,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/layouts" />
+      <recent name="$PROJECT_DIR$/app/helpers" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/app/views/cars" />
     </key>
@@ -219,6 +310,13 @@
       </EXTENSION>
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -395,23 +493,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="1" width="1922" height="1018" extended-state="6" />
+    <frame x="2173" y="32" width="1920" height="1055" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.343785" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31612903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.343785" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292357" sideWeight="0.656215" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="DatabaseBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32958803" sideWeight="0.683871" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DatabaseBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977018" sideWeight="0.6707727" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -450,100 +548,179 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/error_messages_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="712" selection-end="712" vertical-scroll-proportion="0.47368422" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cars/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="7" selection-start="430" selection-end="430" vertical-scroll-proportion="0.5494506" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cars/list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.43956044" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cars/sp.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="205" selection-end="205" vertical-scroll-proportion="0.41208792" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.07550336" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/cars_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="9" selection-start="442" selection-end="442" vertical-scroll-proportion="0.57885903" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="0.40268457" />
-      </provider>
-    </entry>
-    <entry file="file:///var/wwww/example/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="11" selection-start="402" selection-end="416" vertical-scroll-proportion="0.55369127">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///var/www/dotfiles/Gemfile_example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="49" selection-end="49" vertical-scroll-proportion="0.05033557">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/issue.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="14" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="0.36777583">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/issues_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="26" column="7" selection-start="678" selection-end="678" vertical-scroll-proportion="0.68301225">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="381" selection-end="381" vertical-scroll-proportion="0.262697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/layout_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="0.60420316">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/issues/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.ie7.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="49" selection-end="49" vertical-scroll-proportion="-0.7199248">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.ie6.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="69" selection-end="69" vertical-scroll-proportion="0.14097744">
+        <state line="31" column="37" selection-start="530" selection-end="530" vertical-scroll-proportion="-17.709677">
+          <folding>
+            <marker date="1290365318000" expanded="true" signature="126:141" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="516:690" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="785:820" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="895:931" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="1006:1042" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="1064:1099" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="1191:1226" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="1252:1426" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="1520:1556" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="1649:1685" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="1711:1885" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="1926:1961" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="2110:2145" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="2169:2205" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="2357:2407" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="3252:3421" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="3461:3496" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="3535:3571" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="3822:3996" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="4038:4074" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="4153:4187" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="5271:5443" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="5493:5529" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="5616:5651" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="6114:6293" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="6396:6431" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="6509:6545" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="6623:6659" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="6681:6716" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="6816:6851" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="6877:7056" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="7159:7195" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="7297:7333" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="7359:7538" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="7584:7619" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="7776:7811" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="7835:7871" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="8805:8980" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="9025:9061" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="9143:9178" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="9950:10124" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="10217:10252" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="10325:10361" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="10434:10470" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="10492:10527" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="10617:10652" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="10678:10852" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="10945:10981" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="11073:11109" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="11135:11309" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="11350:11385" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="11532:11567" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="11591:11627" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="11987:12172" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="12450:12627" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="12697:12752" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="12907:13082" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="13245:13281" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="13304:13339" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="13423:13459" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="13505:13677" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="13747:13782" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="13891:13927" placeholder="{...}" />
+            <marker date="1290365318000" expanded="true" signature="14040:14211" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="559" column="25" selection-start="8282" selection-end="8282" vertical-scroll-proportion="-35.976105">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database_example.yml">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="336" selection-end="336" vertical-scroll-proportion="0.4793233">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/rails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.0718038">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="1" selection-start="1280" selection-end="1280" vertical-scroll-proportion="2.1541157">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="95" selection-start="279" selection-end="279" vertical-scroll-proportion="0.14802632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/issues/_issues.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="517" selection-end="517" vertical-scroll-proportion="0.48801368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/issues/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2609457">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="52" selection-start="4196" selection-end="4196" vertical-scroll-proportion="0.525394">
           <folding />
         </state>
       </provider>

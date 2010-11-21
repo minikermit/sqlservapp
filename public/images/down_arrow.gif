@@ -1,0 +1,810 @@
+
+    
+
+  
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>episode-240/store/public/images/down_arrow.gif at master from ryanb's railscasts-episodes - GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+
+    <link href="https://assets1.github.com/stylesheets/bundle_common.css?6594fe00e582252f3519fda74da9cb2e5b7dadf7" media="screen" rel="stylesheet" type="text/css" />
+<link href="https://assets1.github.com/stylesheets/bundle_github.css?6594fe00e582252f3519fda74da9cb2e5b7dadf7" media="screen" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" charset="utf-8">
+      var GitHub = {}
+      var github_user = 'minikermit'
+      
+    </script>
+    <script src="https://assets3.github.com/javascripts/jquery/jquery-1.4.2.min.js?6594fe00e582252f3519fda74da9cb2e5b7dadf7" type="text/javascript"></script>
+    <script src="https://assets3.github.com/javascripts/bundle_common.js?6594fe00e582252f3519fda74da9cb2e5b7dadf7" type="text/javascript"></script>
+<script src="https://assets0.github.com/javascripts/bundle_github.js?6594fe00e582252f3519fda74da9cb2e5b7dadf7" type="text/javascript"></script>
+
+        <script type="text/javascript" charset="utf-8">
+      GitHub.spy({
+        repo: "ryanb/railscasts-episodes"
+      })
+    </script>
+
+    
+  
+    
+  
+
+  <link href="https://github.com/ryanb/railscasts-episodes/commits/master.atom" rel="alternate" title="Recent Commits to railscasts-episodes:master" type="application/atom+xml" />
+
+        <meta name="description" content="The full source code for projects used in Railscasts episodes." />
+    <script type="text/javascript">
+      GitHub.nameWithOwner = GitHub.nameWithOwner || "ryanb/railscasts-episodes";
+      GitHub.currentRef = 'master';
+    </script>
+  
+
+            <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3769691-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+
+  </head>
+
+  
+
+  <body class="logged_in ">
+    
+
+    
+      <script type="text/javascript">
+        var _kmq = _kmq || [];
+        function _kms(u){
+          var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
+          s.src = u; f.parentNode.insertBefore(s, f);
+        }
+        _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/406e8bf3a2b8846ead55afb3cfaf6664523e3a54.1.js');
+      </script>
+    
+
+    
+
+    
+
+    
+
+    <div class="subnavd" id="main">
+      <div id="header" class="true">
+        
+          <a class="logo boring" href="https://github.com/">
+            <img src="/images/modules/header/logov3.png?changed" class="default" alt="github" />
+            <![if !IE]>
+            <img src="/images/modules/header/logov3-hover.png" class="hover" alt="github" />
+            <![endif]>
+          </a>
+        
+        
+          
+
+
+
+
+
+
+  
+    <div class="userbox">
+      <div class="avatarname">
+        <a href="https://github.com/minikermit"><img src="https://secure.gravatar.com/avatar/7d3e511e6531fa9fde610015867d5c82?s=140&d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png" alt="" width="20" height="20"  /></a>
+        <a href="https://github.com/minikermit" class="name">minikermit</a>
+
+        
+        
+      </div>
+      <ul class="usernav">
+        <li><a href="https://github.com/">Dashboard</a></li>
+        <li>
+          
+          <a href="https://github.com/inbox">Inbox</a>
+          <a href="https://github.com/inbox" class="unread_count ">0</a>
+        </li>
+        <li><a href="https://github.com/account">Account Settings</a></li>
+                        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </div><!-- /.userbox -->
+  
+
+
+        
+        <div class="topsearch">
+  
+    <form action="/search" id="top_search_form" method="get">
+      <a href="/search" class="advanced-search tooltipped downwards" title="Advanced Search">Advanced Search</a>
+      <input type="search" class="search my_repos_autocompleter" name="q" results="5" placeholder="Search&hellip;" /> <input type="submit" value="Search" class="button" />
+      <input type="hidden" name="type" value="Everything" />
+      <input type="hidden" name="repo" value="" />
+      <input type="hidden" name="langOverride" value="" />
+      <input type="hidden" name="start_value" value="1" />
+    </form>
+    <ul class="nav">
+      <li><a href="/explore">Explore GitHub</a></li>
+      <li><a href="https://gist.github.com">Gist</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="http://help.github.com">Help</a></li>
+    </ul>
+  
+</div>
+
+      </div>
+
+      
+      
+        
+    <div class="site">
+      <div class="pagehead repohead vis-public   ">
+
+      
+
+      <div class="title-actions-bar">
+        <h1>
+          <a href="/ryanb">ryanb</a> / <strong><a href="https://github.com/ryanb/railscasts-episodes">railscasts-episodes</a></strong>
+          
+          
+        </h1>
+
+        
+    <ul class="actions">
+      
+
+      
+        <li class="for-owner" style="display:none"><a href="https://github.com/ryanb/railscasts-episodes/admin" class="minibutton btn-admin "><span><span class="icon"></span>Admin</span></a></li>
+        <li>
+          <a href="/ryanb/railscasts-episodes/toggle_watch" class="minibutton btn-watch " id="watch_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '509621075a54ef131f9b8db0cdf2e0d8509b1ed4'); f.appendChild(s);f.submit();return false;" style="display:none"><span><span class="icon"></span>Watch</span></a>
+          <a href="/ryanb/railscasts-episodes/toggle_watch" class="minibutton btn-watch " id="unwatch_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '509621075a54ef131f9b8db0cdf2e0d8509b1ed4'); f.appendChild(s);f.submit();return false;" style="display:none"><span><span class="icon"></span>Unwatch</span></a>
+        </li>
+        
+          
+            <li class="for-notforked" style="display:none"><a href="/ryanb/railscasts-episodes/fork" class="minibutton btn-fork " id="fork_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '509621075a54ef131f9b8db0cdf2e0d8509b1ed4'); f.appendChild(s);f.submit();return false;"><span><span class="icon"></span>Fork</span></a></li>
+            <li class="for-hasfork" style="display:none"><a href="#" class="minibutton btn-fork " id="your_fork_button"><span><span class="icon"></span>Your Fork</span></a></li>
+          
+
+          <li id='pull_request_item' class='nspr' style='display:none'><a href="/ryanb/railscasts-episodes/pull/new/master" class="minibutton btn-pull-request "><span><span class="icon"></span>Pull Request</span></a></li>
+        
+      
+      
+      <li class="repostats">
+        <ul class="repo-stats">
+          <li class="watchers"><a href="/ryanb/railscasts-episodes/watchers" title="Watchers" class="tooltipped downwards">336</a></li>
+          <li class="forks"><a href="/ryanb/railscasts-episodes/network" title="Forks" class="tooltipped downwards">46</a></li>
+        </ul>
+      </li>
+    </ul>
+
+      </div>
+
+        
+  <ul class="tabs">
+    <li><a href="https://github.com/ryanb/railscasts-episodes/tree/master" class="selected" highlight="repo_source">Source</a></li>
+    <li><a href="https://github.com/ryanb/railscasts-episodes/commits/master" highlight="repo_commits">Commits</a></li>
+    <li><a href="/ryanb/railscasts-episodes/network" highlight="repo_network">Network</a></li>
+    <li><a href="/ryanb/railscasts-episodes/pulls" highlight="repo_pulls">Pull Requests (0)</a></li>
+
+    
+
+    
+      
+      <li><a href="/ryanb/railscasts-episodes/issues" highlight="issues">Issues (2)</a></li>
+    
+
+                <li><a href="/ryanb/railscasts-episodes/wiki" highlight="repo_wiki">Wiki (2)</a></li>
+        
+    <li><a href="/ryanb/railscasts-episodes/graphs" highlight="repo_graphs">Graphs</a></li>
+
+    <li class="contextswitch nochoices">
+      <span class="toggle leftwards" >
+        <em>Branch:</em>
+        <code>master</code>
+      </span>
+    </li>
+  </ul>
+
+  <div style="display:none" id="pl-description"><p><em class="placeholder">click here to add a description</em></p></div>
+  <div style="display:none" id="pl-homepage"><p><em class="placeholder">click here to add a homepage</em></p></div>
+
+  <div class="subnav-bar">
+  
+  <ul>
+    <li>
+      <a href="#" class="dropdown">Switch Branches (1)</a>
+      <ul>
+        
+          
+            <li><strong>master &#x2713;</strong></li>
+            
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="dropdown defunct">Switch Tags (0)</a>
+      
+    </li>
+    <li>
+    
+    <a href="/ryanb/railscasts-episodes/branches" class="manage">Branch List</a>
+    
+    </li>
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+
+
+
+        
+    <div id="repo_details" class="metabox clearfix">
+      <div id="repo_details_loader" class="metabox-loader" style="display:none">Sending Request&hellip;</div>
+
+        <a href="/ryanb/railscasts-episodes/downloads" class="download-source" id="download_button" title="Download source, tagged packages and binaries."><span class="icon"></span>Downloads</a>
+
+      <div id="repository_desc_wrapper">
+      <div id="repository_description" rel="repository_description_edit">
+        
+          <p>The full source code for projects used in Railscasts episodes.
+            <span id="read_more" style="display:none">&mdash; <a href="#readme">Read more</a></span>
+          </p>
+        
+      </div>
+
+      <div id="repository_description_edit" style="display:none;" class="inline-edit">
+        <form action="/ryanb/railscasts-episodes/admin/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="509621075a54ef131f9b8db0cdf2e0d8509b1ed4" /></div>
+          <input type="hidden" name="field" value="repository_description">
+          <input type="text" class="textfield" name="value" value="The full source code for projects used in Railscasts episodes.">
+          <div class="form-actions">
+            <button class="minibutton"><span>Save</span></button> &nbsp; <a href="#" class="cancel">Cancel</a>
+          </div>
+        </form>
+      </div>
+
+      
+      <div class="repository-homepage" id="repository_homepage" rel="repository_homepage_edit">
+        <p><a href="http://railscasts.com" rel="nofollow">http://railscasts.com</a></p>
+      </div>
+
+      <div id="repository_homepage_edit" style="display:none;" class="inline-edit">
+        <form action="/ryanb/railscasts-episodes/admin/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="509621075a54ef131f9b8db0cdf2e0d8509b1ed4" /></div>
+          <input type="hidden" name="field" value="repository_homepage">
+          <input type="text" class="textfield" name="value" value="http://railscasts.com">
+          <div class="form-actions">
+            <button class="minibutton"><span>Save</span></button> &nbsp; <a href="#" class="cancel">Cancel</a>
+          </div>
+        </form>
+      </div>
+      </div>
+      <div class="rule "></div>
+            <div id="url_box" class="url-box">
+        <ul class="clone-urls">
+          
+            
+            <li id="http_clone_url"><a href="https://github.com/ryanb/railscasts-episodes.git" data-permissions="Read-Only">HTTP</a></li>
+            <li id="public_clone_url"><a href="git://github.com/ryanb/railscasts-episodes.git" data-permissions="Read-Only">Git Read-Only</a></li>
+          
+          
+        </ul>
+        <input type="text" spellcheck="false" id="url_field" class="url-field" />
+              <span style="display:none" id="url_box_clippy"></span>
+      <span id="clippy_tooltip_url_box_clippy" class="clippy-tooltip tooltipped" title="copy to clipboard">
+      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+              width="14"
+              height="14"
+              class="clippy"
+              id="clippy" >
+      <param name="movie" value="https://assets3.github.com/flash/clippy.swf?v5"/>
+      <param name="allowScriptAccess" value="always" />
+      <param name="quality" value="high" />
+      <param name="scale" value="noscale" />
+      <param NAME="FlashVars" value="id=url_box_clippy&amp;copied=&amp;copyto=">
+      <param name="bgcolor" value="#FFFFFF">
+      <param name="wmode" value="opaque">
+      <embed src="https://assets3.github.com/flash/clippy.swf?v5"
+             width="14"
+             height="14"
+             name="clippy"
+             quality="high"
+             allowScriptAccess="always"
+             type="application/x-shockwave-flash"
+             pluginspage="http://www.macromedia.com/go/getflashplayer"
+             FlashVars="id=url_box_clippy&amp;copied=&amp;copyto="
+             bgcolor="#FFFFFF"
+             wmode="opaque"
+      />
+      </object>
+      </span>
+
+        <p id="url_description">This URL has <strong>Read+Write</strong> access</p>
+      </div>
+    </div>
+
+
+        
+
+      </div><!-- /.pagehead -->
+
+      
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  GitHub.currentCommitRef = 'master'
+  GitHub.currentRepoOwner = 'ryanb'
+  GitHub.currentRepo = "railscasts-episodes"
+  GitHub.downloadRepo = '/ryanb/railscasts-episodes/archives/master'
+  GitHub.revType = "master"
+
+  GitHub.controllerName = "blob"
+  GitHub.actionName     = "show"
+  GitHub.currentAction  = "blob#show"
+
+  
+    GitHub.hasWriteAccess = false
+    GitHub.hasAdminAccess = false
+    GitHub.watchingRepo = false
+    GitHub.ignoredRepo = false
+    GitHub.hasForkOfRepo = ""
+    GitHub.hasForked = false
+  
+
+  
+</script>
+
+
+
+
+
+
+
+
+  <div id="commit">
+    <div class="group">
+        
+  <div class="envelope commit">
+    <div class="human">
+      
+        <div class="message"><pre><a href="/ryanb/railscasts-episodes/commit/1ff6524af19af328f6a3841392066ab86fd4a5ee">adding episode 240</a> </pre></div>
+      
+
+      <div class="actor">
+        <div class="gravatar">
+          
+          <img src="https://secure.gravatar.com/avatar/8dbf316d36ff66aad4869a4fc3cfbd37?s=140&d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png" alt="" width="30" height="30"  />
+        </div>
+        <div class="name"><a href="/ryanb">ryanb</a> <span>(author)</span></div>
+        <div class="date">
+          <abbr class="relatize" title="2010-11-14 21:55:21">Sun Nov 14 21:55:21 -0800 2010</abbr>
+        </div>
+      </div>
+
+      
+
+    </div>
+    <div class="machine">
+      <span>c</span>ommit&nbsp;&nbsp;<a href="/ryanb/railscasts-episodes/commit/1ff6524af19af328f6a3841392066ab86fd4a5ee" hotkey="c">1ff6524af19af328f6a3</a><br />
+      <span>t</span>ree&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ryanb/railscasts-episodes/tree/1ff6524af19af328f6a3841392066ab86fd4a5ee/episode-209" hotkey="t">8ca445f5c1c095559011</a><br />
+      
+        <span>p</span>arent&nbsp;
+        
+        <a href="/ryanb/railscasts-episodes/tree/48f0fe7c9cbe7effb9b2641c58424fb1d13df79e/episode-209" hotkey="p">48f0fe7c9cbe7effb9b2</a>
+      
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+
+
+  
+    <div id="path">
+      <b><a href="/ryanb/railscasts-episodes/tree/master">railscasts-episodes</a></b> / <a href="/ryanb/railscasts-episodes/tree/master/episode-240">episode-240</a> / <a href="/ryanb/railscasts-episodes/tree/master/episode-240/store">store</a> / <a href="/ryanb/railscasts-episodes/tree/master/episode-240/store/public">public</a> / <a href="/ryanb/railscasts-episodes/tree/master/episode-240/store/public/images">images</a> / down_arrow.gif       <span style="display:none" id="clippy_4513">episode-240/store/public/images/down_arrow.gif</span>
+      
+      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+              width="110"
+              height="14"
+              class="clippy"
+              id="clippy" >
+      <param name="movie" value="https://assets3.github.com/flash/clippy.swf?v5"/>
+      <param name="allowScriptAccess" value="always" />
+      <param name="quality" value="high" />
+      <param name="scale" value="noscale" />
+      <param NAME="FlashVars" value="id=clippy_4513&amp;copied=copied!&amp;copyto=copy to clipboard">
+      <param name="bgcolor" value="#FFFFFF">
+      <param name="wmode" value="opaque">
+      <embed src="https://assets3.github.com/flash/clippy.swf?v5"
+             width="110"
+             height="14"
+             name="clippy"
+             quality="high"
+             allowScriptAccess="always"
+             type="application/x-shockwave-flash"
+             pluginspage="http://www.macromedia.com/go/getflashplayer"
+             FlashVars="id=clippy_4513&amp;copied=copied!&amp;copyto=copy to clipboard"
+             bgcolor="#FFFFFF"
+             wmode="opaque"
+      />
+      </object>
+      
+
+    </div>
+
+    <div id="files">
+      <div class="file">
+        <div class="meta">
+          <div class="info">
+            <span class="icon"><img alt="Txt" height="16" src="https://assets0.github.com/images/icons/txt.png?6594fe00e582252f3519fda74da9cb2e5b7dadf7" width="16" /></span>
+            <span class="mode" title="File Mode">100644</span>
+            
+            <span>0.843 kb</span>
+          </div>
+          <ul class="actions">
+            
+            <li><a href="/ryanb/railscasts-episodes/raw/master/episode-240/store/public/images/down_arrow.gif" id="raw-url">raw</a></li>
+            
+            <li><a href="/ryanb/railscasts-episodes/commits/master/episode-240/store/public/images/down_arrow.gif">history</a></li>
+          </ul>
+        </div>
+        
+  <div class="data type-text">
+    
+      <div class="image">
+        
+        
+          <img src="/ryanb/railscasts-episodes/raw/master/episode-240/store/public/images/down_arrow.gif" />
+        
+      </div>
+    
+  </div>
+
+
+      </div>
+    </div>
+  
+
+
+    </div>
+  
+      
+    </div>
+
+    <div id="footer" class="clearfix">
+      <div class="site">
+        <div class="sponsor">
+          <a href="http://www.rackspace.com" class="logo">
+            <img alt="Dedicated Server" src="https://assets0.github.com/images/modules/footer/rackspace_logo.png?v2?6594fe00e582252f3519fda74da9cb2e5b7dadf7" />
+          </a>
+          Powered by the <a href="http://www.rackspace.com ">Dedicated
+          Servers</a> and<br/> <a href="http://www.rackspacecloud.com">Cloud
+          Computing</a> of Rackspace Hosting<span>&reg;</span>
+        </div>
+
+        <ul class="links">
+          <li class="blog"><a href="https://github.com/blog">Blog</a></li>
+          <li><a href="http://support.github.com?sso=2Lt8XDcKin7zIVmsYNcv5yIXyohMKJP4R74NGFwnEDdbr1-r85Z3Z_GR6LIdMiAtFciihWHBbsQmgidYF0j43upuHH7L_mlDD4cCVgp3-crzNtqvXrkyzusnMcZ22dKPrZIVCC4aKrcRJIptQme9LaQNwVWoCSnbHXImdxtvv30HU2isjYnGVamgoOsG6yRB7SArrPaHVaF5Z0Oz4x77Fh918v7tjy6CEdfl6bvjnuY">Support</a></li>
+          <li><a href="https://github.com/training">Training</a></li>
+          <li><a href="http://jobs.github.com">Job Board</a></li>
+          <li><a href="http://shop.github.com">Shop</a></li>
+          <li><a href="https://github.com/contact">Contact</a></li>
+          <li><a href="http://develop.github.com">API</a></li>
+          <li><a href="http://status.github.com">Status</a></li>
+        </ul>
+        <ul class="sosueme">
+          <li class="main">&copy; 2010 <span id="_rrt" title="0.10602s from fe1.rs.github.com">GitHub</span> Inc. All rights reserved.</li>
+          <li><a href="/site/terms">Terms of Service</a></li>
+          <li><a href="/site/privacy">Privacy</a></li>
+          <li><a href="https://github.com/security">Security</a></li>
+        </ul>
+      </div>
+    </div><!-- /#footer -->
+
+    
+      
+      
+        <!-- current locale:  -->
+        <div class="locales">
+          <div class="site">
+
+            <ul class="choices clearfix limited-locales">
+              <li><span class="current">English</span></li>
+              
+                  <li><a rel="nofollow" href="?locale=de">Deutsch</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=fr">Français</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=ja">日本語</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=pt-BR">Português (BR)</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=ru">Русский</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=zh">中文</a></li>
+              
+              <li class="all"><a href="#" class="minibutton btn-forward js-all-locales"><span><span class="icon"></span>See all available languages</span></a></li>
+            </ul>
+
+            <div class="all-locales clearfix">
+              <h3>Your current locale selection: <strong>English</strong>. Choose another?</h3>
+              
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=en">English</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=af">Afrikaans</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=ca">Català</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=cs">Čeština</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=de">Deutsch</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=es">Español</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=fr">Français</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=hr">Hrvatski</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=id">Indonesia</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=it">Italiano</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=ja">日本語</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=nl">Nederlands</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=no">Norsk</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=pl">Polski</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=pt-BR">Português (BR)</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=ru">Русский</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=sr">Српски</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=sv">Svenska</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=zh">中文</a></li>
+                  
+                </ul>
+              
+            </div>
+
+          </div>
+          <div class="fade"></div>
+        </div>
+      
+    
+
+    <script>window._auth_token = "509621075a54ef131f9b8db0cdf2e0d8509b1ed4"</script>
+    <div id="keyboard_shortcuts_pane" style="display:none">
+  <h2>Keyboard Shortcuts</h2>
+
+  <div class="columns threecols">
+    <div class="column first">
+      <h3>Site wide shortcuts</h3>
+      <dl class="keyboard-mappings">
+        <dt>s</dt>
+        <dd>Focus site search</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>?</dt>
+        <dd>Bring up this help dialog</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column middle">
+      <h3>Commit list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>t</dt>
+        <dd>Open tree</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>p</dt>
+        <dd>Open parent</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>c <em>or</em> o <em>or</em> enter</dt>
+        <dd>Open commit</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column last">
+      <h3>Pull request list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>o <em>or</em> enter</dt>
+        <dd>Open issue</dd>
+      </dl>
+    </div><!-- /.columns.last -->
+  </div><!-- /.columns.equacols -->
+
+  <div class="rule"></div>
+
+  <h3>Issues</h3>
+
+  <div class="columns threecols">
+    <div class="column first">
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>x</dt>
+        <dd>Toggle select target</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>o <em>or</em> enter</dt>
+        <dd>Open issue</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column middle">
+      <dl class="keyboard-mappings">
+        <dt>I</dt>
+        <dd>Mark selected as read</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>U</dt>
+        <dd>Mark selected as unread</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>e</dt>
+        <dd>Close selected</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>y</dt>
+        <dd>Remove selected from view</dd>
+      </dl>
+    </div><!-- /.column.middle -->
+    <div class="column last">
+      <dl class="keyboard-mappings">
+        <dt>c</dt>
+        <dd>Create issue</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>l</dt>
+        <dd>Create label</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>i</dt>
+        <dd>Back to inbox</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>u</dt>
+        <dd>Back to issues</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>/</dt>
+        <dd>Focus issues search</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <h3>Network Graph</h3>
+  <div class="columns equacols">
+    <div class="column first">
+      <dl class="keyboard-mappings">
+        <dt>← <em>or</em> h</dt>
+        <dd>Scroll left</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>→ <em>or</em> l</dt>
+        <dd>Scroll right</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>↑ <em>or</em> k</dt>
+        <dd>Scroll up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>↓ <em>or</em> j</dt>
+        <dd>Scroll down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>t</dt>
+        <dd>Toggle visibility of head labels</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column last">
+      <dl class="keyboard-mappings">
+        <dt>shift ← <em>or</em> shift h</dt>
+        <dd>Scroll all the way left</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>shift → <em>or</em> shift l</dt>
+        <dd>Scroll all the way right</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>shift ↑ <em>or</em> shift k</dt>
+        <dd>Scroll all the way up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>shift ↓ <em>or</em> shift j</dt>
+        <dd>Scroll all the way down</dd>
+      </dl>
+    </div><!-- /.column.last -->
+  </div>
+
+</div>
+    
+
+    <!--[if IE 8]>
+    <script type="text/javascript" charset="utf-8">
+      $(document.body).addClass("ie8")
+    </script>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <script type="text/javascript" charset="utf-8">
+      $(document.body).addClass("ie7")
+    </script>
+    <![endif]-->
+
+    <script type="text/javascript">
+      _kmq.push(['trackClick', 'entice-signup-button', 'Entice banner clicked']);
+      
+    </script>
+    
+  </body>
+</html>
+
