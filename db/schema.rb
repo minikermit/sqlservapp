@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101113202852) do
+ActiveRecord::Schema.define(:version => 20101121151354) do
 
   create_table "B2TA_ClosingRates", :force => true do |t|
     t.string   "Group_id",        :limit => 50
@@ -4080,6 +4080,19 @@ ActiveRecord::Schema.define(:version => 20101113202852) do
     t.string   "created_with",      :limit => 100
     t.string   "updated_with",      :limit => 100
     t.integer  "key_id"
+  end
+
+  create_table "issues", :force => true do |t|
+    t.string   "title",       :null => false
+    t.integer  "opened_by",   :null => false
+    t.date     "date_opened", :null => false
+    t.date     "date_fixed",  :null => false
+    t.integer  "priority",    :null => false
+    t.integer  "status",      :null => false
+    t.text     "comments",    :null => false
+    t.integer  "assigned_to", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

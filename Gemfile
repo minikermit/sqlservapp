@@ -10,6 +10,9 @@ gem 'rails', '3.0.1'
 gem 'ruby-odbc'
 gem 'activerecord-sqlserver-adapter'
 
+gem 'will_paginate', '3.0.pre2'
+gem 'jquery-rails'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -21,7 +24,7 @@ gem 'activerecord-sqlserver-adapter'
 
 # Bundle the extra gems:
 # gem 'bj'
-# gem 'nokogiri'
+gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
@@ -32,8 +35,13 @@ gem 'activerecord-sqlserver-adapter'
 #   gem 'webrat'
 # end
 
+#group :development do
+
+#end
+
 group :test do
-  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'rspec-rails', '>= 2.0.0'
+  gem 'webrat'
 end
 
 group :cucumber do
@@ -41,7 +49,7 @@ group :cucumber do
   gem 'database_cleaner'
   gem 'cucumber-rails'
   gem 'cucumber'
-  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'rspec-rails', '>= 2.0.0'
   gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
 end  

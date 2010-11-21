@@ -1,4 +1,6 @@
 Sqlservapp::Application.routes.draw do
+  resources :issues
+
   resources :cars
  # match 'cars/list', :to => 'catalog#list'
   match 'list', :to => 'cars#list', :as => "list"
