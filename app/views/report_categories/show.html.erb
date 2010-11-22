@@ -1,0 +1,165 @@
+<!-- This is the breadcrumb part -->
+<% content_for :breadcrumb do %>
+<ul id="crumbs">
+ <li><a href="/">Homes</a></li>
+ <li><%= link_to  "Report categories" , report_categories_path %></li>
+ <li>You are looking at one report category</li>
+</ul>
+<% end %>
+
+<!-- This is the list part -->
+<% content_for :article1 do %>
+
+<%= display_flash_messages %>    
+
+
+<h2 class="art-postheader">
+  <%=h @report_category.name %>
+</h2>
+
+<div class="art-postcontent">
+    <!-- article-content -->
+
+<p>
+  <span style="font-weight: bold;">
+    Comments: <%=h @report_category.comments %>
+  </span>
+</p>
+
+<%= link_to 'Back', report_categories_path %>
+   <hr />
+
+<h4>This category includes the following reports:</h4>
+
+  <table>
+      <tr>
+       <th  align='center'> reference </th>
+       <th align='left'> name </th>
+       <th align = 'center'> position </th>
+       <th align='right'> created on </th>
+       <th  align='center'> Comments </th>
+       <th> </th>
+      </tr>
+
+  <% for report in @report_category.reports %>
+
+    <tr>
+     <td><%= link_to report.reference, report %></td>
+     <td><%= report.name %> </td>
+     <td align='center'><%= report.position %> </td>
+     <td><%= report.created_at.strftime("%e %B, %Y") %><td>
+     <td><%= report.comments %> </td>
+
+     <td><%= link_to 'Edit', edit_report_path(report) %></td> 
+
+    </tr>
+  <% end %>
+  </table>
+
+      <br />
+     <br />
+
+
+  <hr />
+
+  <blockquote>
+      <p>
+          &#8220;You can create a new report for this category directly below.&#8221;
+          <br />
+          Push the button when you are ready to launch the missile on planet mars
+      </p>
+  </blockquote>
+
+  
+
+
+  <%= form_tag :action => "report", :id => @report_category %>
+     <%= label "reference", "reference" %><br />
+     <%= text_field "report", "reference" %><br />
+     <%= label "name", "name" %><br />
+     <%= text_field "report", "name" %><br />
+     <%= label "report", "comments" %><br />
+     <%= text_area "report", "comments", "rows" => 3, "cols" => 30 %><br />
+     <%= label "report", "position" %><br />
+     <%= text_field "report", "position" %><br />
+
+
+    <br />
+    <%= submit_tag "Add a new report in this category" %>
+  </form>
+
+
+      <br />
+
+      <hr />
+
+
+  <br />
+  <br />
+
+    <!-- /article-content -->
+</div>
+<% end %>
+
+
+<% content_for :article2 do %>
+
+  <h2 class="art-postheader">
+    <%=h @report_category.name %>
+  </h2>
+
+  <div class="art-postcontent">
+      <!-- article-content -->
+
+
+  <blockquote>
+      <p>
+          &#8220;You can sort the reports within a category below (use the handle).&#8221;
+          <br />
+          Press refresh to see the immediate effect of the reordering. This reordering is effective only for a given category.
+      </p>
+  </blockquote>
+
+
+<ul id="reports-list">
+  <% @report_category.reports.each do |t| %>
+    <li id="report_<%= t.id -%>">
+      <span class="name">
+        <%= t.name -%>
+      </span>
+      <span class="handle">[handle]</span>
+    </li>
+  <% end %>
+</ul>
+
+    <!-- /article-content -->
+</div>
+
+<% end %>
+
+<% content_for :myjavascript do %>
+
+  <% javascript_tag do %>
+     $('#reports-list').sortable(
+        {
+          axis: 'y',
+          dropOnEmpty:false,
+          handle: '.handle',
+          cursor: 'crosshair',
+          items: 'li',
+          opacity: 0.4,
+          scroll: true,
+          update: function(){
+            $.ajax({
+                type: 'post',
+                data: $('#reports-list').sortable('serialize') + '&id=<%=@report_category.id-%>',
+                dataType: 'script',
+                complete: function(request){
+                    $('#reports-list').effect('highlight');
+                  },
+                url: '/report_categories/prioritize_reports'})
+            }
+          })
+    <% end %>
+
+<% end %>

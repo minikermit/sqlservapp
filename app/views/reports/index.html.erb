@@ -1,0 +1,96 @@
+<!-- This is the breadcrumb part -->
+<% content_for :breadcrumb do %>
+
+<ul id="crumbs">
+ <li><a href="#">Homes</a></li>
+ <li><%= link_to  "Report categories" , report_categories_path %></li>
+ <li><%= link_to  "Reports" , reports_path %></li>
+ <li>You are on the list of reports page</li>
+</ul>
+
+<% end %>
+
+
+<% content_for :article1 do %>
+
+<h2 class="art-postheader">
+  Listing reports
+</h2>
+
+<div class="art-postcontent">
+    <!-- article-content -->
+
+  <div id="page_wrapper">
+      <div id="table_wrapper">
+        <!-- This is the live filter input field part -->
+          <input class="filter" name="livefilter" type="text" value="" />
+
+<br/>          
+
+<p>Sort by  <%= order @search, :by => :reference %> | <%= order @search, :by => :name %> | <%= order @search, :by => :position %></p>
+
+
+<table class="live_filter">
+  <thead>
+    <tr>
+      <th>Reference</th>
+      <th>Name</th>
+      <th>Comments</th>
+      <th>Order</th>
+      <th>Report category</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reports.each do |report| %>
+    <tr>
+      <td><%= link_to report.reference, report %></td>
+      <td><%=h report.name %></td>
+      <td><%=h report.comments %></td>
+      <td><%=h report.position %></td>
+      <td><%=h report.report_category.name %></td>
+      <td><%= link_to 'Edit', edit_report_path(report) %></td>
+      <td><%= link_to 'Destroy', report, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+        <div class="digg_pagination">
+          <div class="page_info">
+            <%= page_entries_info @reports %>
+          </div>
+            <%= will_paginate @reports, :container => false %>
+        </div>
+
+<br />
+        
+<%= link_to 'New report', new_report_path %>
+
+
+    </div>
+ </div>
+
+        <blockquote>
+            <p>
+                &#8220;This is a list of available reports.&#8221;
+                <br />
+            </p>
+        </blockquote>
+      <br />
+
+    <!-- /article-content -->
+  
+</div>
+
+<% end %>
+
+<!-- This is the javascript part -->
+<%= render :partial => "shared/livefilter" %>
+
+
+
+<% content_for :side do %>  <p>A simple page</p> <% end %>
+

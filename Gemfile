@@ -13,6 +13,8 @@ gem 'activerecord-sqlserver-adapter'
 gem 'will_paginate', '3.0.pre2'
 gem 'jquery-rails'
 
+gem 'rd_searchlogic'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

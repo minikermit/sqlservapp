@@ -1,0 +1,90 @@
+<!-- This is the breadcrumb part -->
+<% content_for :breadcrumb do %>
+    <ul id="crumbs">
+        <li><a href="/">Homes</a></li>
+        <li><%= link_to  "Report categories" , report_categories_path %></li>
+        <li>You are on the list of report categories page</li>
+    </ul>
+<br/>
+
+<% end %>
+
+<!-- This is the list part -->
+
+<% content_for :article1 do %>
+
+<h2 class="art-postheader">
+  Listing report categories
+</h2>
+
+<div class="art-postcontent">
+    <!-- article-content -->
+
+<div id="page_wrapper">
+		<div id="table_wrapper">
+          <!-- This is the live filter input field part -->
+          <input class="filter" name="livefilter" type="text" value="" />
+<br/>
+<br/>
+
+
+<p>Sort by  <%= order @search, :by => :name %> | <%= order @search, :by => :comments %> | <%= order @search, :by => :created_at %></p>
+
+
+<table class="live_filter">
+  <tr>
+    <th>Name</th>
+    <th>Comments</th>
+  </tr>
+
+<% @report_categories.each do |report_category| %>
+  <tr>
+    <td class="title"><%= link_to report_category.name, report_category %></td>
+    <td><%=h report_category.comments %></td>
+    <td><%= link_to 'Edit', edit_report_category_path(report_category) %></td>
+    <td><%= link_to 'Destroy', report_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @report_categories %>
+  </div>
+    <%= will_paginate @report_categories, :container => false %>
+</div>
+
+
+<%= link_to 'New report_category', new_report_category_path %>
+
+
+        </div>
+     </div>
+
+            <blockquote>
+                <p>
+                    &#8220;This is a list of available categories.&#8221;
+                    <br />
+                </p>
+            </blockquote>
+          <br />
+
+        <!-- /article-content -->
+    </div>
+
+
+
+<% end %>
+
+<% content_for :side do %>  <p>A simple page</p> <% end %>
+
+<!-- This is the javascript part -->
+<%= render :partial => "shared/livefilter" %>
+
+
+
+
+
+

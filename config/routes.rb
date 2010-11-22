@@ -1,10 +1,86 @@
 Sqlservapp::Application.routes.draw do
+
   resources :issues
 
   resources :cars
- # match 'cars/list', :to => 'catalog#list'
+  resources :users
+
+  resources :invoices
+  resources :depreciations
+  resources :accruals
+
+
+  # match 'cars/list', :to => 'catalog#list'
   match 'list', :to => 'cars#list', :as => "list"
   match 'sp', :to => 'cars#sp', :as => "sp"
+
+  resources :activity_logs
+
+
+  match 'login', :to => 'user_sessions#new', :as => "login"
+  match 'logout', :to => 'user_sessions#destroy', :as => "logout"
+  # map.logout "logout", :controller => "user_sessions", :action => "destroy"
+  resource :account, :controller => "users"
+  resources :users
+  resource :user_sessions
+  root :controller => "user_sessions", :action => "new"
+  resources :roles
+
+  resources :report_categories
+  resources :report_categories, :collection => { :prioritize_reports => :post }
+
+  resources :reports
+  resources :reports, :collection => { :prioritize_report_lines => :post }
+
+  resources :report_lines
+  resources :account_plans
+
+  resources :menus
+  resources :projects
+  resources :tasklists , :has_many => [ :comments ]
+  resources :comments
+
+  resources :par_mappings
+  resources :currencies
+  resources :products
+  resources :product_categories
+  resources :position_types
+  resources :dim_dates
+  resources :client_security_positions
+  resources :packages
+  resources :timebands
+  resources :sources
+  resources :scenarios
+
+  resources :validationrules
+  resources :validations
+
+  resources :b2_ta_mappings
+  resources :mortgagescollaterals
+  resources :mortgages
+  resources :derivatives
+  resources :ratings
+  resources :loanbooks
+  resources :counterparties
+  resources :limits
+  resources :nostros
+  resources :provisions
+
+  resources :scrambles
+  resources :commands
+
+  resources :homes
+  resources :portals
+
+  resources :fdbtabs
+  resources :fdbclis
+
+  # resources :autocomplete_searches, :only => [:index], :as => 'autocomplete'
+  # map.resources :users, :collection => {:load_user => :get, :autocomplete => :get}
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

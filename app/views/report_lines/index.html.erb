@@ -1,0 +1,97 @@
+<!-- This is the breadcrumb part -->
+<% content_for :breadcrumb do %>
+
+<ul id="crumbs">
+ <li><a href="/">Homes</a></li>
+ <li><%= link_to  "Report categories" , report_categories_path %></li>
+ <li><%= link_to  "Reports" , reports_path %></li>
+ <li><%= link_to  "Report lines" , report_lines_path %></li>
+ <li>You are on the list of report lines page</li>
+</ul>
+
+<% end %>
+
+<br/>
+
+<!-- This is the list part -->
+<% content_for :article1 do %>
+
+<h2 class="art-postheader">
+  Listing report lines
+</h2>
+
+<div class="art-postcontent">
+    <!-- article-content -->
+
+<br/>
+
+<div id="page_wrapper">
+		<div id="table_wrapper">
+                    <!-- This is the live filter input field part -->
+                    <input class="filter" name="livefilter" type="text" value="" />
+
+
+
+<br/>
+
+<p>Sort by  <%= order @search, :by => :name %> | <%= order @search, :by => :comments %> | <%= order @search, :by => :line_id %></p>
+                    
+<table class="live_filter">
+  <tr>
+    <th>Line id</th>
+    <th>Name</th>
+    <th>Comments</th>
+    <th>Order</th>
+    <th>Line morphing</th>
+    <th>Report</th>
+            
+  </tr>
+
+<% @report_lines.each do |report_line| %>
+  <tr>
+    <td><%= link_to report_line.line_id, report_line %></td>
+    <td><%=h report_line.line_caption %></td>
+    <td><%=h report_line.comments %></td>
+    <td align='center'><%=h report_line.position %></td>
+    <td align='right'><%=h report_line.line_morphing %></td>
+    <td><%=h report_line.report.name %></td>
+
+    <td><%= link_to 'Edit', edit_report_line_path(report_line) %></td>
+    <td><%= link_to 'Destroy', report_line, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @report_lines %>
+  </div>
+    <%= will_paginate @report_lines, :container => false %>
+</div>
+
+<br />
+
+<%= link_to 'New report_line', new_report_line_path %>
+
+        </div>
+     </div>
+
+            <blockquote>
+                <p>
+                    &#8220;This is a list of available report lines.&#8221;
+                    <br />
+                </p>
+            </blockquote>
+          <br />
+
+        <!-- /article-content -->
+    </div>
+
+
+<!-- This is the javascript part -->
+
+<%= render :partial => "shared/livefilter" %>
+
+<% end %>

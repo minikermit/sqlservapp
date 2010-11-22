@@ -1,0 +1,12 @@
+<h1>Editing invoice</h1>
+
+<fieldset>
+
+  <!--legend>Editing invoice</legend-->
+
+  <%= render :partial => 'form' , :locals => { :invoice => @invoice } %>
+
+<%= link_to 'Show', @invoice %> |
+<%= link_to 'Back', invoices_path %>
+
+</fieldset>

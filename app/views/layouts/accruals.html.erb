@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'application', :media => "screen", :cache =>  true %>
+    <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", :media => "screen", :cache =>  true  %>
+    <%= stylesheet_link_tag 'flexselect', :media => "screen", :cache =>  true %>
+    <!-- Blueprint CSS Start color: green-->
+    <!--%= stylesheet_link_tag 'blueprint/screen', :media => "screen,projection"  %-->
+    <%= stylesheet_link_tag 'blueprint/print', :media => "print"  %>
+    <!-- Blueprint CSS End -->
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+
+      <%= yield %>
+    </div>
+
+    <!-- This is the javascript part -->
+    <%= javascript_include_tag "jquery.min.js",:cache => true %>
+    <%= javascript_include_tag "jquery-ui.min.js",:cache => true %>
+    <%= javascript_include_tag  "application", :cache => true %>
+    <%= javascript_include_tag  "actions", :cache => true %>
+    <%= javascript_include_tag  "flexselect/liquidmetal", :cache => true %>
+    <%= javascript_include_tag  "flexselect/jquery.flexselect", :cache => true %>
+    <!-- End of javascript part -->
+
+  </body>
+</html>

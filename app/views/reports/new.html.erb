@@ -1,0 +1,37 @@
+<!-- This is the breadcrumb part -->
+<% content_for :breadcrumb do %>
+    <ul id="crumbs">
+     <li><a href="/">Homes</a></li>
+     <li><%= link_to  "Report categories" , report_categories_path %></li>
+     <li><%= link_to  "Reports" , reports_path %></li>
+      <li>You are creating a new report</li>
+    </ul>
+<% end %>
+
+<% content_for :article1 do %>
+
+<h2 class="art-postheader">
+  New report
+</h2>
+
+<div class="art-postcontent">
+    <!-- article-content -->
+  <%= render :partial => 'form' , :locals => { :report => @report } %>
+
+  <%= link_to 'Back', reports_path %>
+
+
+        <blockquote>
+            <p>
+                &#8220;This stylesheet is going to help so freaking much.&#8221;
+                <br />
+                -Blockquote
+            </p>
+        </blockquote>
+      <br />
+
+    <!-- /article-content -->
+</div>
+
+
+<% end %>

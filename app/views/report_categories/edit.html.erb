@@ -1,0 +1,40 @@
+<!-- This is the breadcrumb part -->
+<% content_for :breadcrumb do %>
+
+    <ul id="crumbs">
+     <li><a href="/">Homes</a></li>
+     <li><%= link_to  "Report categories" , report_categories_path %></li>
+     <li>You are editing a report category</li>
+    </ul>
+
+<% end %>
+
+
+<% content_for :article1 do %>
+
+<h2 class="art-postheader">
+  Editing report category
+</h2>
+
+<div class="art-postcontent">
+    <!-- article-content -->
+
+<%= render :partial => 'form' , :locals => { :report_category => @report_category } %>
+
+<%= link_to 'Show', @report_category %> |
+<%= link_to 'Back', report_categories_path %>
+
+        <blockquote>
+            <p>
+                &#8220;This is where you can edit and modify your report category.&#8221;
+                <br />
+                You can change the name of the category for example !
+            </p>
+        </blockquote>
+      <br />
+
+    <!-- /article-content -->
+</div>
+
+
+<% end %>

@@ -69,6 +69,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="rd_searchlogic" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="rspec-rails" version="2.0.0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
@@ -132,6 +138,37 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] erubis (v2.6.6, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/erubis-2.6.6)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord-sqlserver-adapter (v3.0.5, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/activerecord-sqlserver-adapter-3.0.5)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] ruby-odbc (v0.99992, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/ruby-odbc-0.99992)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord-sqlserver-adapter (v3.0.6, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/activerecord-sqlserver-adapter-3.0.6)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] capybara (v0.4.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/capybara-0.4.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-rails (v2.1.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/rspec-rails-2.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] webrat (v0.7.2, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/webrat-0.7.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] will_paginate (v3.0.pre2, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/will_paginate-3.0.pre2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] jquery-rails (v0.2.5, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/jquery-rails-0.2.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] cucumber (v0.9.4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/cucumber-0.9.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] spork (v0.8.4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/spork-0.8.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] database_cleaner (v0.6.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/database_cleaner-0.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] cucumber-rails (v0.3.2, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/cucumber-rails-0.3.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] nokogiri (v1.4.4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/nokogiri-1.4.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] launchy (v0.3.7, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/launchy-0.3.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] term-ansicolor (v1.0.5, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/term-ansicolor-1.0.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rubyzip (v0.9.4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/rubyzip-0.9.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] configuration (v1.2.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/configuration-1.2.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-core (v2.1.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/rspec-core-2.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] ffi (v0.6.3, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/ffi-0.6.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] diff-lcs (v1.1.2, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/diff-lcs-1.1.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] xpath (v0.1.2, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/xpath-0.1.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.1.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/rspec-expectations-2.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] culerity (v0.2.12, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/culerity-0.2.12)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] json_pure (v1.4.6, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/json_pure-1.4.6)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] nokogiri (v1.4.4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/nokogiri-1.4.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-mocks (v2.1.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/rspec-mocks-2.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] gherkin (v2.2.9, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/gherkin-2.2.9)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] json (v1.4.6, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/json-1.4.6)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] cucumber (v0.9.4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/cucumber-0.9.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] childprocess (v0.1.4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/childprocess-0.1.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] celerity (v0.8.4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/celerity-0.8.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.1.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/rspec-2.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] selenium-webdriver (v0.1.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/selenium-webdriver-0.1.0)" level="application" />
   </component>
 </module>
 

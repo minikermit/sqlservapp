@@ -1,0 +1,163 @@
+<% content_for :breadcrumb do %>
+
+<ul id="crumbs">
+ <li><a href="#">Homes</a></li>
+ <li><%= link_to  "Report categories" , report_categories_path %></li>
+ <li><%= link_to  "Reports" , reports_path %></li>
+ <li>You are looking at a specific report</li>
+</ul>
+<% end %>
+
+
+
+<% content_for :article1 do %>
+
+<h2 class="art-postheader">
+  <%=h @report.name %>
+</h2>
+
+<div class="art-postcontent">
+    <!-- article-content -->
+  <p>
+    <b>Reference:</b>
+    <%=h @report.reference %>
+    (internal key = <%=h @report.id %>)
+  </p>
+
+  <p>
+    <b>Report category:</b>
+    <%=h @report.report_category.name %>
+  </p>
+
+  <p>
+    <b>
+      Comments: <%=h @report.comments %>
+    </b>
+  </p>
+
+  <p>
+    <b>Order:</b>
+    <%=h @report.position %>
+  </p>
+
+  <%= link_to 'Back', reports_path %>
+  <hr />
+
+   <h4>This report includes the following lines:</h4>
+
+     <table>
+     <tr>
+      <th align='center'> Reference </th>
+      <th align='left'> Name </th>
+       <th> Position </th>
+       <th> Comments </th>
+     </tr>
+
+     <% for report_line in @report.report_lines %>
+
+   <tr>
+    <td><%= link_to report_line.line_id, report_line %></td>
+    <td><%= report_line.line_caption %> </td>
+    <td><%= report_line.position %> </td>
+    <td><%= report_line.comments %> </td>
+    <td><%= link_to 'Edit', edit_report_line_path(report_line) %></td>
+
+    <!--Created on report.created_at.strftime("%e %B, %Y") %-->
+   </tr>
+     <% end %>
+     </table>
+
+
+     <br />
+     <br />
+
+
+  <hr />
+
+  <blockquote>
+      <p>
+          &#8220;You can create a new line for this report directly below.&#8221;
+          <br />
+          Push the button when you are ready to launch the missile on planet earth
+      </p>
+  </blockquote>
+
+
+    <%= form_tag :action => "report_line", :id => @report %>
+    <%= label "report_line", "Line Id" %><br />
+    <%= text_field "report_line", "line_id" %> <br />
+    <%= label "report_line", "Name" %><br />
+    <%= text_field "report_line", "line_caption" %><br />
+    <%= label "report_line", "comments" %><br />
+    <%= text_area "report_line", "comments", "rows" => 3, "cols" => 30 %><br />
+    <%= label "report_line", "position" %><br />
+    <%= text_field "report_line", "position" %><br />
+    <br/>
+    <%= submit_tag "Add a new line to this report" %>
+    </form>
+
+      <br />
+
+      <hr />
+
+
+  <br />
+  <br />
+
+  <blockquote>
+      <p>
+          &#8220;You can sort the lines below (use the handle).&#8221;
+          <br />
+          Press refresh to see the immediate effect of the reordering. This reordering is effective only for a given report.
+      </p>
+  </blockquote>
+
+
+<ul id="report_lines-list">
+  <% @report.report_lines.each do |t| %>
+    <li id="report_line_<%= t.id -%>">
+      <span class="line_caption">
+        <%= t.line_caption -%>
+      </span>
+      <span class="handle">[handle]</span>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
+    <!-- /article-content -->
+</div>
+
+<% end %>    
+
+<% content_for :myjavascript do %>
+
+  <% javascript_tag do %>
+     $('#report_lines-list').sortable(
+        {
+          axis: 'y',
+          dropOnEmpty:false,
+          handle: '.handle',
+          cursor: 'crosshair',
+          items: 'li',
+          opacity: 0.4,
+          scroll: true,
+          update: function(){
+            $.ajax({
+                type: 'post',
+                data: $('#report_lines-list').sortable('serialize') + '&id=<%=@report.id-%>',
+                dataType: 'script',
+                complete: function(request){
+                    $('#report_lines-list').effect('highlight');
+                  },
+                url: '/reports/prioritize_report_lines'})
+            }
+          })
+    <% end %>
+
+<% end %>
+
+
+

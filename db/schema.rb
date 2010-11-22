@@ -4037,6 +4037,42 @@ ActiveRecord::Schema.define(:version => 20101121151354) do
     t.string "Location",                     :limit => 50
   end
 
+  create_table "accruals", :force => true do |t|
+    t.integer  "type_id",                                       :null => false
+    t.string   "name",                                          :null => false
+    t.string   "currency",                                      :null => false
+    t.decimal  "amount",         :precision => 18, :scale => 0, :null => false
+    t.date     "event_date",                                    :null => false
+    t.integer  "period_id",                                     :null => false
+    t.string   "debit_account",                                 :null => false
+    t.string   "credit_account",                                :null => false
+    t.text     "comments",                                      :null => false
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
+  end
+
+  add_index "accruals", ["period_id"], :name => "index_accruals_on_period_id"
+  add_index "accruals", ["type_id"], :name => "index_accruals_on_type_id"
+
+  create_table "activity_logs", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.integer  "user_id",    :null => false
+    t.string   "browser",    :null => false
+    t.string   "ip_address", :null => false
+    t.string   "controller", :null => false
+    t.string   "action",     :null => false
+    t.datetime "request_at", :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "assignments", :id => false, :force => true do |t|
+    t.integer "role_id", :null => false
+    t.integer "user_id", :null => false
+  end
+
+  add_index "assignments", ["user_id", "role_id"], :name => "by_user_and_role", :unique => true
+
   create_table "b2_ta_mapping", :force => true do |t|
     t.string   "information_mapped",      :limit => 50,  :null => false
     t.string   "group_id",                :limit => 50,  :null => false
@@ -4063,6 +4099,63 @@ ActiveRecord::Schema.define(:version => 20101121151354) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "client_security_positions", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "commands", :force => true do |t|
+    t.string   "execute",    :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "comments", :force => true do |t|
+    t.text     "body",        :null => false
+    t.integer  "tasklist_id", :null => false
+    t.integer  "user_id",     :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "comments", ["tasklist_id"], :name => "index_comments_on_tasklist_id"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+
+  create_table "currencies", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "custom_menus", :id => false, :force => true do |t|
+    t.integer "menu_id", :null => false
+    t.integer "user_id", :null => false
+  end
+
+  add_index "custom_menus", ["menu_id"], :name => "index_custom_menus_on_menu_id"
+  add_index "custom_menus", ["user_id"], :name => "index_custom_menus_on_user_id"
+
+  create_table "depreciations", :force => true do |t|
+    t.integer  "type_id",                                       :null => false
+    t.string   "name",                                          :null => false
+    t.string   "currency",                                      :null => false
+    t.decimal  "amount",         :precision => 18, :scale => 0, :null => false
+    t.date     "event_date",                                    :null => false
+    t.integer  "period_id",                                     :null => false
+    t.string   "debit_account",                                 :null => false
+    t.string   "credit_account",                                :null => false
+    t.text     "comments",                                      :null => false
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
+  end
+
+  add_index "depreciations", ["period_id"], :name => "index_depreciations_on_period_id"
+  add_index "depreciations", ["type_id"], :name => "index_depreciations_on_type_id"
+
+  create_table "dim_dates", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "exchange_rates", :force => true do |t|
     t.string   "SMONNAIE",          :limit => 3,                                                   :null => false
     t.string   "SANNEE",            :limit => 4,                                                   :null => false
@@ -4082,6 +4175,50 @@ ActiveRecord::Schema.define(:version => 20101121151354) do
     t.integer  "key_id"
   end
 
+  create_table "fdbtabs", :force => true do |t|
+    t.string   "TBID",                 :limit => 3,  :null => false
+    t.string   "TBCODE",               :limit => 14, :null => false
+    t.string   "TBETAT",               :limit => 1,  :null => false
+    t.string   "TBDTOU",               :limit => 6,  :null => false
+    t.string   "TBDTMU",               :limit => 6,  :null => false
+    t.string   "TBOPRN",               :limit => 7,  :null => false
+    t.string   "TBDES1",               :limit => 35, :null => false
+    t.string   "TBDES2",               :limit => 35, :null => false
+    t.string   "TBDES3",               :limit => 35, :null => false
+    t.string   "TBDES4",               :limit => 35, :null => false
+    t.string   "TBCOMP",               :limit => 73, :null => false
+    t.integer  "TBNBRM",                             :null => false
+    t.string   "fimis_status",         :limit => 1,  :null => false
+    t.string   "Group_Identifier",     :limit => 50, :null => false
+    t.string   "Entity_Identifier",    :limit => 50, :null => false
+    t.string   "Source_Identifier",    :limit => 50, :null => false
+    t.datetime "Record_Creation_Date",               :null => false
+    t.string   "Source_Package",       :limit => 50, :null => false
+  end
+
+  create_table "invoices", :force => true do |t|
+    t.integer  "identification",                                                 :null => false
+    t.string   "counterparty",                                                   :null => false
+    t.string   "account",                                                        :null => false
+    t.string   "name",                                                           :null => false
+    t.date     "booked_on",                                                      :null => false
+    t.date     "period_from",                                                    :null => false
+    t.date     "period_to",                                                      :null => false
+    t.integer  "validity_in_months",                                             :null => false
+    t.string   "currency",                                                       :null => false
+    t.decimal  "amount",                          :precision => 18, :scale => 0, :null => false
+    t.string   "balance_sheet_accrual_account",                                  :null => false
+    t.string   "profit_and_loss_accrual_account",                                :null => false
+    t.integer  "type_id",                                                        :null => false
+    t.integer  "user_id",                                                        :null => false
+    t.integer  "updated_by",                                                     :null => false
+    t.datetime "created_at",                                                     :null => false
+    t.datetime "updated_at",                                                     :null => false
+  end
+
+  add_index "invoices", ["type_id"], :name => "index_invoices_on_type_id"
+  add_index "invoices", ["user_id"], :name => "index_invoices_on_user_id"
+
   create_table "issues", :force => true do |t|
     t.string   "title",       :null => false
     t.integer  "opened_by",   :null => false
@@ -4093,6 +4230,140 @@ ActiveRecord::Schema.define(:version => 20101121151354) do
     t.integer  "assigned_to", :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "menus", :force => true do |t|
+    t.integer  "parent_id",   :null => false
+    t.string   "name",        :null => false
+    t.text     "description", :null => false
+    t.string   "htmllink",    :null => false
+    t.string   "target",      :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "packages", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "par_mappings", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "portals", :force => true do |t|
+    t.string   "title",             :null => false
+    t.text     "description",       :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+  end
+
+  create_table "position_types", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "product_categories", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "title",      :null => false
+    t.text     "comments",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "scenarios", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "sources", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tasklists", :force => true do |t|
+    t.string   "name",        :null => false
+    t.string   "scope",       :null => false
+    t.string   "genre",       :null => false
+    t.integer  "project_id",  :null => false
+    t.integer  "user_id",     :null => false
+    t.text     "description", :null => false
+    t.integer  "priority",    :null => false
+    t.date     "due_date",    :null => false
+    t.integer  "status",      :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "assigned_to"
+  end
+
+  add_index "tasklists", ["project_id"], :name => "index_tasklists_on_project_id"
+  add_index "tasklists", ["user_id"], :name => "index_tasklists_on_user_id"
+
+  create_table "timebands", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name",                :null => false
+    t.string   "shortname",           :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "login",               :null => false
+    t.string   "email",               :null => false
+    t.string   "crypted_password",    :null => false
+    t.string   "password_salt",       :null => false
+    t.string   "persistence_token",   :null => false
+    t.string   "single_access_token", :null => false
+    t.string   "perishable_token",    :null => false
+    t.integer  "login_count",         :null => false
+    t.integer  "failed_login_count",  :null => false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
+  end
+
+  create_table "validationrules", :force => true do |t|
+    t.string   "rule_identification", :limit => 20,   :null => false
+    t.string   "rule_description",    :limit => 200,  :null => false
+    t.string   "rule_scope",          :limit => 15,   :null => false
+    t.string   "rule_hint",           :limit => 500,  :null => false
+    t.string   "rule_sql_query",      :limit => 1000, :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+    t.string   "rule_type",           :limit => 20,   :null => false
   end
 
 end

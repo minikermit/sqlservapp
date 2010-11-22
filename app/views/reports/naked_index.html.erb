@@ -1,0 +1,60 @@
+<!-- This is the breadcrumb part -->
+
+<ul id="crumbs">
+ <li><a href="#">Homes</a></li>
+ <li><%= link_to  "Report categories" , report_categories_path %></li>
+ <li><%= link_to  "Reports" , reports_path %></li>
+ <li>You are on the list of reports page</li>
+</ul>
+
+<br/>
+
+
+
+<!-- This is the list part -->
+
+<div id="page_wrapper">
+		<div id="table_wrapper">
+          <h1>Listing reports</h1>
+
+          <!-- This is the live filter input field part -->
+
+          <input class="filter" name="livefilter" type="text" value="" />
+
+<br/>
+
+<table class="live_filter">
+  <tr>
+    <th>Reference</th>
+    <th>Name</th>
+    <th>Comments</th>
+    <th>Order</th>
+    <th>Report category</th>
+  </tr>
+
+<% @reports.each do |report| %>
+  <tr>
+    <td><%= link_to report.reference, report %></td>
+    <td><%=h report.name %></td>
+    <td><%=h report.comments %></td>
+    <td><%=h report.position %></td>
+    <td><%=h report.report_category.name %></td>
+    <td><%= link_to 'Edit', edit_report_path(report) %></td>
+    <td><%= link_to 'Destroy', report, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New report', new_report_path %>
+
+    </div>
+ </div>
+
+
+<!-- This is the javascript part -->
+
+<%= render :partial => "shared/livefilter" %>
+
+<% content_for :side do %>  <p>A simple page</p> <% end %> 

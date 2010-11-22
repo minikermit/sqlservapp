@@ -15,3 +15,12 @@ development:
   password: testsql
   host: UMPC
 
+test:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: finance_development
+  pool: 5
+  username: root
+  password: mysuperpasswordishidden
+  socket: /var/run/mysqld/mysqld.sock

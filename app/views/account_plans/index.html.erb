@@ -1,0 +1,120 @@
+<!-- This is the breadcrumb part -->
+<% content_for :breadcrumb do %>
+    <ul id="crumbs">
+      <li><a href="/">Homes</a></li>
+      <li><%= link_to  "Account Plan" , account_plans_path %></li>
+      <li>You are on the list of accounts page</li>
+     </ul>
+<br/>
+<% end %>
+
+<!-- This is the list part -->
+
+<% content_for :article1 do %>
+
+<h2 class="art-postheader">
+  Listing account plan
+</h2>
+
+<div class="art-postcontent">
+    <!-- article-content -->
+
+<div id="page_wrapper">
+		<div id="table_wrapper">
+
+          <!-- This is the live filter input field part -->
+
+          <input class="filter" name="livefilter" type="text" value="" />
+          <!--%= f.text_field :auto_account_plan_account_id, :class => 'autocomplete', 'data-autocomplete-url'=>autocomplete_for_account_plan_account_id_account_plans_path %-->
+
+<div id="live-search-results"></div>
+<br/>
+
+<table class="live_filter">
+  <tr>
+    <th>Account type</th>
+    <th>Account</th>
+    <th>Shortname</th>
+    <th>Name</th>
+    <th>Comments</th>
+    <th>Order</th>
+  </tr>
+
+<% @account_plans.each do |account_plan| %>
+  <tr>
+    <td><%=h account_plan.account_type_id %></td>
+    <td><%=h account_plan.account_id %></td>
+    <td><%=h account_plan.shortname %></td>
+    <td><%=h account_plan.name %></td>
+    <td><%=h account_plan.comments %></td>
+    <td><%=h account_plan.position %></td>
+    <td><%= link_to 'Show', account_plan %></td>
+    <td><%= link_to 'Edit', edit_account_plan_path(account_plan) %></td>
+    <td><%= link_to 'Destroy', account_plan, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @account_plans %>
+  </div>
+    <%= will_paginate @account_plans, :container => false %>
+</div>
+
+<br />
+
+<%= link_to 'New account_plan', new_account_plan_path %>
+
+        </div>
+     </div>
+
+           <blockquote>
+               <p>
+                   &#8220;This is a list of available accounts.&#8221;
+                   <br />
+               </p>
+           </blockquote>
+         <br />
+
+       <!-- /article-content -->
+   </div>
+
+
+
+<% end %>
+
+
+<% content_for :article2 do %>
+
+
+<div id="tabs">
+    <ul>
+        <li><a href="#fragment-1"><span>One</span></a></li>
+        <li><a href="#fragment-2"><span>Two</span></a></li>
+        <li><a href="#fragment-3"><span>Three</span></a></li>
+    </ul>
+    <div id="fragment-1">
+        <p>First tab is active by default:</p>
+        <pre><code>$('#example').tabs();</code></pre>
+    </div>
+    <div id="fragment-2">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </div>
+    <div id="fragment-3">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </div>
+</div>
+
+<% end %>
+
+
+<% content_for :side do %>  <p>Account plan submenu</p> <% end %>
+
+<!-- This is the javascript part -->
+<%= render :partial => "shared/livefilter" %>

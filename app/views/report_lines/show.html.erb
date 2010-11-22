@@ -1,0 +1,101 @@
+<% content_for :breadcrumb do %>
+
+<ul id="crumbs">
+  <li><a href="/">Homes</a></li>
+  <li><%= link_to  "Report categories" , report_categories_path %></li>
+  <li><%= link_to  "Reports" , reports_path %></li>
+  <li><%= link_to  "Report lines" , report_lines_path %></li>
+  <li>You are looking at a specific report line</li>
+</ul>
+<% end %>
+
+<% content_for :article1 do %>
+
+<h2 class="art-postheader">
+  <%=h @report_line.line_caption %>
+</h2>
+
+<div class="art-postcontent">
+    <!-- article-content -->
+
+<p>
+  <b>Comments:</b>
+  <%=h @report_line.comments %>
+</p>
+
+<p>
+  <b>Line:</b>
+  <%=h @report_line.line_id %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @report_line.position %>
+</p>
+
+<p>
+  <b>Line morphing:</b>
+  <%=h @report_line.line_morphing %>
+</p>
+<p>
+  <b>Report:</b>
+  <%=h @report_line.report.name %>
+</p>
+
+<%= link_to 'Edit', edit_report_line_path(@report_line) %> |
+<%= link_to 'Back', report_lines_path %>
+
+<hr />
+
+ <h4>this report line contains the following accounts: </h4>
+
+   <table>
+   <tr>
+    <th> Account id </th>
+    <th align='left'> Account description </th>
+    <th> Position </th>
+    <th> Created on </th>
+   </tr>
+
+   <% for account_plan in @report_line.account_plans %>
+
+ <tr>
+  <td><%= link_to account_plan.account_id, account_plan %></td>
+  <td><%= account_plan.name %> </td>
+  <td><%= account_plan.position %> </td>
+  <td><%= report.created_at.strftime("%e %B, %Y") %> </td>
+  <td><%= link_to 'Edit', edit_account_plan_path(account_plan) %></td>   
+ </tr>
+   <% end %>
+   </table>
+
+  <br />
+  <br />
+
+
+   <hr />
+
+   <blockquote>
+   <p>
+       &#8220;You can create a new account mapped to this report line directly below.&#8221;
+       <br />
+       Push the button when you are ready to launch the missile on planet earth
+   </p>
+   </blockquote>
+
+<%= form_tag :action => "structure", :id => @report_line %>
+
+   <%= label "structure", "Line Id" %><br />
+   <%= text_field "structure", "report_line_id", :value => @report_line.id, 'disabled' => 'true'  %><br />
+   <%= label "structure", "Account Id" %><br />
+   <%= text_field "structure", "account_plan_id" %><br />
+   <%= label "structure", "Comments" %><br />
+   <%= text_area "structure", "comments", "rows" => 3, "cols" => 30 %><br />
+   <br/>
+   <%= submit_tag "Map a new account to this report line" %>
+</form>
+
+    <!-- /article-content -->
+</div>
+
+<% end %>

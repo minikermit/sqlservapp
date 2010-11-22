@@ -1,0 +1,59 @@
+
+<div class="row">
+  <div class="column grid_2"><b>Identification & Name:</b></div>
+  <div class="column grid_6"><%=h @invoice.identification %> - <%=h @invoice.name %></div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>Counterparty/Account:</b></div>
+  <div class="column grid_6"><%=h @invoice.counterparty %>/<%=h @invoice.account %></div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>Amount:</b></div>
+  <div class="column grid_6"><!--%=h @invoice.currency %--> <%=h number_to_currency(@invoice.amount) %></div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>Booked on:</b></div>
+  <div class="column grid_6"><%=h @invoice.booked_on %></div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>Period from/to:</b></div>
+  <div class="column grid_6"><%=h @invoice.period_from %> to <%=h @invoice.period_to %></div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>Validity in months:</b></div>
+  <div class="column grid_6"><%=h @invoice.validity_in_months %></div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>BS accrual account:</b></div>
+  <div class="column grid_6"><%=h @invoice.balance_sheet_accrual_account %> </div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>P&L accrual account:</b></div>
+  <div class="column grid_6"><%=h @invoice.profit_and_loss_accrual_account %> </div>
+</div>
+
+<p>
+  <b>Type:</b>
+  <%=h @invoice.type_name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @invoice.user.name %>
+</p>
+
+<p>
+  <b>Updated by:</b>
+  <%=h @invoice.updated_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

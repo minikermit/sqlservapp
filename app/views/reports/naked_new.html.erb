@@ -1,0 +1,14 @@
+<ul id="crumbs">
+ <li><a href="#">Homes</a></li>
+ <li><%= link_to  "Report categories" , report_categories_path %></li>
+ <li><%= link_to  "Reports" , reports_path %></li>
+  <li>You are creating a new report</li>
+</ul>
+
+<br/>
+
+<h1>New report</h1>
+
+<%= render :partial => 'form' %>
+
+<%= link_to 'Back', reports_path %>
