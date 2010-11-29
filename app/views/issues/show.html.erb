@@ -1,33 +1,25 @@
+<% title @issue.title %>
+
 <p id="notice"><%= notice %></p>
 
+<h2>  <%= @issue.title %> </h2><%= link_to 'Edit', edit_issue_path(@issue), :align => 'right' %>
+
 <p>
-  <b>Title:</b>
-  <%= @issue.title %>
+  <b>Opened on </b> <%= @issue.date_opened %>
 </p>
 
 <p>
-  <b>Opened by:</b>
-  <%= @issue.opened_by %>
-</p>
-
-<p>
-  <b>Date opened:</b>
-  <%= @issue.date_opened %>
-</p>
-
-<p>
-  <b>Date fixed:</b>
-  <%= @issue.date_fixed %>
+  <b>Fixed on</b> <%= @issue.date_fixed %>
 </p>
 
 <p>
   <b>Priority:</b>
-  <%= @issue.priority %>
+ <%=  @issue.priority_name %>
 </p>
 
 <p>
   <b>Status:</b>
-  <%= @issue.status %>
+  <%= @issue.status_name %>
 </p>
 
 <p>
@@ -36,10 +28,171 @@
 </p>
 
 <p>
-  <b>Assigned to:</b>
-  <%= @issue.assigned_to %>
+  Assigned to <%= @issue.assigned_to %> (originally opened by <%= @issue.opened_by %>)
 </p>
 
-
-<%= link_to 'Edit', edit_issue_path(@issue) %> |
 <%= link_to 'Back', issues_path %>
+
+
+
+<ul>
+
+<li id="foli1" 		class="     ">
+	<label class="desc" id="title1" for="Field1">
+		Issue Title
+	</label>
+	<div>
+		<input id="Field1" 			name="Field1" 			type="text" 			class="field text medium" 			value="" 			maxlength="255" 			tabindex="1" 			onkeyup="" 						/>
+	</div>
+	</li>
+
+
+<li id="foli102" 		class="      ">
+	<label class="desc" id="title102" for="Field102">
+		Opened By
+	</label>
+	<div>
+		<select id="Field102" 			name="Field102" 			class="field select medium" 						tabindex="2" >
+		<option value="Bob" 				>
+				Bob
+		</option>
+		<option value="Steve" 				>
+				Steve
+		</option>
+		<option value="George" 				>
+				George
+	    </option>
+		</select>
+	</div>
+	</li>
+
+
+
+<li id="foli103" 		class="date leftHalf     ">
+	<label class="desc" id="title103" for="Field103">
+		Date Opened
+			</label>
+	<span>
+		<input id="Field103-1" 			name="Field103-1" 			type="text" 			class="field text" 			value="" 			size="2" 			maxlength="2" 			tabindex="3" 						/>
+		<label for="Field103-1">MM</label>
+	</span>
+	<span class="symbol">/</span>
+	<span>
+		<input id="Field103-2" 			name="Field103-2" 			type="text" 			class="field text" 			value="" 			size="2" 			maxlength="2" 			tabindex="4" 						/>
+		<label for="Field103-2">DD</label>
+	</span>
+	<span class="symbol">/</span>
+	<span>
+	 	<input id="Field103" 			name="Field103" 			type="text" 			class="field text" 			value="" 			size="4" 			maxlength="4" 			tabindex="5" 						/>
+		<label for="Field103">YYYY</label>
+	</span>
+	<span id="cal103">
+		<img id="pick103" class="datepicker" src="/images/calendar.png" alt="Pick a date." />
+	</span>
+	</li>
+
+
+
+<li id="foli104" 		class="date rightHalf     ">
+	<label class="desc" id="title104" for="Field104">
+		Date Fixed
+			</label>
+	<span>
+		<input id="Field104-1" 			name="Field104-1" 			type="text" 			class="field text" 			value="" 			size="2" 			maxlength="2" 			tabindex="6" 						/>
+		<label for="Field104-1">MM</label>
+	</span>
+	<span class="symbol">/</span>
+	<span>
+		<input id="Field104-2" 			name="Field104-2" 			type="text" 			class="field text" 			value="" 			size="2" 			maxlength="2" 			tabindex="7" 						/>
+		<label for="Field104-2">DD</label>
+	</span>
+	<span class="symbol">/</span>
+	<span>
+	 	<input id="Field104" 			name="Field104" 			type="text" 			class="field text" 			value="" 			size="4" 			maxlength="4" 			tabindex="8" 						/>
+		<label for="Field104">YYYY</label>
+	</span>
+	<span id="cal104">
+		<img id="pick104" class="datepicker" src="/images/calendar.png" alt="Pick a date." />
+	</span>
+	</li>
+
+
+
+<li id="foli105" 		class="leftHalf      ">
+	<label class="desc" id="title105" for="Field105">
+		Priority
+			</label>
+	<div>
+		<select id="Field105" 			name="Field105" 			class="field select medium" 						tabindex="9" >
+						<option value="Low" 								selected="selected">
+				Low
+			</option>
+						<option value="Moderate" 				>
+				Moderate
+			</option>
+						<option value="High" 				>
+				High
+			</option>
+					</select>
+	</div>
+	</li>
+
+
+
+<li id="foli106" 		class="rightHalf      ">
+	<label class="desc" id="title106" for="Field106">
+		Status
+			</label>
+	<div>
+		<select id="Field106" 			name="Field106" 			class="field select medium" 						tabindex="10" >
+						<option value="Not Started" 								selected="selected">
+				Not Started
+			</option>
+						<option value="Complete" 				>
+				Complete
+			</option>
+					</select>
+	</div>
+	</li>
+
+
+
+<li id="foli107"
+		class="     ">
+
+
+	<label class="desc" id="title107" for="Field107">
+		Comments
+	</label>
+
+	<div>
+
+         <%= text_area @issue.comments, 'comments' , "rows" => 10, "cols" => 50 %><br />
+	</div>
+
+
+
+	</li>
+
+
+
+
+	<li class="buttons ">
+		<div>
+					<input type="hidden" name="currentPage" id="currentPage" value="dB5YAYUJLThQ1vViLqkRtO8PC6nWmLuPsz2BRQNT4gw=" />
+						<input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit"
+				onmousedown="doSubmitEvents();" />
+
+
+				</div>
+	</li>
+
+	<li style="display:none">
+		<label for="comment">Do Not Fill This Out</label>
+		<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+		<input type="hidden" id="idstamp" name="idstamp" value="" />
+		<input type="hidden" id="stats" name="stats" value="" />
+				<input type="hidden" id="clickOrEnter" name="clickOrEnter" value="" />
+	</li>
+</ul>
+</form>

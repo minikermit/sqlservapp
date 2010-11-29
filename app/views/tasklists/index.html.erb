@@ -54,7 +54,7 @@
 
 <div id = "tasklist">
 
-<p>Sort by  <%= order @search, :by => :name %> | <%= order @search, :by => :due_date %> | <%= order @search, :by => :priority %> | <%= order @search, :by => :status %> | <%= order @search, :by => :user_id %> | <%= order @search, :by => :scope %> | <%= order @search, :by => :genre %></p>
+<p>Sort by  <%= sort_link :name %> | <%= sort_link :due_date %> | <%= sort_link :priority %> | <%= sort_link :status %> | <%= sort_link :user_id %> | <%= sort_link :scope %> | <%= sort_link :genre %></p>
 
 <br />
 

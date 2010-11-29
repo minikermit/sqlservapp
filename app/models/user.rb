@@ -19,10 +19,10 @@ class User < ActiveRecord::Base
  validates_length_of :login, :within => 3..40
  validates_uniqueness_of :login
 
- named_scope :limit, lambda { |limit| {:limit => limit}}
- named_scope :search_for_name, lambda { |term| {:conditions => ['lower(name) LIKE ?', "%#{term.downcase}%"]}}
+ scope :limit, lambda { |limit| {:limit => limit}}
+ scope :search_for_name, lambda { |term| {:conditions => ['lower(name) LIKE ?', "%#{term.downcase}%"]}}
 
- named_scope :autocomplete_name, lambda{ |name| {:include => :user, :conditions => ["users.name LIKE ?", "#{name}%"]} }
+ scope :autocomplete_name, lambda{ |name| {:include => :user, :conditions => ["users.name LIKE ?", "#{name}%"]} }
 
 
  def role_symbols

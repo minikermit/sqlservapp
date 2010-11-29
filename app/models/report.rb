@@ -16,9 +16,6 @@ validates_associated :report_lines
 
 end
 
-
-
-
 # == Schema Information
 #
 # Table name: reports

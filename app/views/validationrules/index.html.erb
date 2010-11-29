@@ -5,17 +5,17 @@
 </a><br />	
 
   
-<div id="show_search" style="display:none"; >
+<div id="show_search" style="display:none" >
    <div class="column span-10 append-12 prepend-2 last">
 	<fieldset  class="span-8">
 		<legend>Search</legend> 
 	<% form_for @search do |f| %>  
  
       <div class="column span-2">
-        <%= f.label :ErrorKind_like, "Rule" %>  
+        <%= f.label :rule_identification_like, "Rule" %>
       </div>
       <div class="column span-8 last">
-        <%= f.text_field :ErrorKind_like , :class => 'text' %>
+        <%= f.text_field :rule_identification_like , :class => 'text' %>
       </div>
       <div class="column span-2">
          <%= f.label :rule_type_like, "Type" %> 
@@ -98,7 +98,7 @@
 <div class="digg_pagination">
   <div class="page_info">
     <%= page_entries_info @validationrules %>
-  </div-->
+  </div>
     <%= will_paginate @validationrules, :container => false %>
 </div>
 

@@ -15,8 +15,6 @@
 	 </span>	
 </a>
 
-<p>Sort by <%= order @search, :by => :Errorkind %> | <%= order @search, :by => :OutputFile %> | <%= order @search, :by => :OutputField %></p>  
-
 <br />
 
 <div id="show_search" style="display:none"; >
@@ -30,7 +28,7 @@
       </div>
       <div class="column span-8 last">   	      		
         <!--%= f.text_field :LoadDate_like , :class => 'text' %-->
-        <!--%= f.collection_select :LoadDate_equals, Validation.all, :LoadDate, :LoadDate, :include_blank => true %-->
+        <%= f.collection_select :LoadDate_equals, Validation.all, :LoadDate, :LoadDate, :include_blank => true %>
         <select name="search[LoadDate_equals]">
 		    <option value="" selected="selected">[Select a date]</option>
     		<option value="2008-12-31">2008-12-31</option>
@@ -166,9 +164,9 @@
 <table id="rounded-corner" summary="Validations errors for Basel II" >
   <thead>
     	<tr>
-        	<th scope="col" class="rounded-company"><%= order @search, :by => :Errorkind %></th>
-            <th scope="col" class="rounded-q1"><%= order @search, :by => :OutputFile %></th>
-            <th scope="col" class="rounded-q2"><%= order @search, :by => :OutputField %></th>
+        	<th scope="col" class="rounded-company"><%= sort_link @search, :ErrorKind %></th>
+            <th scope="col" class="rounded-q1"><%= sort_link @search, :OutputFile %></th>
+            <th scope="col" class="rounded-q2"><%= sort_link @search, :OutputField %></th>
             <th scope="col" class="rounded-q2">Source</th>
             <th scope="col" class="rounded-q2">Destination</th>
             <th scope="col" class="rounded-q2">Client</th>
@@ -190,7 +188,7 @@
     <tbody>
 <% @validations.each do |validation| %>
   <tr>
-    <td><%=h validation.validationrule.ErrorKind %></td>
+    <td><%=h validation.ErrorKind %></td>
     <td><%=h validation.OutputFile %></td>
     <td><%=h validation.OutputField %></td>
     <td><%=h validation.Source %></td>

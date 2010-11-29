@@ -57,6 +57,18 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="meta_search" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="mysql2" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="nokogiri" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
@@ -64,12 +76,6 @@
     <requirement>
       <requirement>
         <dependency name="rails" version="3.0.1" bound="EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source from="Gemfile" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="rd_searchlogic" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -169,6 +175,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] celerity (v0.8.4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/celerity-0.8.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.1.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/rspec-2.1.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] selenium-webdriver (v0.1.0, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/selenium-webdriver-0.1.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rd_searchlogic (v3.0.0.rc4, /home/minikermit/.rvm/gems/ruby-1.9.2-p0@rails3/gems/rd_searchlogic-3.0.0.rc4)" level="application" />
   </component>
 </module>
 

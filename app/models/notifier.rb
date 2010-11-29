@@ -6,7 +6,7 @@ class Notifier < ActionMailer::Base
     @from         = "Domain.com "
     @subject      = "Your requested a password reset."
     @sent_on      = Time.now
-    @body         = { :user =< user }
+    @body         = { :user => user }
   end
 
   def reset_notification(user)
@@ -14,7 +14,7 @@ class Notifier < ActionMailer::Base
     @from         = "Domain.com "
     @subject      = "Your password has been reset."
     @sent_on      = Time.now
-    @body         = { :user =< user }
+    @body         = { :user => user }
   end
 
 end

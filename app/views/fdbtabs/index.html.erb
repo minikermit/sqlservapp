@@ -32,7 +32,7 @@
         </a>
     </div>
         
-<p>  <%= I18n.t 'fdbtabs.index.sort' %> <%= order @search, :by => :TBID %> | <%= order @search, :by => :TBCODE %> | <%= order @search, :by => :TBDES1 %></p>
+<p>  <%= I18n.t 'fdbtabs.index.sort' %> <%= sort_link :TBID %> | <%= sort_link :TBCODE %> | <%= sort_link :TBDES1 %></p>
 
 <br />
 
