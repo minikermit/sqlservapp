@@ -81,6 +81,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="rails3-jquery-autocomplete" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="rspec-rails" version="2.0.0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />

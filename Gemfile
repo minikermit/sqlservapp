@@ -12,6 +12,7 @@ gem 'activerecord-sqlserver-adapter'
 gem "meta_search"  #  <%= f.sort_link :title %>
 gem 'will_paginate', '3.0.pre2'
 gem 'jquery-rails'
+gem 'rails3-jquery-autocomplete' # rails g autocomplete
 
 # gem 'rd_searchlogic'
 
