@@ -1,3 +1,5 @@
+<% title "Report categories" %>
+
 <!-- This is the breadcrumb part -->
 <% content_for :breadcrumb do %>
     <ul id="crumbs">
@@ -11,12 +13,6 @@
 
 <!-- This is the list part -->
 
-<% content_for :article1 do %>
-
-<h2 class="art-postheader">
-  Listing report categories
-</h2>
-
 <div class="art-postcontent">
     <!-- article-content -->
 
@@ -28,7 +24,7 @@
 <br/>
 
 
-<p>Sort by  <%= order @search, :by => :name %> | <%= order @search, :by => :comments %> | <%= order @search, :by => :created_at %></p>
+<p>Sort by  <%= sort_link @search, :name %> | <%= sort_link @search, :comments %> | <%= sort_link @search, :created_at %></p>
 
 
 <table class="live_filter">
@@ -76,7 +72,6 @@
 
 
 
-<% end %>
 
 <% content_for :side do %>  <p>A simple page</p> <% end %>
 

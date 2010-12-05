@@ -1,9 +1,13 @@
 class ScramblesController < ApplicationController
+
+  autocomplete :scramble, :ClearID
+
   # GET /scrambles
   # GET /scrambles.xml
   def index
-    @scrambles = Scramble.all
-
+    @search = Scramble.search(params[:search])
+    @scrambles = @search.all.paginate(:page => params[:page])
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @scrambles }

@@ -1,11 +1,11 @@
 /*
- * jquery-ujs
- *
- * http://github.com/rails/jquery-ujs/blob/master/src/rails.js
- *
- * This rails.js file supports jQuery 1.4.3 and 1.4.4 .
- *
- */ 
+* jquery-ujs
+*
+* http://github.com/rails/jquery-ujs/blob/master/src/rails.js
+*
+* This rails.js file supports jQuery 1.4.3 and 1.4.4 .
+*
+*/
 
 jQuery(function ($) {
     var csrf_token = $('meta[name=csrf-token]').attr('content'),
@@ -13,13 +13,13 @@ jQuery(function ($) {
 
     $.fn.extend({
         /**
-         * Triggers a custom event on an element and returns the event result
-         * this is used to get around not being able to ensure callbacks are placed
-         * at the end of the chain.
-         *
-         * TODO: deprecate with jQuery 1.4.2 release, in favor of subscribing to our
-         *       own events and placing ourselves at the end of the chain.
-         */
+* Triggers a custom event on an element and returns the event result
+* this is used to get around not being able to ensure callbacks are placed
+* at the end of the chain.
+*
+* TODO: deprecate with jQuery 1.4.2 release, in favor of subscribing to our
+* own events and placing ourselves at the end of the chain.
+*/
         triggerAndReturn: function (name, data) {
             var event = new $.Event(name);
             this.trigger(event, data);
@@ -28,20 +28,20 @@ jQuery(function ($) {
         },
 
         /**
-         * Handles execution of remote calls. Provides following callbacks:
-         *
-         * - ajax:before   - is execute before the whole thing begings
-         * - ajax:loading  - is executed before firing ajax call
-         * - ajax:success  - is executed when status is success
-         * - ajax:complete - is execute when status is complete
-         * - ajax:failure  - is execute in case of error
-         * - ajax:after    - is execute every single time at the end of ajax call 
-         */
+* Handles execution of remote calls. Provides following callbacks:
+*
+* - ajax:before - is execute before the whole thing begings
+* - ajax:loading - is executed before firing ajax call
+* - ajax:success - is executed when status is success
+* - ajax:complete - is execute when status is complete
+* - ajax:failure - is execute in case of error
+* - ajax:after - is execute every single time at the end of ajax call
+*/
         callRemote: function () {
-            var el      = this,
-                method  = el.attr('method') || el.attr('data-method') || 'GET',
-                url     = el.attr('action') || el.attr('href'),
-                dataType  = el.attr('data-type')  || ($.ajaxSettings && $.ajaxSettings.dataType);
+            var el = this,
+                method = el.attr('method') || el.attr('data-method') || 'GET',
+                url = el.attr('action') || el.attr('href'),
+                dataType = el.attr('data-type') || ($.ajaxSettings && $.ajaxSettings.dataType);
 
             if (url === undefined) {
                 throw "No URL specified for remote call (action or href must be present).";
@@ -54,6 +54,7 @@ jQuery(function ($) {
                         dataType: dataType,
                         type: method.toUpperCase(),
                         beforeSend: function (xhr) {
+                            xhr.setRequestHeader("Accept", "text/javascript");
                             el.trigger('ajax:loading', xhr);
                         },
                         success: function (data, status, xhr) {
@@ -74,8 +75,8 @@ jQuery(function ($) {
     });
 
     /**
-     *  confirmation handler
-     */
+* confirmation handler
+*/
 
     $('body').delegate('a[data-confirm], button[data-confirm], input[data-confirm]', 'click.rails', function () {
         var el = $(this);
@@ -85,12 +86,12 @@ jQuery(function ($) {
             }
         }
     });
-  
+
 
 
     /**
-     * remote handlers
-     */
+* remote handlers
+*/
     $('form[data-remote]').live('submit.rails', function (e) {
         $(this).callRemote();
         e.preventDefault();
@@ -101,6 +102,11 @@ jQuery(function ($) {
         e.preventDefault();
     });
 
+    /**
+* <%= link_to "Delete", user_path(@user), :method => :delete, :confirm => "Are you sure?" %>
+*
+* <a href="/users/5" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a>
+*/
     $('a[data-method]:not([data-remote])').live('click.rails', function (e){
         var link = $(this),
             href = link.attr('href'),
@@ -121,10 +127,10 @@ jQuery(function ($) {
     });
 
     /**
-     * disable-with handlers
-     */
-    var disable_with_input_selector           = 'input[data-disable-with]',
-        disable_with_form_remote_selector     = 'form[data-remote]:has('       + disable_with_input_selector + ')',
+* disable-with handlers
+*/
+    var disable_with_input_selector = 'input[data-disable-with]',
+        disable_with_form_remote_selector = 'form[data-remote]:has(' + disable_with_input_selector + ')',
         disable_with_form_not_remote_selector = 'form:not([data-remote]):has(' + disable_with_input_selector + ')';
 
     var disable_with_input_function = function () {
@@ -149,8 +155,10 @@ jQuery(function ($) {
 
     var jqueryVersion = $().jquery;
 
-    if ( (jqueryVersion === '1.4') || (jqueryVersion === '1.4.1') || (jqueryVersion === '1.4.2') ){
-        alert('This rails.js does not support the jQuery version you are using. Please read documentation.');
-    }
+if (!( (jqueryVersion === '1.4.3') || (jqueryVersion === '1.4.4'))){
+alert('This rails.js does not support the jQuery version you are using. Please read documentation.');
+}
+
 
 });
+

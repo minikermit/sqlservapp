@@ -1,11 +1,7 @@
-<% content_for :article1 do %>
-
-
-<h1>Edit My Account</h1>
+<% title "Edit My Account" %>
 
 <%= render :partial => "form", :locals => { :user => @user } %>
 
 
 <br /><%= link_to "My Profile", user_path %>
 
-<% end %>

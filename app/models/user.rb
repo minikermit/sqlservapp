@@ -22,9 +22,6 @@ class User < ActiveRecord::Base
  scope :limit, lambda { |limit| {:limit => limit}}
  scope :search_for_name, lambda { |term| {:conditions => ['lower(name) LIKE ?', "%#{term.downcase}%"]}}
 
- scope :autocomplete_name, lambda{ |name| {:include => :user, :conditions => ["users.name LIKE ?", "#{name}%"]} }
-
-
  def role_symbols
   roles.map do |role|
     role.name.underscore.to_sym

@@ -1,5 +1,3 @@
-<% content_for :article1 do %>
-
 <p>
   <b>Login:</b>
   <%=h @user.login %>
@@ -42,5 +40,3 @@
   <% for role in @user.roles %>
     <p class="commenttext"> <%= role.name %> </p>
   <% end %>
-
-<% end %>

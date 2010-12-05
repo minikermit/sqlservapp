@@ -27,6 +27,7 @@ Sqlservapp::Application.routes.draw do
   resources :roles
 
   resources :report_categories
+  match 'report_categories/:id' => 'report_category#show'
   resources :report_categories, :collection => { :prioritize_reports => :post }
 
   resources :reports
@@ -67,6 +68,9 @@ Sqlservapp::Application.routes.draw do
   resources :provisions
 
   resources :scrambles
+  get "scramble/show"
+  get 'scrambles/autocomplete_scramble_ClearID'
+
   resources :commands
 
   resources :homes

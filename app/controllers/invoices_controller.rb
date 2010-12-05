@@ -10,9 +10,9 @@ class InvoicesController < ApplicationController
   # GET /invoices.xml
   def index
 
-     #@search = Invoice.search(params[:search])
-     #@invoices = @search.all.paginate(:page => params[:page], :order => 'created_at desc')
-    @invoices = Invoice.all.paginate(:page => params[:page], :order => 'created_at desc')
+    @search = Invoice.search(params[:search])
+    @invoices = @search.all.paginate(:page => params[:page], :order => 'created_at desc')
+    #@invoices = Invoice.all.paginate(:page => params[:page], :order => 'created_at desc')
 
     respond_to do |format|
       format.html # index.html.erb

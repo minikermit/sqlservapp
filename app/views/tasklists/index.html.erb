@@ -21,14 +21,14 @@
     <li> <%= f.text_field :name_like, :class => 'text' %></li>
     <li> <%= f.label :scope_like, "Scope " %> </li>
     <li> <%= f.text_field :scope_like, :class => 'text' %></li>
-    <li> <%= f.label :genre_equakls, "Genre " %> </li>
+    <li> <%= f.label :genre_equals, "Genre " %> </li>
     <li> <!--%= f.text_field :genre_like, :class => 'text' %></li-->
          <%= f.collection_select :genre_equals, Tasklist.genre_name_options, :first, :last,  {:include_blank => 'All'}, {:selected => 'All' } %>
     </li>
     <li> <%= f.label :user_id_equals, "Assigned to user" %> </li>
     <li> <%= f.text_field :user_id_equals, :class => 'text' %></li>
-    <li> <%= f.label :unassigned, "Not assigned to anyone" %> </li>
-    <li> <%= f.check_box :unassigned %></li>
+    <li> <!--%= f.label :unassigned, "Not assigned to anyone" %--> </li>
+    <li> <!--%= f.check_box :unassigned %--></li>
     <li>    <select class="flexselect">
                  <option value="1">George Washington</option>
                  <option value="2">John Adams</option>
@@ -54,7 +54,7 @@
 
 <div id = "tasklist">
 
-<p>Sort by  <%= sort_link :name %> | <%= sort_link :due_date %> | <%= sort_link :priority %> | <%= sort_link :status %> | <%= sort_link :user_id %> | <%= sort_link :scope %> | <%= sort_link :genre %></p>
+<p>Sort by  <%= sort_link @search, :name %> | <%=  sort_link @search, :due_date %> | <%= sort_link @search, :priority %> | <%=  sort_link @search, :status %> | <%=  sort_link @search, :user_id %> | <%=  sort_link @search, :scope %> | <%=  sort_link @search, :genre %></p>
 
 <br />
 
@@ -133,6 +133,6 @@
 </div>
 
 <p><%= link_to "New Task", new_tasklist_path %> |
-<%= link_to 'Create PDF document', tasklists_path(:format => :pdf) %></p>
+<!--%= link_to 'Create PDF document', tasklists_path(:format => :pdf) %--></p>
 
 </div><!--/#tasklist-->

@@ -1,3 +1,4 @@
+<% title "Invoice details" %>
 
 <div class="row">
   <div class="column grid_2"><b>Identification & Name:</b></div>
@@ -11,7 +12,7 @@
 
 <div class="row">
   <div class="column grid_2"><b>Amount:</b></div>
-  <div class="column grid_6"><!--%=h @invoice.currency %--> <%=h number_to_currency(@invoice.amount) %></div>
+  <div class="column grid_6"><%=h @invoice.currency %> <%=h number_to_currency(@invoice.amount) %></div>
 </div>
 
 <div class="row">
@@ -36,7 +37,7 @@
 
 <div class="row">
   <div class="column grid_2"><b>P&L accrual account:</b></div>
-  <div class="column grid_6"><%=h @invoice.profit_and_loss_accrual_account %> </div>
+  <div class="column grid_6"><!--%=h @invoice.profit_and_loss_accrual_account %--> </div>
 </div>
 
 <p>

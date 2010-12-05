@@ -4,7 +4,7 @@
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
     <%= stylesheet_link_tag 'application', :media => "screen", :cache =>  true %>
-    <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", :media => "screen", :cache =>  true  %>
+    <%= stylesheet_link_tag "jquery-ui.css", :media => "screen", :cache =>  true  %>
     <%= stylesheet_link_tag 'flexselect', :media => "screen", :cache =>  true %>
     <!-- Blueprint CSS Start color: green-->
     <!--%= stylesheet_link_tag 'blueprint/screen', :media => "screen,projection"  %-->
@@ -15,18 +15,7 @@
   <body>
     <div id="container">
 
-      <div id="user_nav">
-
-        <% if !current_user %>
-           <%= link_to "Register", new_user_path %> |
-           <%= link_to "Login", login_path %>
-           <% else %>
-            welcome <%=h current_user.login %>
-           <!--%= link_to "Edit profile", edit_user_path %--> |
-           <%= link_to "My Account", account_path %> |
-           <%= link_to "Logout", user_sessions_path, :method => :delete, :confirm => "Are you sure you want to logout?" %>
-        <% end %>
-      </div>
+      <!--%= render :partial => 'user_nav' %-->
 
 
       <%- flash.each do |name, msg| -%>
@@ -50,8 +39,8 @@
 
 
     <!-- This is the javascript part -->
-    <%= javascript_include_tag "jquery-1.4.3.min.js",:cache => true %>
-    <%= javascript_include_tag "jquery-ui-1.8.5.custom.min.js",:cache => true %>
+    <%= javascript_include_tag "jquery.min.js",:cache => true %>
+    <%= javascript_include_tag "jquery-ui.min.js",:cache => true %>
     <%= javascript_include_tag  "application", :cache => true %>
     <%= javascript_include_tag  "actions", :cache => true %>
     <%= javascript_include_tag  "flexselect/liquidmetal", :cache => true %>

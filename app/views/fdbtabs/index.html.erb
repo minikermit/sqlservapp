@@ -8,21 +8,7 @@
 </ul>
 <% end %>
 
-<% content_for :article1 do %>
-
-<h2 class="art-postheader">
-  <%= I18n.t 'fdbtabs.index.header' %>
-</h2>
-
-<div class="art-postcontent">
-    <!-- article-content -->
-
-  <div id="page_wrapper">
-      <div id="table_wrapper">
-
-<br/>
-
-
+<% title I18n.t 'fdbtabs.index.header' %>
 
     <div id="clickme">
         <a href="#" class ='a'>
@@ -32,7 +18,7 @@
         </a>
     </div>
         
-<p>  <%= I18n.t 'fdbtabs.index.sort' %> <%= sort_link :TBID %> | <%= sort_link :TBCODE %> | <%= sort_link :TBDES1 %></p>
+<p>  <%= I18n.t 'fdbtabs.index.sort' %> <%= sort_link @search, :TBID %> | <%= sort_link @search,:TBCODE %> | <%= sort_link @search, :TBDES1 %></p>
 
 <br />
 
@@ -89,8 +75,6 @@
   </div>
 </div>
 
-</div>
-
 <br />
 
 
@@ -137,9 +121,7 @@
 
 
 <!--%= link_to 'New fdbtab', new_fdbtab_path %-->
-<a href="/fdbtabs.csv">Export to excel</a>
-
-</div>
+<!--a href="/fdbtabs.csv">Export to excel</a-->
 
     <blockquote>
         <p>
@@ -149,16 +131,4 @@
     </blockquote>
   <br />
 
-<!-- /article-content -->   
 
-</div>
-
-
-<% end %>
-
-<!-- This is the javascript part -->
-<%= render :partial => "shared/livefilter" %>
-
-
-
-<% content_for :side do %>  <p>A simple page</p> <% end %>

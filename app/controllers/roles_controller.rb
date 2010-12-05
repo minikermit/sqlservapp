@@ -7,17 +7,17 @@ class RolesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @roles }
-      format.pdf do
-        @example_text = "some text"
-                  render :pdf => "roles",
-                         :template => 'roles/index.pdf.erb',
-                         :layout => 'pdf',
-                         :footer => {
-                            :center => "Center",
-                            :left => "Left",
-                            :right => "Right"
-                         }
-      end
+     # format.pdf do
+     #   @example_text = "some text"
+     #             render :pdf => "roles",
+     #                    :template => 'roles/index.pdf.erb',
+     #                    :layout => 'pdf',
+     #                    :footer => {
+     #                       :center => "Center",
+     #                       :left => "Left",
+     #                       :right => "Right"
+     #                    }
+     # end
     end
   end
 

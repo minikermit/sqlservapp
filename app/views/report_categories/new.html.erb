@@ -9,14 +9,8 @@
 
 <% end %>
 
-<% content_for :article1 do %>
+<% title "New Report Category" %>
 
-<h2 class="art-postheader">
-  New report_category
-</h2>
-
-<div class="art-postcontent">
-    <!-- article-content -->
   <%= render :partial => 'form' , :locals => { :report_category => @report_category } %>
 
   <%= link_to 'Show', @report_category %> |
@@ -32,8 +26,3 @@
         </blockquote>
       <br />
 
-    <!-- /article-content -->
-</div>
-
-
-<% end %>

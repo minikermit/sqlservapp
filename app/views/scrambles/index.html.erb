@@ -1,23 +1,35 @@
-<span class="myapptitle">Scrambled counterparty identification</span>
+<% title "Scrambled counterparty identification" %>
+
+<%= form_tag do %>
+  <%=text_field_tag 'ClearID', '', :autocomplete => scrambles_autocomplete_scramble_ClearID_path %>       
+<% end %>
 
 <table>
   <tr>
-    <th>Counteparty id</th>
-    <th>Scrambled Identification</th>
-    <th>Entity</th>
+    <th align='center'>Scrambled Identification</th>
+    <th align='center'>Counteparty id</th>
+    <th align='center'>Entity</th>
  	<th> </th>   
  </tr>
 
 <% @scrambles.each do |scramble| %>
   <tr>
-    <td><%=h scramble.ClearID %></td>
-    <td><%=h scramble.EncryptedID4 %></td>
-    <td><%=h scramble.entity_id %></td>
+    <td align='center'><%=h scramble.EncryptedID4 %></td>
+    <td align='center'><%=h scramble.ClearID %></td>
+    <td align='center'><%=h scramble.entity_id %></td>
     <td><%= link_to 'Show', scramble %></td>
   </tr>
 <% end %>
 </table>
 
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @scrambles %>
+  </div>
+    <%= will_paginate @scrambles, :container => false %>
+</div>
+
+
 <br />
 
-<%= link_to 'New scramble', new_scramble_path %>
+<!--%= link_to 'New scramble', new_scramble_path %--> 

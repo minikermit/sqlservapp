@@ -6,11 +6,11 @@ class Fdbtab < ActiveRecord::Base
 # ===============
 # = CSV support =
 # ===============
-  comma do |fdbtab| # implicitly named :default
-    fdbtab.id
-    fdbtab.TBID
-    fdbtab.TBCODE
-  end
+  #comma do |fdbtab| # implicitly named :default
+  #  fdbtab.id
+  #  fdbtab.TBID
+  #  fdbtab.TBCODE
+  #end
 
 
 

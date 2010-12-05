@@ -15,7 +15,7 @@ class FdbtabsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @fdbtabs }
-      format.csv { render :csv => @fdbtabs }
+      #format.csv { render :csv => @fdbtabs }
     end
   end
 

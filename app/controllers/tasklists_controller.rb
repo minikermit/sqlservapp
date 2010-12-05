@@ -1,7 +1,7 @@
 class TasklistsController < ApplicationController
 
-  before_filter :require_user, :only => [:edit, :update]
-  before_filter :set_current_user
+  # before_filter :require_user, :only => [:edit, :update]
+  # before_filter :set_current_user
 
   def index
     @search = Tasklist.search(params[:search])
@@ -10,17 +10,17 @@ class TasklistsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @tasklists }
-      format.pdf do
-        @example_text = "some text"
-                  render :pdf => "tasklists",
-                         :template => 'tasklists/index.pdf.erb',
-                         :layout => 'pdf',
-                         :footer => {
-                            :center => "Center",
-                            :left => "Left",
-                            :right => "Right"
-                         }
-      end
+      #format.pdf do
+      #  @example_text = "some text"
+      #            render :pdf => "tasklists",
+      #                   :template => 'tasklists/index.pdf.erb',
+      #                   :layout => 'pdf',
+      #                   :footer => {
+      #                      :center => "Center",
+      #                      :left => "Left",
+      #                      :right => "Right"
+      #                   }
+      #end
     end
   end
 
