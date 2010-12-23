@@ -38,9 +38,9 @@ gem 'nokogiri'
 #   gem 'webrat'
 # end
 
-#group :development do
-
-#end
+group :development do
+ gem "bullet"
+end
 
 group :test do
   gem 'rspec-rails', '>= 2.0.0'
