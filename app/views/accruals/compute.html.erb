@@ -1,0 +1,21 @@
+<%= form_for(@accrual) do |f| %>
+  <% if @accrual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@accrual.errors.count, "error") %> prohibited this period from being computed:</h2>
+
+      <ul>
+      <% @accruals.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :period %><br />
+    <%= f.text_field :period %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

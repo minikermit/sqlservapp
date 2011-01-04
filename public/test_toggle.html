@@ -1,0 +1,27 @@
+<html>
+<head>
+     <script language="javascript" src="javascripts/jquery.js"></script>
+     <script language="javascript">
+     $(document).ready(function() {
+          $('#toggleButton').click(function() {
+               if ($('#toggleSection').is(":hidden"))
+               {
+                    $('#toggleSection').slideDown("slow");
+               } else {
+                    $('#toggleSection').slideUp("slow");
+               }
+               return false;
+          });
+     });
+     </script>
+</head>
+<body>
+     <a href="#" id="toggleButton">Click Here</a>
+     <div id="toggleSection">
+          Content to toggle on and off<br>
+          More content<br>
+          Slides are more fun with more content<br>
+          Four lines should be enough
+     </div>
+</body>
+</html>

@@ -8,6 +8,7 @@ Sqlservapp::Application.routes.draw do
   resources :invoices
   resources :depreciations
   resources :accruals
+  match 'compute_accruals', :to => 'accruals#compute_accruals', :as => "compute_accruals"
 
 
   # match 'cars/list', :to => 'catalog#list'

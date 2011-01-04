@@ -23,27 +23,15 @@ jQuery(document).ready(function() {
 });
 
 
-$(function() {
-  $("#issues th a, #issues .pagination a").live("click", function() {
-    $.getScript(this.href);
-    return false;
-  });
-  $("#issues_search input").keyup(function() {
-    $.get($("#issues_search").attr("action"), $("#issues_search").serialize(), null, "script");
-    return false;
-  });
-});
-
-// jQuery -------------------------------------------------------------
-
+// Jquery : Toggle DIV called "toggleSection"
 $(document).ready(function() {
-  setTimeout(hideFlashes, 25000);
+      $('#toggleButton').click(function() {
+          if (!$('#toggleSection').is(":hidden")) {
+              $('#toggleSection').slideUp("slow");
+          } else $('#toggleSection').slideDown("slow");
+          return false;
+      });
 });
-
-var hideFlashes = function() {
-  $('p.notice, p.warning, p.error').fadeOut(1500);
-}
-// --------------------------------------------------------------------
 
 
 
@@ -66,74 +54,3 @@ jQuery(function($){//on document ready
  jQuery(function (){
      $('#tasklist_due_date').datepicker();
  });
-
-// Jquery : flexselect plugin
-jQuery(document).ready(function() {
-  $("select[class*=flexselect]").flexselect();
-});
-
-// Jquery : tabs
-jQuery(document).ready(function() {
-  $("#tabs").tabs();
-});
-
-// Jquery effects (slide tab in or out).
-
-$('#clickme').click(function() {
-  $('#show_search').slideToggle('slow', function() {
-    // Animation complete.
-  });
-});
-
-// Jquery effects (slide in or out).
-$(document).ready(function() {
-
-	// Expand Panel
-	$("#open").click(function(){
-		$("div#panel").slideDown("slow");
-
-	});
-
-	// Collapse Panel
-	$("#close").click(function(){
-		$("div#panel").slideUp("slow");
-	});
-
-	// Switch buttons from "Log In | Register" to "Close Panel" on click
-	$("#toggle a").click(function () {
-		$("#toggle a").toggle();
-	});
-
-});
-
-// another styling trick for CSS select
-
-$(document).ready(function(){
-
-    if (!$.browser.opera) {
-
-        $('select.select').each(function(){
-            var title = $(this).attr('title');
-            if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
-            $(this)
-                .css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
-                .after('<span class="select">' + title + '</span>')
-                .change(function(){
-                    val = $('option:selected',this).text();
-                    $(this).next().text(val);
-                    })
-        });
-
-    };
-
-});
-
-// jQuery flash messages
-
-$(document).ready(function() {
-  setTimeout(hideFlashes, 2500);
-});
-
-var hideFlashes = function() {
-    $('p.notice, p.warning, p.error').fadeOut(1500);
-};

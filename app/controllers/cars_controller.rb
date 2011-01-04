@@ -11,7 +11,7 @@ class CarsController < ApplicationController
   end
 
 
-    def list 
+  def list
     @cars = Car.execute_procedure :select_total, params[:limit]
 
 
@@ -19,9 +19,9 @@ class CarsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @cars }
     end
-    end
+  end
 
-    def sp
+  def sp
       @cars = Car.find_by_sql(["exec select_total ? ",  params[:limit]])
 
     respond_to do |format|
@@ -29,6 +29,7 @@ class CarsController < ApplicationController
       format.xml  { render :xml => @cars }
     end
   end
+
   # GET /cars/1
   # GET /cars/1.xml
   def show

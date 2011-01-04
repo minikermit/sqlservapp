@@ -12,7 +12,7 @@
 
 <div class="row">
   <div class="column grid_2"><b>Amount:</b></div>
-  <div class="column grid_6"><%=h @invoice.currency %> <%=h number_to_currency(@invoice.amount) %></div>
+  <div class="column grid_6"><%=h @invoice.currency %> <%=h @invoice.amount %></div>
 </div>
 
 <div class="row">
@@ -47,7 +47,7 @@
 
 <p>
   <b>User:</b>
-  <%=h @invoice.user.name %>
+  <!--%=h @invoice.user.name %-->
 </p>
 
 <p>

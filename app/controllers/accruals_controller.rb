@@ -88,6 +88,15 @@ class AccrualsController < ApplicationController
     end
   end
 
+  def compute_accruals
+    @accrual = Accrual.execute_procedure :compute_accruals, params[:period]
+
+
+    respond_to do |format|
+      format.html { redirect_to(accruals_url) }
+    end
+  end
+
   private
 
   def choose_layout
