@@ -8,11 +8,16 @@ gem 'rails', '3.0.1'
 gem 'mysql2'
 gem 'ruby-odbc'
 gem 'activerecord-sqlserver-adapter'
+gem 'sqlite3-ruby', :require => 'sqlite3'
+
 
 gem "meta_search"  #  <%= f.sort_link :title %>
 gem 'will_paginate', '3.0.pre2'
 gem 'jquery-rails'
 gem 'rails3-jquery-autocomplete' # rails g autocomplete
+
+
+gem "authlogic"
 
 # gem 'rd_searchlogic'
 
@@ -20,7 +25,7 @@ gem 'rails3-jquery-autocomplete' # rails g autocomplete
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug'
@@ -28,7 +33,6 @@ gem 'rails3-jquery-autocomplete' # rails g autocomplete
 # Bundle the extra gems:
 # gem 'bj'
 gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
