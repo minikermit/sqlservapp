@@ -1,10 +1,8 @@
 Sqlservapp::Application.routes.draw do
 
+
+  resources :activity_logs
   resources :issues
-
-  resources :cars
-  resources :users
-
   resources :invoices
   resources :depreciations
   resources :accruals
@@ -14,13 +12,10 @@ Sqlservapp::Application.routes.draw do
   # match 'cars/list', :to => 'catalog#list'
   match 'list', :to => 'cars#list', :as => "list"
   match 'sp', :to => 'cars#sp', :as => "sp"
-
-  resources :activity_logs
-
-
+    
+   #  Authentication and roles
   match 'login', :to => 'user_sessions#new', :as => "login"
   match 'logout', :to => 'user_sessions#destroy', :as => "logout"
-  # map.logout "logout", :controller => "user_sessions", :action => "destroy"
   resource :account, :controller => "users"
   resources :users
   resource :user_sessions
