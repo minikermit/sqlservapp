@@ -10,7 +10,7 @@ class CreateAccruals < ActiveRecord::Migration
       t.string :debit_account
       t.string :credit_account
       t.text :comments
-
+      t.string :identification
       t.timestamps
     end
   end

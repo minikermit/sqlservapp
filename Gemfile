@@ -58,7 +58,10 @@ group :cucumber do
   gem 'cucumber'
   gem 'rspec-rails', '>= 2.0.0'
   gem 'spork'
-  gem 'launchy'    # So you can do Then show me the page
+  gem 'launchy' # So you can do Then show me the page
+  gem 'shoulda'
+  gem 'factory_girl_rails'
+  gem 'autotest'
 end  
 
 
