@@ -1,3 +1,21 @@
+# == Schema Information
+# Schema version: 20101121151354
+#
+# Table name: issues
+#
+#  id          :integer(4)      not null, primary key
+#  title       :string(255)     not null
+#  opened_by   :integer(4)      not null
+#  date_opened :date            not null
+#  date_fixed  :date            not null
+#  priority    :integer(4)      not null
+#  status      :integer(4)      not null
+#  comments    :text            not null
+#  assigned_to :integer(4)      not null
+#  created_at  :datetime        not null
+#  updated_at  :datetime        not null
+#
+
 class Issue < ActiveRecord::Base
 
   def self.search(search)

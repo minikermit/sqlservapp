@@ -1,3 +1,23 @@
+# == Schema Information
+# Schema version: 20101121151354
+#
+# Table name: tasklists
+#
+#  id          :integer(4)      not null, primary key
+#  name        :string(255)     not null
+#  scope       :string(255)     not null
+#  genre       :string(255)     not null
+#  project_id  :integer(4)      not null
+#  user_id     :integer(4)      not null
+#  description :text            not null
+#  priority    :integer(4)      not null
+#  due_date    :date            not null
+#  status      :integer(4)      not null
+#  created_at  :datetime        not null
+#  updated_at  :datetime        not null
+#  assigned_to :integer(4)
+#
+
 class Tasklist < ActiveRecord::Base
 
   belongs_to :user
@@ -80,22 +100,4 @@ class Tasklist < ActiveRecord::Base
 end
 
 
-
-# == Schema Information
-#
-# Table name: tasklists
-#
-#  id          :integer(4)      not null, primary key
-#  name        :string(255)
-#  scope       :string(255)
-#  genre       :string(255)
-#  project_id  :integer(4)
-#  user_id     :integer(4)
-#  description :text
-#  priority    :string(255)
-#  due_date    :date
-#  status      :string(255)
-#  created_at  :datetime
-#  updated_at  :datetime
-#
 

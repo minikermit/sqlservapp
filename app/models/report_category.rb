@@ -1,3 +1,24 @@
+# == Schema Information
+# Schema version: 20101121151354
+#
+# Table name: report_categories
+#
+#  id                        :integer(8)      not null, primary key
+#  report_category_id        :integer(4)      not null
+#  category_type             :string(50)      not null
+#  category_type_description :string(100)
+#  category_kind             :string(50)      not null
+#  name                      :string(100)
+#  comments                  :string(1000)
+#  created_at                :datetime        not null
+#  created_by                :string(50)      not null
+#  updated_at                :datetime
+#  updated_by                :string(50)
+#  updated_with              :string(100)
+#  record_validity           :boolean         not null
+#  record_visibility         :boolean         not null
+#
+
 class ReportCategory < ActiveRecord::Base
 
 # set_table_name "DIM_Report_Categories"
@@ -15,24 +36,4 @@ end
 
 
 
-
-# == Schema Information
-#
-# Table name: report_categories
-#
-#  id                        :integer(4)      not null, primary key
-#  report_category_id        :string(50)      not null
-#  category_type             :string(50)      not null
-#  category_type_description :string(50)      not null
-#  category_kind             :string(50)      not null
-#  name                      :string(50)      not null
-#  comments                  :string(255)     default("-")
-#  created_by                :string(50)      default("-")
-#  updated_by                :string(50)      default("-")
-#  updated_with              :string(50)      default("-")
-#  record_validity           :boolean(1)      default(TRUE)
-#  record_visibility         :boolean(1)      default(TRUE)
-#  created_at                :datetime
-#  updated_at                :datetime
-#
 

@@ -1,3 +1,19 @@
+# == Schema Information
+# Schema version: 20101121151354
+#
+# Table name: validationrules
+#
+#  id                  :integer(4)      not null, primary key
+#  rule_identification :string(20)      not null
+#  rule_description    :string(200)     not null
+#  rule_scope          :string(15)      not null
+#  rule_hint           :string(500)     not null
+#  rule_sql_query      :string(1000)    not null
+#  created_at          :datetime        not null
+#  updated_at          :datetime        not null
+#  rule_type           :string(20)      not null
+#
+
 class Validationrule < ActiveRecord::Base
 	#set table_name "B2TA_VAL_Validation_Rules"
 
@@ -11,19 +27,4 @@ class Validationrule < ActiveRecord::Base
   validates_presence_of     :rule_identification
 
 end
-
-# == Schema Information
-#
-# Table name: validationrules
-#
-#  id               :integer(4)      not null, primary key
-#  ErrorKind        :string(20)      not null
-#  rule_description :string(200)     not null
-#  rule_scope       :string(15)      not null
-#  rule_hint        :string(500)
-#  rule_sql_query   :string(1000)
-#  created_at       :datetime        not null
-#  updated_at       :datetime
-#  rule_type        :string(20)      not null
-#
 

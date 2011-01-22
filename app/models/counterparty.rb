@@ -1,8 +1,5 @@
-class Counterparty < ActiveRecord::Base
-	set_table_name "B2TA_XPORT_Counterparty"
-end
-
 # == Schema Information
+# Schema version: 20101121151354
 #
 # Table name: B2TA_XPORT_Counterparty
 #
@@ -25,7 +22,7 @@ end
 #  Count_Group_Code         :string(1)
 #  Count_Name               :string(60)
 #  Count_Segment_BH         :string(40)
-#  Count_Segment_Det        :string(40)
+#  Count_Segment_Det        :string(60)
 #  Count_Segment            :string(40)
 #  Count_Legal              :string(1)
 #  Count_Domicile           :string(3)
@@ -48,5 +45,11 @@ end
 #  Count_Income_Total_NIS   :decimal(13, 2)  default(0.0)
 #  Count_Code               :string(2)
 #  Domicile_Branch_Code     :string(3)
+#  Record_Validity          :boolean         default(TRUE)
+#  Comments                 :string(250)
 #
+
+class Counterparty < ActiveRecord::Base
+	set_table_name "B2TA_XPORT_Counterparty"
+end
 

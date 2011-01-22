@@ -1,8 +1,5 @@
-class Loanbook < ActiveRecord::Base
-		set_table_name "B2TA_XPORT_Loan_Book"
-end
-
 # == Schema Information
+# Schema version: 20101121151354
 #
 # Table name: B2TA_XPORT_Loan_Book
 #
@@ -20,7 +17,7 @@ end
 #  Type_of_record                 :string(10)      default("LOAN-BOOK"), not null
 #  Bank_id                        :string(4)       not null
 #  Branch_id                      :string(3)       not null
-#  Trans_nr                       :string(25)
+#  Trans_nr                       :string(30)
 #  Count_CIF                      :string(50)
 #  Legacy_System_Code             :string(15)
 #  OnCall_Ind                     :string(1)
@@ -80,13 +77,19 @@ end
 #  Other_Amt                      :decimal(13, 2)
 #  Executing_Bank_Id              :integer(2)
 #  Trans_Segment_Code             :string(3)
-#  Trans_Segment_Det              :string(40)
+#  Trans_Segment_Det              :string(60)
 #  Trans_Sub_Segment_code         :string(3)
-#  Trans_Sub_Segment_Det          :string(40)
+#  Trans_Sub_Segment_Det          :string(60)
 #  Trans_Marking_Past_Due_Code    :string(3)
 #  Trans_Marking_Past_Due_Det     :string(100)
 #  Trans_Markings_Other_code      :string(3)
 #  Trans_Markings_Other_Det       :string(100)
 #  Executing_Branch_Id            :integer(2)
+#  Record_Validity                :boolean         default(TRUE)
+#  Comments                       :string(50)
 #
+
+class Loanbook < ActiveRecord::Base
+		set_table_name "B2TA_XPORT_Loan_Book"
+end
 

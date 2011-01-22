@@ -1,3 +1,27 @@
+# == Schema Information
+# Schema version: 20101121151354
+#
+# Table name: b2_ta_mapping
+#
+#  id                      :integer(8)      not null, primary key
+#  information_mapped      :string(50)      not null
+#  group_id                :string(50)      not null
+#  entity_id               :string(50)      not null
+#  source_code             :string(50)
+#  description             :string(50)
+#  dimension_code          :string(50)
+#  dimension_description   :string(100)
+#  destination_code        :string(50)
+#  destination_description :string(100)
+#  record_validity         :boolean
+#  created_at              :datetime        not null
+#  updated_at              :datetime
+#  created_by              :string(50)
+#  updated_by              :string(50)
+#  created_using           :string(50)
+#  updated_using           :string(50)
+#
+
 class B2TaMapping < ActiveRecord::Base
 	set_table_name "b2_ta_mapping"
 	# named_scope :recent, {:limit => 30, :order => 'created_at desc'}

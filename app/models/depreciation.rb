@@ -1,3 +1,22 @@
+# == Schema Information
+# Schema version: 20101121151354
+#
+# Table name: depreciations
+#
+#  id             :integer(4)      not null, primary key
+#  type_id        :integer(4)      not null
+#  name           :string(255)     not null
+#  currency       :string(255)     not null
+#  amount         :integer         not null
+#  event_date     :date            not null
+#  period_id      :integer(4)      not null
+#  debit_account  :string(255)     not null
+#  credit_account :string(255)     not null
+#  comments       :text            not null
+#  created_at     :datetime        not null
+#  updated_at     :datetime        not null
+#
+
 class Depreciation < ActiveRecord::Base
 
   validates_numericality_of :amount

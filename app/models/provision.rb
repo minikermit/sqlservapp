@@ -1,8 +1,5 @@
-class Provision < ActiveRecord::Base
-	set_table_name "B2TA_XPORT_Provisions"
-end
-
 # == Schema Information
+# Schema version: 20101121151354
 #
 # Table name: B2TA_XPORT_Provisions
 #
@@ -56,5 +53,11 @@ end
 #  Prov_SNG_NIS            :decimal(13, 2)  default(0.0)
 #  Executing_Bank_Id       :integer(2)
 #  Executing_Branch_Id     :integer(2)
+#  Record_Validity         :boolean         default(TRUE)
+#  Comments                :string(250)
 #
+
+class Provision < ActiveRecord::Base
+	set_table_name "B2TA_XPORT_Provisions"
+end
 

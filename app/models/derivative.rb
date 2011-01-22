@@ -1,8 +1,5 @@
-class Derivative < ActiveRecord::Base
-	set_table_name "B2TA_XPORT_OTC_Derivatives"
-end
-
 # == Schema Information
+# Schema version: 20101121151354
 #
 # Table name: B2TA_XPORT_OTC_Derivatives
 #
@@ -13,14 +10,14 @@ end
 #  DownloadDate                :datetime        not null
 #  Record_Creation_Date        :datetime        not null
 #  Record_Creator              :string(50)      default("suser_sname() + '-' + user_name(")
-#  Record_Application          :string(50)      default("app_name(")
+#  Record_Application          :string(50)
 #  Value_Month                 :string(7)       not null
 #  Value_Date                  :string(10)      not null
 #  Executing_Date              :string(10)      not null
 #  Type_of_record              :string(10)      default("OTC"), not null
 #  Bank_id                     :string(4)       not null
 #  Branch_id                   :string(3)       not null
-#  Trans_nr                    :string(15)
+#  Trans_nr                    :string(30)
 #  Count_CIF                   :string(50)
 #  Limit_nr                    :string(15)
 #  Trans_Code                  :string(10)
@@ -90,13 +87,19 @@ end
 #  Trans_Tenure_Left           :integer(4)
 #  Executing_Bank_Id           :integer(2)
 #  Trans_Segment_Code          :string(10)
-#  Trans_Segment_Det           :string(40)
+#  Trans_Segment_Det           :string(60)
 #  Trans_Sub_Segment_code      :string(3)
-#  Trans_Sub_Segment_Det       :string(40)
+#  Trans_Sub_Segment_Det       :string(60)
 #  Trans_Marking_Past_Due_code :string(3)
 #  Trans_Marking_Past_Due_Det  :string(100)
 #  Trans_Markings_Other_code   :string(3)
 #  Trans_Markings_Other_Det    :string(100)
 #  Executing_Branch_Id         :integer(2)
+#  Record_Validity             :boolean         default(TRUE)
+#  Comments                    :string(250)
 #
+
+class Derivative < ActiveRecord::Base
+	set_table_name "B2TA_XPORT_OTC_Derivatives"
+end
 

@@ -1,8 +1,5 @@
-class Nostro < ActiveRecord::Base
-		set_table_name "B2TA_XPORT_Nostro"
-end
-
 # == Schema Information
+# Schema version: 20101121151354
 #
 # Table name: B2TA_XPORT_Nostro
 #
@@ -68,5 +65,11 @@ end
 #  Trans_Marking_Other_code    :string(3)
 #  Trans_Markings_Other_Det    :string(100)
 #  Executing_Branch_Id         :integer(2)
+#  Record_Validity             :boolean         default(TRUE)
+#  Comments                    :string(50)
 #
+
+class Nostro < ActiveRecord::Base
+		set_table_name "B2TA_XPORT_Nostro"
+end
 

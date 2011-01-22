@@ -1,3 +1,33 @@
+# == Schema Information
+# Schema version: 20101121151354
+#
+# Table name: PAR_Mapping
+#
+#  id                      :integer(8)      not null, primary key
+#  Group_Identifier        :string(50)
+#  Entity_Identifier       :string(50)
+#  Information_Mapped      :string(50)
+#  Source_code             :string(50)
+#  Dimension_Code          :string(50)
+#  Dimension_description_1 :string(100)
+#  Group_1                 :string(50)
+#  Group_description_1     :string(100)
+#  Group_2                 :string(50)
+#  Group_description_2     :string(100)
+#  Group_3                 :string(50)
+#  Group_description_3     :string(100)
+#  Validity_Start          :datetime        default(2000-01-01 00:00:00 UTC), not null
+#  Validity_End            :datetime        default(2015-12-31 00:00:00 UTC), not null
+#  Do_Not_Update           :boolean         default(TRUE), not null
+#  Record_Validity         :boolean         default(TRUE)
+#  created_at              :datetime        not null
+#  created_by              :string(50)      default("suser_sname() + '-' + user_name("), not null
+#  created_with            :string(100)     not null
+#  updated_at              :datetime
+#  updated_by              :string(50)
+#  updated_with            :string(100)
+#
+
 class ParMapping < ActiveRecord::Base
 
   set_table_name "PAR_Mapping"

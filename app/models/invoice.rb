@@ -1,3 +1,28 @@
+# == Schema Information
+# Schema version: 20101121151354
+#
+# Table name: invoices
+#
+#  id                              :integer(4)      not null, primary key
+#  identification                  :integer(4)      not null
+#  counterparty                    :string(255)     not null
+#  account                         :string(255)     not null
+#  name                            :string(255)     not null
+#  booked_on                       :date            not null
+#  period_from                     :date            not null
+#  period_to                       :date            not null
+#  validity_in_months              :integer(4)      not null
+#  currency                        :string(255)     not null
+#  amount                          :integer         not null
+#  balance_sheet_accrual_account   :string(255)     not null
+#  profit_and_loss_accrual_account :string(255)     not null
+#  type_id                         :integer(4)      not null
+#  user_id                         :integer(4)      not null
+#  updated_by                      :integer(4)      not null
+#  created_at                      :datetime        not null
+#  updated_at                      :datetime        not null
+#
+
 class Invoice < ActiveRecord::Base
 
   belongs_to :user

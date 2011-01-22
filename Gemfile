@@ -18,7 +18,6 @@ gem 'rails3-jquery-autocomplete' # rails g autocomplete
 
 
 gem "authlogic"
-
 # gem 'rd_searchlogic'
 
 # Use unicorn as the web server
@@ -44,6 +43,7 @@ gem 'nokogiri'
 
 group :development do
  gem "bullet"
+ gem "annotate-models"
 end
 
 group :test do
