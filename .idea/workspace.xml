@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8816f9c-4e4f-4c6a-adaf-0c3ffefcdab6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqlservapp.iml" afterPath="$PROJECT_DIR$/.idea/sqlservapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+    <list default="true" id="d8816f9c-4e4f-4c6a-adaf-0c3ffefcdab6" name="Default" comment="Move to rails 3&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/cucumber.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/support/env.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/support/paths.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tasks/cucumber.rake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/cucumber" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20100909022457_create_invoices.rb" afterPath="$PROJECT_DIR$/db/migrate/20100909022457_create_invoices.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20100910113235_create_accruals.rb" afterPath="$PROJECT_DIR$/db/migrate/20100910113235_create_accruals.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20100926221556_create_depreciations.rb" afterPath="$PROJECT_DIR$/db/migrate/20100926221556_create_depreciations.rb" />
     </list>
     <ignored path="sqlservapp.iws" />
     <ignored path=".idea/workspace.xml" />
