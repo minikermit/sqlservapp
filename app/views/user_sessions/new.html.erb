@@ -1,7 +1,6 @@
-<%= content_for :article1 do %>
-
 <h1>Login</h1>
 
+    <!--%= form_for (@user_session, :url => { :action => "create" }) do |f| %-->
     <%= form_for @user_session, :url => user_sessions_path do |f| %>
       <%= f.error_messages %>
       <%= f.label :login %><br />
@@ -15,5 +14,3 @@
       <br />
       <%= f.submit "Login" %>
     <% end %>
-
-<% end %>

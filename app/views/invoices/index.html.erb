@@ -8,12 +8,15 @@
         <!--
             Setting all the checkbox names to "source[] helps us build the array on submit"
             We're also adding the RSS feed url to the checkbox value so we can save it in the array values
+
         -->
   <ul>
     <li> <%= f.label :identification_equals, 'Id' %> </li>
     <li> <%= f.text_field :identification_equals, :class => 'text' %></li>
     <li> <%= f.label :name_like, "Name " %> </li>
-    <li> <%= f.text_field :name_like, :class => 'text' %></li> 
+    <li> <%= f.text_field :name_like, :class => 'text' %></li>
+    <li> <%= f.label :type_id_equals, "Type of invoice " %> </li>
+    <li> <%= f.text_field :type_id_equals, :class => 'text' %></li>
   </ul>
 
   <!-- Setting the submit name to "btn" -->

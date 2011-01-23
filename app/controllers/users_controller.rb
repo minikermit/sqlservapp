@@ -16,20 +16,22 @@ class UsersController < ApplicationController
     end
   end
 
-
   def create
-    @user = User.new(params[:user])
+  @user = User.new(params[:user])
+
+  respond_to do |format|
     if @user.save
-      flash[:notice] = "Account registered!"
-      redirect_to user_path(current_user)
+      format.html { redirect_to(:users, :notice => 'Registration successfull.') } #     redirect_to user_path(current_user)
+      format.xml  { render :xml => @user, :status => :created, :location => @user }
     else
-      render :action => :new
+      format.html { render :action => "new" }
+      format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
     end
   end
 
   def show
     @user = current_user
-    # @roles = current_user.roles.find(:all)
+    @roles = current_user.roles.find(:all)
   end
 
   def edit
@@ -39,18 +41,16 @@ class UsersController < ApplicationController
   def update
     @user = current_user # makes our views "cleaner" and more consistent
     if @user.update_attributes(params[:user])
-      flash[:notice] = "User account updated!"
-      redirect_to root_url
+      format.html { redirect_to(:root, :notice => 'User account updated!') }
     else
-      render :action => :edit
+      format.html { render :action => "edit" }
     end
-  end
+  end 
 
   def destroy
     current_user_session.destroy
     redirect_to new_user_session_path
+    end
   end
 
 end
-
-

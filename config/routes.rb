@@ -12,13 +12,17 @@ Sqlservapp::Application.routes.draw do
   # match 'cars/list', :to => 'catalog#list'
   match 'list', :to => 'cars#list', :as => "list"
   match 'sp', :to => 'cars#sp', :as => "sp"
-    
+
+
+
+
+
    #  Authentication and roles
-  match 'login', :to => 'user_sessions#new', :as => "login"
-  match 'logout', :to => 'user_sessions#destroy', :as => "logout"
+  resources :users, :user_sessions
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+
   resource :account, :controller => "users"
-  resources :users
-  resource :user_sessions
   root :controller => "user_sessions", :action => "new"
   resources :roles
 

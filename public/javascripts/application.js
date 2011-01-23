@@ -25,6 +25,7 @@ jQuery(document).ready(function() {
 
 // Jquery : Toggle DIV called "toggleSection"
 $(document).ready(function() {
+      $("#toggleSection").hide()
       $('#toggleButton').click(function() {
           if (!$('#toggleSection').is(":hidden")) {
               $('#toggleSection').slideUp("slow");

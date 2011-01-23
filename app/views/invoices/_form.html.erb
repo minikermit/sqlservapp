@@ -33,8 +33,8 @@
     <%= f.text_field :validity_in_months, :size => '2' %>
   </p>
   <p>
-    <%= f.label :balance_sheet_accrual_account %> & <%= f.label :profit_and_loss_accrual_account %><br />
-    <%= f.text_field :balance_sheet_accrual_account, :size => '19' %> & <%= f.text_field :profit_and_loss_accrual_account, :size => '19' %>
+    <%= f.label :balance_sheet_account %> & <%= f.label :profit_and_loss_account %><br />
+    <%= f.text_field :balance_sheet_account, :size => '19' %> & <%= f.text_field :profit_and_loss_account, :size => '19' %>
   </p>
   <p>
     <%= f.label :user_id %><br />
@@ -44,6 +44,23 @@
     <%= f.label :updated_by %><br />
     <%= f.text_field :updated_by %>
   </p>
+
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </p>
+  <p>
+    <%= f.label :reference %><br />
+    <%= f.text_field :reference %>
+  </p>
+
+  <p>
+    <%= f.label :cost_center_1 %> & <%= f.label :cost_center_2 %><br />
+    <%= f.text_field :cost_center_1, :size => '19' %> & <%= f.text_field :cost_center_2, :size => '19' %>
+  </p>
+
+
+
   <p>
     <%= f.submit 'Submit' %>
   </p>

@@ -32,18 +32,38 @@
 
 <div class="row">
   <div class="column grid_2"><b>BS accrual account:</b></div>
-  <div class="column grid_6"><%=h @invoice.balance_sheet_accrual_account %> </div>
+  <div class="column grid_6"><%=h @invoice.balance_sheet_account %> </div>
 </div>
 
 <div class="row">
   <div class="column grid_2"><b>P&L accrual account:</b></div>
-  <div class="column grid_6"><!--%=h @invoice.profit_and_loss_accrual_account %--> </div>
+  <div class="column grid_6"><%=h @invoice.profit_and_loss_account %> </div>
 </div>
 
 <p>
   <b>Type:</b>
   <%=h @invoice.type_name %>
 </p>
+
+<div class="row">
+  <div class="column grid_2"><b>Comment:</b></div>
+  <div class="column grid_6"><%=h @invoice.comment %> </div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>Reference:</b></div>
+  <div class="column grid_6"><%=h @invoice.reference %> </div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>Cost Center 1:</b></div>
+  <div class="column grid_6"><%=h @invoice.cost_center_1 %> </div>
+</div>
+
+<div class="row">
+  <div class="column grid_2"><b>Cost Center 2:</b></div>
+  <div class="column grid_6"><%=h @invoice.cost_center_2 %> </div>
+</div>
 
 <p>
   <b>User:</b>
