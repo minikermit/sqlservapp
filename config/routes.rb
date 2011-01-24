@@ -13,18 +13,11 @@ Sqlservapp::Application.routes.draw do
   match 'list', :to => 'cars#list', :as => "list"
   match 'sp', :to => 'cars#sp', :as => "sp"
 
-
-
-
-
-   #  Authentication and roles
-  # resources :users, :user_sessions
-  resources :users
-  resources :user_sessions
+  #  Authentication and roles
+  resources :users, :user_sessions
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
-  resource :account, :controller => "users"
   root :controller => "user_sessions", :action => "new"
   resources :roles
 
@@ -142,5 +135,5 @@ Sqlservapp::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  match ':controller(/:action(/:id(.:format)))'
 end

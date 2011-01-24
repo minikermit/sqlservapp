@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
 
  attr_accessible :name, :shortname, :email, :login, :password, :password_confirmation 
 
- acts_as_authentic do |config|
+ acts_as_authentic  do |config|
   # Add custom configuration options here.
   config.logged_in_timeout = 120.minutes
   config.crypto_provider = Authlogic::CryptoProviders::MD5

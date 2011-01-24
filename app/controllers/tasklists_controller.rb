@@ -44,14 +44,18 @@ class TasklistsController < ApplicationController
     @users = User.find(:all)
     @projects = Project.find(:all)
     @tasklist = Tasklist.new(params[:tasklist])
-    if @tasklist.save
-      flash[:notice] = "Successfully created task."
-      redirect_to @tasklist
-    else
-      render :action => 'new'
+
+    respond_to do |format|
+      if @tasklist.save
+        format.html { redirect_to(@tasklist, :notice => 'Successfully created task.') }
+        format.xml  { render :xml => @tasklist, :status => :created, :location => @tasklist }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @tasklist.errors, :status => :unprocessable_entity }
+      end
     end
   end
-  
+
   def edit
     @users = User.find(:all)
     @tasklist = Tasklist.find(params[:id])
