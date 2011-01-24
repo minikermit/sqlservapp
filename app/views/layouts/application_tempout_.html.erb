@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+    <!--
+    Created by Artisteer v2.5.0.31067
+    Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title><%= yield(:title) || "Finance application" %></title>
+    <%= stylesheet_link_tag 'jquery-ui.css', 'pagination.css' %>
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="/stylesheets/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="/stylesheets/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="/stylesheets/application.css" type="text/css" media="screen" />
+
+    <%= yield(:head) %>
+
+    <!-- This is the javascript part -->
+    <%= javascript_include_tag "jquery.1.4.4.min.js", "jquery-ui.min.js", "autocomplete-rails.js", "jquery.rails.js", "application.js", "script.js"  %>
+    <%= csrf_meta_tag %>
+</head>
+<body>
+    <div id="art-page-background-gradient"></div>
+    <div id="art-main">
+        <div class="art-sheet">
+            <div class="art-sheet-tl"></div>
+            <div class="art-sheet-tr"></div>
+            <div class="art-sheet-bl"></div>
+            <div class="art-sheet-br"></div>
+            <div class="art-sheet-tc"></div>
+            <div class="art-sheet-bc"></div>
+            <div class="art-sheet-cl"></div>
+            <div class="art-sheet-cr"></div>
+            <div class="art-sheet-cc"></div>
+            <div class="art-sheet-body">
+                <%= render :partial => 'shared/navigation' %>
+                <div class="art-header">
+                    <div class="art-header-jpeg"></div>
+                    <div class="art-logo">
+                        <h1 id="name-text" class="art-logo-name"><a href="#">Finance</a></h1>
+                        <div id="slogan-text" class="art-logo-text">Hapoalim Switzerland</div>
+                    </div>
+                </div>
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content">
+                            <div class="art-post">
+                                <div class="art-post-body">
+                            <div class="art-post-inner art-article">
+
+                            </div>
+                            
+                            		<div class="cleared"></div>
+                                </div>
+                            </div>
+                            <div class="art-post">
+                                <div class="art-post-body">
+                            <div class="art-post-inner art-article">
+                                            <h2 class="art-postheader">
+                                                <img src="images/postheadericon.png" width="26" height="26" alt="postheadericon" />
+                                                <%= yield(:title) if show_title? %>
+                                            </h2>
+                                            <div class="art-postcontent">
+                                                <!-- article-content -->
+
+                                                      <div id="container">
+                                                        <% flash.each do |name, msg| %>
+                                                        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                                                        <% end %>
+                                                        <%= yield %>
+                                                      </div>
+
+                                                    <blockquote>
+                                                        <p>
+                                                            &#8220;This stylesheet is going to help so freaking much.&#8221;
+                                                            <br />
+                                                            -Blockquote
+                                                        </p>
+                                                    </blockquote>
+                                                  <br />
+                                                    
+                                                <!-- /article-content -->
+                                            </div>
+                                            <div class="cleared"></div>
+                            </div>
+                            
+                            		<div class="cleared"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="art-layout-cell art-sidebar1">
+                            <div class="art-vmenublock">
+                                <div class="art-vmenublock-tl"></div>
+                                <div class="art-vmenublock-tr"></div>
+                                <div class="art-vmenublock-bl"></div>
+                                <div class="art-vmenublock-br"></div>
+                                <div class="art-vmenublock-tc"></div>
+                                <div class="art-vmenublock-bc"></div>
+                                <div class="art-vmenublock-cl"></div>
+                                <div class="art-vmenublock-cr"></div>
+                                <div class="art-vmenublock-cc"></div>
+                                <div class="art-vmenublock-body">
+                                            <div class="art-vmenublockheader">
+                                                 <div class="t">Navigation</div>
+                                            </div>
+                                            <div class="art-vmenublockcontent">
+                                                <div class="art-vmenublockcontent-body">
+                                            <!-- block-content -->
+                                                            <ul class="art-vmenu">
+                                                            	<li>
+                                                            		<a href="page.html?i1"><span class="l"></span><span class="r"></span><span class="t">Home</span></a>
+                                                            	</li>
+                                                            	<li>
+                                                            		<a href="page.html?i2"><span class="l"></span><span class="r"></span><span class="t">News</span></a>
+                                                            				<ul>
+                                                            			<li><a href="page.html?">Top 10</a></li>
+                                                            		</ul>
+                                                            	</li>
+                                                            	<li class="active">
+                                                            		<a class="active" href="page.html?i3"><span class="l"></span><span class="r"></span><span class="t">Menu Item</span></a>
+                                                            		<ul class="active">
+                                                            			<li><a href="page.html?i3s1">Subitem 1</a></li>
+                                                            			<li><a href="page.html" class="active">Subitem 2</a></li>
+                                                            			<li><a href="page.html?i3s3">Subitem 3</a></li>
+                                                            		</ul>
+                                                            	</li>
+                                                            	<li>
+                                                            		<a href="page.html?i4"><span class="l"></span><span class="r"></span><span class="t">Video</span></a>
+                                                            	</li>
+                                                            	<li>
+                                                            		<a href="page.html?i5"><span class="l"></span><span class="r"></span><span class="t">Archive</span></a>
+                                                            		<ul>
+                                                            			<li><a href="page.html?i5s1">2008</a>
+                                                            				<ul>
+                                                            					<li><a href="page.html?i5s1s1">January</a></li>
+                                                            					<li><a href="page.html?i5s1s2">February</a></li>
+                                                            					<li><a href="page.html?i5s1s3">March</a></li>
+                                                            				</ul>
+                                                            			</li>
+                                                            			<li><a href="page.html?i5s2">2007</a>
+                                                            				<ul>
+                                                            					<li><a href="page.html?i5s2s1">January</a></li>
+                                                            					<li><a href="page.html?i5s2s2">February</a></li>
+                                                            					<li><a href="page.html?i5s2s3">March</a></li>
+                                                            				</ul>
+                                                            			</li>
+                                                            			<li><a href="page.html?i5s3">2006</a>
+                                                            				<ul>
+                                                            					<li><a href="page.html?i5s3s1">January</a></li>
+                                                            					<li><a href="page.html?i5s3s2">February</a></li>
+                                                            					<li><a href="page.html?i5s3s3">March</a></li>
+                                                            				</ul>
+                                                            			</li>
+                                                            		</ul>
+                                                            	</li>
+                                                            	<li>
+                                                            		<a href="page.html?i6"><span class="l"></span><span class="r"></span><span class="t">Forum</span></a>
+                                                            	</li>
+                                                            	<li>
+                                                            		<a href="page.html?i7"><span class="l"></span><span class="r"></span><span class="t">About</span></a>
+                                                            	</li>
+                                                            	<li>
+                                                            		<a href="page.html?i8"><span class="l"></span><span class="r"></span><span class="t">Contact</span></a>
+                                                            	</li>
+                                                            </ul>
+                                            <!-- /block-content -->
+                                            
+                                            		<div class="cleared"></div>
+                                                </div>
+                                            </div>
+                            		<div class="cleared"></div>
+                                </div>
+                            </div>
+                            <%= render :partial => 'shared/newsletter' %>
+                            <%= render :partial => 'shared/highlights' %>
+                            <%= render :partial => 'shared/infos' %>
+                        </div>
+                    </div>
+                </div>
+                <div class="cleared"></div><div class="art-footer">
+                    <div class="art-footer-t"></div>
+                    <div class="art-footer-l"></div>
+                    <div class="art-footer-b"></div>
+                    <div class="art-footer-r"></div>
+                    <div class="art-footer-body">
+                         <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+                        <div class="art-footer-text">
+                            <p><a href="#">Contact Us</a> | <a href="#">Terms of Use</a> | <a href="#">Trademarks</a>
+                                | <a href="#">Privacy Statement</a><br />
+                                Copyright &copy; 2010 ---. All Rights Reserved.</p>
+                        </div>
+                		<div class="cleared"></div>
+                    </div>
+                </div>
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <p class="art-page-footer">Designed by Vincent Jacquel.</p>
+    </div>
+    
+</body>
+</html>

@@ -1,6 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html>
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
     <%= stylesheet_link_tag 'application', :media => "screen", :cache =>  true %>
@@ -14,9 +12,11 @@
 
     <!-- This is the javascript part -->
 
-    <%= javascript_include_tag "jquery.min",:cache => true %>
+    <%= javascript_include_tag "jquery.1.4.4.min",:cache => true %>
     <%= javascript_include_tag "jquery-ui.min",:cache => true %>
+    <%= javascript_include_tag "rails",:cache => true %>
     <%= javascript_include_tag  "application", :cache => true %>
+    <%= csrf_meta_tag %>
     <!-- End of javascript part -->
 
 

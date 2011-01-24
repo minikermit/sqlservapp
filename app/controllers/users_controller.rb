@@ -35,11 +35,9 @@ class UsersController < ApplicationController
         respond_to do |format|
           format.html # show.html.erb
           format.xml { render :xml => @user }
+        end
     end
   end
-    # @user = current_user
-    # @roles = current_user.roles.find(:all)
-  #end
 
 
   def edit
@@ -64,7 +62,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(users_url) }
       format.xml  { head :ok }
-      end
     end
   end
 
