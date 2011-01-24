@@ -23,7 +23,7 @@ jQuery(document).ready(function() {
 });
 
 
-// Jquery : Toggle DIV called "toggleSection"
+// Jquery : Toggle DIV called "toggleSection" -- Default is hidden
 $(document).ready(function() {
       $("#toggleSection").hide()
       $('#toggleButton').click(function() {

@@ -18,6 +18,7 @@ gem 'rails3-jquery-autocomplete' # rails g autocomplete
 
 
 gem "authlogic", :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+gem "declarative_authorization", :git => "git://github.com/stffn/declarative_authorization.git"
 # gem 'rd_searchlogic'
 
 # Use unicorn as the web server

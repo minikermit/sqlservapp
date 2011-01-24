@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101121151354) do
+ActiveRecord::Schema.define(:version => 20110122123456) do
 
   create_table "B2TA_ClosingRates", :force => true do |t|
     t.string   "Group_id",        :limit => 50
@@ -4197,23 +4197,27 @@ ActiveRecord::Schema.define(:version => 20101121151354) do
   end
 
   create_table "invoices", :force => true do |t|
-    t.integer  "identification",                                                 :null => false
-    t.string   "counterparty",                                                   :null => false
-    t.string   "account",                                                        :null => false
-    t.string   "name",                                                           :null => false
-    t.date     "booked_on",                                                      :null => false
-    t.date     "period_from",                                                    :null => false
-    t.date     "period_to",                                                      :null => false
-    t.integer  "validity_in_months",                                             :null => false
-    t.string   "currency",                                                       :null => false
-    t.decimal  "amount",                          :precision => 18, :scale => 0, :null => false
-    t.string   "balance_sheet_accrual_account",                                  :null => false
-    t.string   "profit_and_loss_accrual_account",                                :null => false
-    t.integer  "type_id",                                                        :null => false
-    t.integer  "user_id",                                                        :null => false
-    t.integer  "updated_by",                                                     :null => false
-    t.datetime "created_at",                                                     :null => false
-    t.datetime "updated_at",                                                     :null => false
+    t.integer  "identification",                                                       :null => false
+    t.string   "counterparty",                                                         :null => false
+    t.string   "account",                                                              :null => false
+    t.string   "name",                                                                 :null => false
+    t.date     "booked_on",                                                            :null => false
+    t.date     "period_from",                                                          :null => false
+    t.date     "period_to",                                                            :null => false
+    t.integer  "validity_in_months",                                                   :null => false
+    t.string   "currency",                                                             :null => false
+    t.decimal  "amount",                                :precision => 18, :scale => 0, :null => false
+    t.string   "balance_sheet_account",                                                :null => false
+    t.string   "profit_and_loss_account",                                              :null => false
+    t.integer  "type_id",                                                              :null => false
+    t.integer  "user_id",                                                              :null => false
+    t.integer  "updated_by",                                                           :null => false
+    t.datetime "created_at",                                                           :null => false
+    t.datetime "updated_at",                                                           :null => false
+    t.text     "comment"
+    t.string   "reference",               :limit => 50
+    t.string   "cost_center_1",           :limit => 50
+    t.string   "cost_center_2",           :limit => 50
   end
 
   add_index "invoices", ["type_id"], :name => "index_invoices_on_type_id"
@@ -4346,14 +4350,18 @@ ActiveRecord::Schema.define(:version => 20101121151354) do
     t.string   "persistence_token",   :null => false
     t.string   "single_access_token", :null => false
     t.string   "perishable_token",    :null => false
-    t.integer  "login_count",         :null => false
-    t.integer  "failed_login_count",  :null => false
+    t.integer  "login_count"
+    t.integer  "failed_login_count"
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["login"], :name => "index_users_on_login", :unique => true
+  add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token", :unique => true
 
   create_table "validationrules", :force => true do |t|
     t.string   "rule_identification", :limit => 20,   :null => false

@@ -27,7 +27,7 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="authlogic" version="0" bound="GREATER_OR_EQUAL" git="true" path="false" ref="rails3" doRequire="true" />
+        <dependency name="authlogic" version="0" bound="GREATER_OR_EQUAL" git="true" path="false" ref="a087ad0cba3c" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -70,6 +70,12 @@
     <requirement>
       <requirement>
         <dependency name="database_cleaner" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="declarative_authorization" version="0" bound="GREATER_OR_EQUAL" git="true" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
