@@ -1,9 +1,7 @@
 class UsersController < ApplicationController
   
-  before_filter :require_no_user, :only => [:new, :create]
+  before_filter :require_no_user, :only => [:new, :create, :destroy]
   before_filter :require_user, :only => [:show, :edit, :update]
-
-  filter_resource_access
 
   def new
     @user = User.new
@@ -57,9 +55,16 @@ class UsersController < ApplicationController
     end
   end 
 
+  # DELETE /users/1
+  # DELETE /users/1.xml
   def destroy
-    current_user_session.destroy
-    redirect_to new_user_session_path
+    @user = User.find(params[:id])
+    @user.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(users_url) }
+      format.xml  { head :ok }
+      end
     end
   end
 
