@@ -38,10 +38,10 @@ class Tasklist < ActiveRecord::Base
   scope :basel2,    :conditions => "tasklists.project.name = 'Basel II' "
   scope :unassigned,    :conditions => "assigned_to is null"
   
-  validates_presence_of :name, :scope, :due_date, :project_id, :assigned_to
+  validates_presence_of :name, :scope, :project_id, :assigned_to #:due_date
   validates_uniqueness_of :name
 
-  # default_value_for :user_id, User.current
+  default_value_for :user_id, User.current
 
 
   # creates hash for nice names in view

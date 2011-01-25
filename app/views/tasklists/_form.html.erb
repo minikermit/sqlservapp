@@ -22,6 +22,8 @@
   <p>
     <%= f.label :assigned_to %><br />
     <%= f.text_field :assigned_to %><br />
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %><br />
 
     <!--%= collection_select(:assigned_to, User.all, :id, :shortname, {:prompt => true}) %-->
   </p>

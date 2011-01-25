@@ -8,7 +8,7 @@ gem 'rails', '3.0.1'
 gem 'mysql2'
 gem 'ruby-odbc'
 gem 'activerecord-sqlserver-adapter'
-gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'sqlite3', :require => 'sqlite3'
 
 
 gem "meta_search"  #  <%= f.sort_link :title %>
