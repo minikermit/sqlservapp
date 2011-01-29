@@ -1,8 +1,11 @@
-<h1>Login</h1>
+
 
     <%= form_for @user_session, :as => :user_session, :url => { :action => "create" } do |f| %>
     <!--%= form_for @user_session, :url => user_sessions_path do |f| %-->
-      <%= f.error_messages %>
+      <%= f.error_messages %> <br />
+
+      <%= image_tag("login/login.gif" , :height => '128', :width => '128')  %><br />
+
       <%= f.label :login %><br />
       <%= f.text_field :login %><br />
       <!--%= text_field_tag 'login', :login, default_text("Enter your username")%><br /-->
@@ -14,3 +17,5 @@
       <br />
       <%= f.submit "Login" %>
     <% end %>
+
+    

@@ -22,32 +22,10 @@
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
 
-        <ul id="navigation" class="navigation">
-            <li class="home"><a href="/tasklists?search[order]=ascend_by_due_date&search[recent]=1&commit=Search" title="Recent tasks"></a></li>
-            <li class="about"><a href="/tasklists?search[order]=ascend_by_due_date&search[mytasks]=1&commit=Search" title="Assigned to me"></a></li>
-            <li class="search"><a href="/tasklists??search[order]=ascend_by_due_date&search[mycreatedtasks]=1&commit=Search" title="Assigned by me"></a></li>
-            <li class="photos"><a href="/tasklists?search[order]=ascend_by_due_date&search[name_like]=&search[scope_like]=&search[priority_equals]=&search[status_equals]=Done&search[genre_like]=&commit=Search" title="Closed tasks"></a></li>
-            <li class="rssfeed"><a href="/tasklists?search[order]=ascend_by_due_date&search[name_like]=&search[scope_like]=&search[priority_equals]=&search[status_does_not_equal]=Done&search[genre_like]=&commit=Search" title="Open tasks"></a></li>
-            <li class="podcasts"><a href="/tasklists?search[order]=ascend_by_due_date&search[unassigned]=1&commit=Search" title="Unassigned tasks"></a></li>
-            <li class="contact"><a href="/tasklists?search[order]=ascend_by_due_date&search[overdue]=1&commit=Search" title="Overdue tasks"></a></li>
-        </ul>
-
-
-
       <%= yield %>
     </div>
 
 
-    <!-- This is the javascript part -->
-    <%= javascript_include_tag "jquery.min.js",:cache => true %>
-    <%= javascript_include_tag "jquery-ui.min.js",:cache => true %>
-    <%= javascript_include_tag "jquery.rails.js",:cache => true %>
-    <%= javascript_include_tag  "application", :cache => true %>
-    <%= javascript_include_tag  "actions", :cache => true %>
-    <%= javascript_include_tag  "flexselect/liquidmetal", :cache => true %>
-    <%= javascript_include_tag  "flexselect/jquery.flexselect", :cache => true %>
-    <%= csrf_meta_tag %>
-    <!-- End of javascript part -->
 
   </body>
 </html>

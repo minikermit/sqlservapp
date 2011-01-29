@@ -1,7 +1,9 @@
 <%= link_to image_tag 'icons/folder_magnify.png', :id => "toggleButton" %>
 
 <div id="toggleSection">
- <div id="selection">
+ <fieldset>
+  <legend>Search form</legend>
+  <div id="selection">
   <% form_for @search do |f| %>
 
     <h2>Choose your search criteria</h2>
@@ -23,6 +25,7 @@
   <%= f.submit "Search" %>
   <% end %>
    </div>
+ </fieldset>
 </div>
 
 

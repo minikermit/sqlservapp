@@ -93,3 +93,62 @@ float:right;
   background-color: #c00;
   color: #fff;
 }
+
+form#selection {
+ background: #9cbc2c;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ border-radius: 5px;
+ padding: 20px;
+ width: 400px;
+ }
+
+
+form#selection fieldset {
+ border: none;
+ margin-bottom: 10px;
+ }
+ form#selection fieldset:last-of-type {
+ margin-bottom: 0;
+ }
+
+ form#selection legend {
+ color: #384313;
+ font-size: 16px;
+ font-weight: bold;
+ padding-bottom: 10px;
+ text-shadow: 0 1px 1px #c0d576;
+ }
+
+ form#selection > fieldset > legend:before {
+ content: "Step " counter(fieldsets) ": ";
+ counter-increment: fieldsets;
+ }
+
+ form#selection fieldset fieldset legend {
+ color: #111111;
+ font-size: 13px;
+ font-weight: normal;
+ padding-bottom: 0;
+ }
+
+ form#selection ol li {
+ background: #b9cf6a;
+ background: rgba(255,255,255,.3);
+ border-color: #e3ebc3;
+ border-color: rgba(255,255,255,.6);
+ border-style: solid;
+ border-width: 2px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    }
+    form#selection ol ol li {
+    background: none;
+    border: none;
+    float: left;
+    }

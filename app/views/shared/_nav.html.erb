@@ -1,7 +1,6 @@
     <div id="nav" class = "nav">
         <% if current_user %>
-        Welcome 
-        <%= current_user.name %>
+        Welcome <%= current_user.name %>  <br />
         <%= link_to "Edit Profile", edit_user_path(current_user.id)%>
         <%= link_to "Logout", :logout%>
         <% else %>

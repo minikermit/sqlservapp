@@ -1,4 +1,6 @@
-<div id="selectnews">
+<%= link_to image_tag 'icons/folder_magnify.png', :id => "toggleButton" %>
+
+<div id="toggleSection">
  <div id="selection">
   <% form_for @search do |f| %>
 
@@ -48,9 +50,7 @@
   <%= f.submit "Search" %>
   <% end %>
    </div>
-</div><!--/#selectnews-->
-
-<p id="getform"><a href="#selection">Search</a></p>
+</div>
 
 <div id = "tasklist">
 
@@ -136,3 +136,16 @@
 <!--%= link_to 'Create PDF document', tasklists_path(:format => :pdf) %--></p>
 
 </div><!--/#tasklist-->
+
+
+    <!-- This is the javascript part -->
+
+    <%= javascript_include_tag "jquery.1.4.4.min",:cache => true %>
+    <%= javascript_include_tag "jquery-ui.min",:cache => true %>
+    <%= javascript_include_tag "rails",:cache => true %>
+    <%= javascript_include_tag  "application", :cache => true %>
+    <!--%= javascript_include_tag  "actions", :cache => true %-->
+    <!--%= javascript_include_tag  "flexselect/liquidmetal", :cache => true %-->
+    <!--%= javascript_include_tag  "flexselect/jquery.flexselect", :cache => true %-->
+    <%= csrf_meta_tag %>
+    <!-- End of javascript part -->
