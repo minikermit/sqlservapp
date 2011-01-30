@@ -37,6 +37,7 @@ class UserSessionsController < ApplicationController
     current_user_session.destroy
 
     flash[:notice] = "Logout successful!"
+    logger.info "The user logged out successfuly ! -- to remove after tests"
 
     redirect_to new_user_session_url
 

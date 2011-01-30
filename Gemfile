@@ -10,6 +10,8 @@ gem 'ruby-odbc'
 gem 'activerecord-sqlserver-adapter'
 gem 'sqlite3', :require => 'sqlite3'
 
+gem 'haml'
+gem 'sass'
 
 gem "meta_search"  #  <%= f.sort_link :title %>
 gem 'will_paginate', '3.0.pre2'

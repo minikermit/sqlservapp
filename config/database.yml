@@ -15,6 +15,15 @@ development:
   password: testsql
   host: UMPC
 
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: finance_test
+  pool: 5
+  username: root
+  password: mysuperpasswordishidden
+  socket: /var/run/mysqld/mysqld.sock
 
 cucumber:
   <<: *test
