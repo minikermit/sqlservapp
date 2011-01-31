@@ -1,80 +1,102 @@
 <% title "Invoice details" %>
 
-<div class="row">
-  <div class="column grid_2"><b>Identification & Name:</b></div>
-  <div class="column grid_6"><%=h @invoice.identification %> - <%=h @invoice.name %></div>
-</div>
+<fieldset>
+    <legend>Main information</legend>
+        <div class="row">
+            <div class="column grid_2"><b>Identification & Name:</b></div>
+            <div class="column grid_6"><%=h @invoice.identification %> - <%=h @invoice.name %></div>
+        </div>
 
-<div class="row">
-  <div class="column grid_2"><b>Counterparty/Account:</b></div>
-  <div class="column grid_6"><%=h @invoice.counterparty %>/<%=h @invoice.account %></div>
-</div>
+        <div class="row">
+            <div class="column grid_2"><b>Counterparty/Account:</b></div>
+            <div class="column grid_6"><%=h @invoice.counterparty %>/<%=h @invoice.account %></div>
+        </div>
 
-<div class="row">
-  <div class="column grid_2"><b>Amount:</b></div>
-  <div class="column grid_6"><%=h @invoice.currency %> <%=h @invoice.amount %></div>
-</div>
+        <div class="row">
+            <div class="column grid_2"><b>Amount:</b></div>
+            <div class="column grid_6"><%=h @invoice.currency %> <%=h @invoice.amount %></div>
+        </div>
 
-<div class="row">
-  <div class="column grid_2"><b>Booked on:</b></div>
-  <div class="column grid_6"><%=h @invoice.booked_on %></div>
-</div>
+        <div class="row">
+            <div class="column grid_2"><b>Booked on:</b></div>
+            <div class="column grid_6"><%=h @invoice.booked_on %></div>
+        </div>
+</fieldset>
 
-<div class="row">
-  <div class="column grid_2"><b>Period from/to:</b></div>
-  <div class="column grid_6"><%=h @invoice.period_from %> to <%=h @invoice.period_to %></div>
-</div>
+<fieldset>
+    <legend>Validity</legend>
+        <div class="row">
+            <div class="column grid_2"><b>Period from/to:</b></div>
+            <div class="column grid_6"><%=h @invoice.period_from %> to <%=h @invoice.period_to %></div>
+        </div>
 
-<div class="row">
-  <div class="column grid_2"><b>Validity in months:</b></div>
-  <div class="column grid_6"><%=h @invoice.validity_in_months %></div>
-</div>
+        <div class="row">
+            <div class="column grid_2"><b>Validity in months:</b></div>
+            <div class="column grid_6"><%=h @invoice.validity_in_months %></div>
+        </div>
+</fieldset>
 
-<div class="row">
-  <div class="column grid_2"><b>BS accrual account:</b></div>
-  <div class="column grid_6"><%=h @invoice.balance_sheet_account %> </div>
-</div>
+<fieldset>
+    <legend>Booking information</legend>
 
-<div class="row">
-  <div class="column grid_2"><b>P&L accrual account:</b></div>
-  <div class="column grid_6"><%=h @invoice.profit_and_loss_account %> </div>
-</div>
+        <p>
+        <b>Type:</b>
+        <%=h @invoice.type_name %>
+        </p>
 
-<p>
-  <b>Type:</b>
-  <%=h @invoice.type_name %>
-</p>
+        <div class="row">
+            <div class="column grid_2"><b>BS accrual account:</b></div>
+            <div class="column grid_6"><%=h @invoice.balance_sheet_account %> </div>
+        </div>
 
-<div class="row">
-  <div class="column grid_2"><b>Comment:</b></div>
-  <div class="column grid_6"><%=h @invoice.comment %> </div>
-</div>
+        <div class="row">
+            <div class="column grid_2"><b>P&L accrual account:</b></div>
+            <div class="column grid_6"><%=h @invoice.profit_and_loss_account %> </div>
+        </div>
+</fieldset>
 
-<div class="row">
-  <div class="column grid_2"><b>Reference:</b></div>
-  <div class="column grid_6"><%=h @invoice.reference %> </div>
-</div>
+<fieldset>
+  <legend>Reference and cost centers</legend>
 
-<div class="row">
-  <div class="column grid_2"><b>Cost Center 1:</b></div>
-  <div class="column grid_6"><%=h @invoice.cost_center_1 %> </div>
-</div>
+        <div class="row">
+            <div class="column grid_2"><b>Comment:</b></div>
+            <div class="column grid_6"><%=h @invoice.comment %> </div>
+        </div>
 
-<div class="row">
-  <div class="column grid_2"><b>Cost Center 2:</b></div>
-  <div class="column grid_6"><%=h @invoice.cost_center_2 %> </div>
-</div>
+        <div class="row">
+            <div class="column grid_2"><b>Reference:</b></div>
+            <div class="column grid_6"><%=h @invoice.reference %> </div>
+        </div>
 
-<p>
-  <b>User:</b>
-  <!--%=h @invoice.user.name %-->
-</p>
+        <div class="row">
+            <div class="column grid_2"><b>Cost Center 1:</b></div>
+            <div class="column grid_6"><%=h @invoice.cost_center_1 %> </div>
+        </div>
 
-<p>
-  <b>Updated by:</b>
-  <%=h @invoice.updated_by %>
-</p>
+        <div class="row">
+            <div class="column grid_2"><b>Cost Center 2:</b></div>
+            <div class="column grid_6"><%=h @invoice.cost_center_2 %> </div>
+        </div>
+</fieldset>
 
+
+
+<fieldset>
+  <legend>Audit fields</legend>
+    <p>
+        <b>Created :</b>
+        <%= distance_of_time_in_words_to_now(@invoice.created_at)  %> ago
+    <b>Updated :</b>
+        <%= distance_of_time_in_words_to_now(@invoice.updated_at)  %> ago
+    <b>Updated by:</b>
+        <%=h @invoice.updated_by %>
+    </p>
+
+    <p>
+        <b>User:</b>
+        <!--%=h @invoice.user.name %-->
+    </p>
+</fieldset>
 
 <%= link_to 'Edit', edit_invoice_path(@invoice) %> |
 <%= link_to 'Back', invoices_path %>
