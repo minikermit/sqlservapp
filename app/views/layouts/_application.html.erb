@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'application', :media => "screen", :cache =>  true %>
+    <!-- Blueprint CSS Start color: green-->
+    <%= stylesheet_link_tag 'blueprint/screen', :media => "screen,projection"  %>
+    <!--[if IE 6]><link rel="stylesheet" href="/stylesheets/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="/stylesheets/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+    <%= stylesheet_link_tag 'blueprint/print', :media => "print"  %>
+    <!-- Blueprint CSS End -->
+    <%= yield(:head) %>
+
+    <!-- This is the javascript part -->
+
+    <%= javascript_include_tag "jquery.1.4.4.min",:cache => true %>
+    <%= javascript_include_tag "jquery-ui.min",:cache => true %>
+    <%= javascript_include_tag "rails",:cache => true %>
+    <%= javascript_include_tag  "application", :cache => true %>
+    <%= csrf_meta_tag %>
+    <!-- End of javascript part -->
+
+
+  </head>
+  <body>
+
+    <%= render :partial => '/shared/nav' %>
+
+
+    <div id="container">
+
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+
+      <%= yield %>
+    </div>
+
+
+
+  </body>
+</html>
