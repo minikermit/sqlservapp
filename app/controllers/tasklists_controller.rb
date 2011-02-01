@@ -1,7 +1,11 @@
 class TasklistsController < ApplicationController
 
   # before_filter :require_user, :only => [:edit, :update]
-  # before_filter :set_current_user
+  before_filter :set_current_user
+
+  respond_to :html, :xml, :json
+
+  layout :choose_layout
 
   def index
     @search = Tasklist.search(params[:search])
@@ -32,6 +36,9 @@ class TasklistsController < ApplicationController
   
   def show
     @tasklist = Tasklist.find(params[:id])
+    @comment = @tasklist.comments.build
+    respond_with(@comment)
+
   end
   
   def new
@@ -80,4 +87,15 @@ class TasklistsController < ApplicationController
     flash[:notice] = "Successfully destroyed task."
     redirect_to tasklists_url
   end
+
+  private
+
+  def choose_layout
+    if [ 'new', 'edit' ].include? action_name
+      'accruals'
+    else
+      'accruals'
+    end
+  end
+
 end

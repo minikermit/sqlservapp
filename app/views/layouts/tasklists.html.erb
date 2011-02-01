@@ -4,18 +4,17 @@
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
     <%= stylesheet_link_tag 'application', :media => "screen", :cache =>  true %>
-    <%= stylesheet_link_tag "jquery-ui.css", :media => "screen", :cache =>  true  %>
-    <%= stylesheet_link_tag 'flexselect', :media => "screen", :cache =>  true %>
     <!-- Blueprint CSS Start color: green-->
-    <!--%= stylesheet_link_tag 'blueprint/screen', :media => "screen,projection"  %-->
+    <%= stylesheet_link_tag 'blueprint/screen', :media => "screen,projection"  %>
+    <!--[if IE 6]><link rel="stylesheet" href="/stylesheets/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="/stylesheets/style.ie7.css" type="text/css" media="screen" /><![endif]-->
     <%= stylesheet_link_tag 'blueprint/print', :media => "print"  %>
     <!-- Blueprint CSS End -->
     <%= yield(:head) %>
-  </head>
   <body>
     <div id="container">
 
-      <!--%= render :partial => 'user_nav' %-->
+      <%= render :partial => '/shared/nav' %>
 
 
       <%- flash.each do |name, msg| -%>

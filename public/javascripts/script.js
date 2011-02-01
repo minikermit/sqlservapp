@@ -177,7 +177,7 @@ function artFixPNG(element) {
 		if (element.tagName == 'IMG') {
 			if (/\.png$/.test(element.src)) {
 				src = element.src;
-				element.src = artGetStyleUrl() + '/images/spacer.gif';
+				element.src = artGetStyleUrl() + 'images/spacer.gif';
 			}
 		}
 		else {

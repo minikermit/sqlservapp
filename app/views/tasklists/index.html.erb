@@ -2,6 +2,9 @@
 
 <div id="toggleSection">
  <div id="selection">
+  <fieldset>
+    <legend>Search form</legend>
+
   <% form_for @search do |f| %>
 
     <h2>Choose your search criteria</h2>
@@ -10,7 +13,7 @@
             We're also adding the RSS feed url to the checkbox value so we can save it in the array values
         -->
   <ul>
-    <li> <%= f.label :priority_equals, "Priority " %>  <%= f.label :status_equals," &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Status " %> <%= f.label :project_id_equals," &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project " %></li>
+    <li> <%= f.label :priority_equals, "Priority     -" %>  <%= f.label :status_equals," Status     - " %> <%= f.label :project_id_equals," Project " %></li>
     <li> <!--%= f.select :priority_equals, (["","Low","Medium","High","Urgent"]) %-->
          <%= f.collection_select :priority_equals, Tasklist.priority_name_options, :first, :last, {:include_blank => 'All'},{:selected => 'All'}  %>
          <!--%= f.select :status_equals, (["","To start","In progress","Done","Discarded","Reopened","To review"]), :class=> 'flexselect' %-->
@@ -29,26 +32,14 @@
     </li>
     <li> <%= f.label :user_id_equals, "Assigned to user" %> </li>
     <li> <%= f.text_field :user_id_equals, :class => 'text' %></li>
-    <li> <!--%= f.label :unassigned, "Not assigned to anyone" %--> </li>
-    <li> <!--%= f.check_box :unassigned %--></li>
-    <li>    <select class="flexselect">
-                 <option value="1">George Washington</option>
-                 <option value="2">John Adams</option>
-                  <option value="3">Thomas Jefferson</option>
-                  <option value="3">Vincent Jacquel</option>
-                  <option value="3">Arthur Reipold</option>
-                  <option value="3">Rafael Ruiz</option>
-                  <option value="3">Pascal Juillerat</option>
-                  <option value="3">Sylvain Lonni</option>
-                  <option value="3">Denise Stephanus</option>
-
-            </select>
-    </li>
+    <!--%= f.label :unassigned, "Not assigned to anyone" %-->
+    <!--%= f.check_box :unassigned %-->
   </ul>
 
   <!-- Setting the submit name to "btn" -->
   <%= f.submit "Search" %>
   <% end %>
+   </fieldset>
    </div>
 </div>
 
@@ -138,14 +129,3 @@
 </div><!--/#tasklist-->
 
 
-    <!-- This is the javascript part -->
-
-    <%= javascript_include_tag "jquery.1.4.4.min",:cache => true %>
-    <%= javascript_include_tag "jquery-ui.min",:cache => true %>
-    <%= javascript_include_tag "rails",:cache => true %>
-    <%= javascript_include_tag  "application", :cache => true %>
-    <!--%= javascript_include_tag  "actions", :cache => true %-->
-    <!--%= javascript_include_tag  "flexselect/liquidmetal", :cache => true %-->
-    <!--%= javascript_include_tag  "flexselect/jquery.flexselect", :cache => true %-->
-    <%= csrf_meta_tag %>
-    <!-- End of javascript part -->

@@ -54,7 +54,7 @@
            <li>
 				<ul class="meta">
 					<li class="image"><img src="http://www.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=48" alt="Author's name" /></li>
-					<li class="date">posted on <%=h comment.created_at.strftime("%e %B, %Y") %></li>
+					<li class="date">posted on <%= comment.created_at  %> </li>
 
 				</ul>
 				<div class="body"> <%= comment.body %> </div>
