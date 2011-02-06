@@ -18,7 +18,8 @@ gem 'will_paginate', '3.0.pre2'
 gem 'jquery-rails'
 gem 'rails3-jquery-autocomplete' # rails g autocomplete
 
-
+gem 'acts_as_list'
+gem 'acts_as_tree'
 
 gem "authlogic", :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem "declarative_authorization", :git => "git://github.com/stffn/declarative_authorization.git"
@@ -38,6 +39,7 @@ gem 'capistrano'
 # Bundle the extra gems:
 # gem 'bj'
 gem 'nokogiri'
+gem 'paperclip'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to

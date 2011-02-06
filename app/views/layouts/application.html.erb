@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-     <title><%= (yield(:title) || "Finance Application") %></title>
+     <title><%= yield(:title) || "Finance Application" %></title>
 
     <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" />
 
@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" href="/stylesheets/breadcrumb.css" type="text/css" media="screen" />
 
-    <script type="text/javascript" src="/javascripts/script.js"></script>
 </head>
 
 <body>
@@ -41,36 +40,10 @@
                     </div>
                 </div>
 
-                <!--%= yield(:menu) || render(:partial => '/shared/menubar') %-->
+                <%= render :partial => '/shared/menubar' %> <!-- yield(:menu) || -->
 
-                <div class="art-nav">
-                	<div class="l"></div>
-                	<div class="r"></div>
-                	<ul class="art-menu">
-                		<li>
-                			<a href="#" class="active"><span class="l"></span><span class="r"></span><span class="t">Home</span></a>
-                		</li>
-                		<li>
-                			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Menu Item</span></a>
-                			<ul>
-                				<li><a href="#">Menu Subitem 1</a>
-                					<ul>
-                						<li><a href="#">Menu Subitem 1.1</a></li>
-                						<li><a href="#">Menu Subitem 1.2</a></li>
-                						<li><a href="#">Menu Subitem 1.3</a></li>
-                					</ul>
-                				</li>
-                				<li><a href="#">Menu Subitem 2</a></li>
-                				<li><a href="#">Menu Subitem 3</a></li>
-                			</ul>
-                		</li>
-                		<li>
-                			<a href="#"><span class="l"></span><span class="r"></span><span class="t">About</span></a>
-                		</li>
-                	</ul>
-                </div>
 
-              <%= yield(:breadcrumb) || render(:partial => '/shared/defaultbreadcrumb') %>
+              <%= yield(:breadcrumb) || (render :partial => '/shared/defaultbreadcrumb') %>
               <div class="art-content-layout">
                     <div class="art-content-layout-row">
                         <div class="art-layout-cell art-content">
@@ -88,7 +61,8 @@
                             <div class="art-post-inner art-article">
 
                                 <%= yield(:article1) || render(:partial => '/shared/template1') %>
-
+                                <p style="color: green"><%= notice %></p>
+                                <%= yield %>
                                             <div class="cleared"></div>
                             </div>
                             
@@ -388,6 +362,19 @@
         <div class="cleared"></div>
         <p class="art-page-footer">Designed by Vincent Jacquel.</p>
     </div>
-    
+
+
+<!-- This is the javascript part -->
+
+ <%= javascript_include_tag "jquery.1.4.4.min",:cache => true %>
+ <%= javascript_include_tag "jquery-ui.min",:cache => true %>
+ <%= javascript_include_tag "rails",:cache => true %>
+ <%= javascript_include_tag 'application' %>
+ <%= javascript_include_tag 'script' %>
+ <%= yield(:myjavascript) || render(:partial => '/shared/livefilter') %>
+ <%= csrf_meta_tag %>
+
+<!-- End of javascript part -->
+
 </body>
 </html>

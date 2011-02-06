@@ -17,12 +17,13 @@ Sqlservapp::Application.routes.draw do
   resources :users, :user_sessions
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+  match 'account' => 'users#index', :as => :account
 
   root :controller => "user_sessions", :action => "new"
   resources :roles
 
   resources :report_categories
-  match 'report_categories/:id' => 'report_category#show'
+  match 'report_categories/:id' => 'report_categories#show'
   resources :report_categories, :collection => { :prioritize_reports => :post }
 
   resources :reports

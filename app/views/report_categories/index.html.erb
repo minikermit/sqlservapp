@@ -19,7 +19,7 @@
 <div id="page_wrapper">
 		<div id="table_wrapper">
           <!-- This is the live filter input field part -->
-          <input class="filter" name="livefilter" type="text" value="" />
+          Live filter <input class="filter" name="livefilter" type="text" value="" />
 <br/>
 <br/>
 
@@ -31,6 +31,8 @@
   <tr>
     <th>Name</th>
     <th>Comments</th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @report_categories.each do |report_category| %>
@@ -76,8 +78,9 @@
 <% content_for :side do %>  <p>A simple page</p> <% end %>
 
 <!-- This is the javascript part -->
-<%= render :partial => "shared/livefilter" %>
-
+<% content_for :myjavascript do %>
+  <%= render :partial => "shared/livefilter" %>
+<% end %>
 
 
 
