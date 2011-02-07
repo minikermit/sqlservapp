@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8816f9c-4e4f-4c6a-adaf-0c3ffefcdab6" name="Default" comment="Move to rails 3&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_highlights.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/shared/_contact_info.html.erb" />
+    <list default="true" id="d8816f9c-4e4f-4c6a-adaf-0c3ffefcdab6" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/_highlights.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/account_plans/index.html.erb" afterPath="$PROJECT_DIR$/app/views/account_plans/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_highlights.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_highlights.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_newsletter.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_newsletter.html.erb" />
     </list>
     <ignored path="sqlservapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +33,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="280" column="0" selection-start="19808" selection-end="19808" vertical-scroll-proportion="0.84817815">
+            <state line="236" column="74" selection-start="16922" selection-end="16922" vertical-scroll-proportion="0.060728744">
               <folding />
             </state>
           </provider>
@@ -608,13 +608,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_menubar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1739" selection-end="1739" vertical-scroll-proportion="0.94736844">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application_oldnew.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="0" selection-start="4723" selection-end="4723" vertical-scroll-proportion="0.94129556">
@@ -713,9 +706,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_highlights.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="725" selection-end="725" vertical-scroll-proportion="0.02366864">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="0" selection-start="19808" selection-end="19808" vertical-scroll-proportion="0.84817815">
+        <state line="236" column="74" selection-start="16922" selection-end="16922" vertical-scroll-proportion="0.060728744">
           <folding />
         </state>
       </provider>
