@@ -9,9 +9,6 @@
 
 <!-- This is the list part -->
 
-<%= display_flash_messages %>    
-
-
 <h2 class="art-postheader">
   <%=h @report_category.name %>
 </h2>
@@ -49,7 +46,7 @@
      <td><%= report.created_at.strftime("%e %B, %Y") %><td>
      <td><%= report.comments %> </td>
 
-     <td><%= link_to 'Edit', edit_report_path(report) %></td> 
+     <td><%= link_to 'Edit', edit_report_path(report) %></td>
 
     </tr>
   <% end %>
@@ -69,7 +66,7 @@
       </p>
   </blockquote>
 
-  
+
 
 
   <%= form_tag :action => "report", :id => @report_category %>

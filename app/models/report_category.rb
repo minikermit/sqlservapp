@@ -48,9 +48,6 @@ validates_associated :reports
     '1'
   end
 
-  default_value_for :position do
-  '20'
-  end
 
 end
 
