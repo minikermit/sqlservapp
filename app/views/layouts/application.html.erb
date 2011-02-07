@@ -40,10 +40,9 @@
                     </div>
                 </div>
 
-                <%= render :partial => '/shared/menubar' %> <!-- yield(:menu) || -->
+                <%= content_for?(:menu) ? yield(:menu) : render(:partial => '/shared/menubar') %>
+                <%= content_for?(:breadcrumb) ? yield(:breadcrumb) : render(:partial => '/shared/defaultbreadcrumb') %>
 
-
-              <%= yield(:breadcrumb) || (render :partial => '/shared/defaultbreadcrumb') %>
               <div class="art-content-layout">
                     <div class="art-content-layout-row">
                         <div class="art-layout-cell art-content">
@@ -60,7 +59,7 @@
                                 <div class="art-post-body">
                             <div class="art-post-inner art-article">
 
-                                <%= yield(:article1) || render(:partial => '/shared/template1') %>
+                                <%= content_for?(:article1) ? yield(:article1) : render(:partial => '/shared/template1') %>
                                 <p style="color: green"><%= notice %></p>
                                 <%= yield %>
                                             <div class="cleared"></div>
@@ -262,86 +261,13 @@
                             		<div class="cleared"></div>
                                 </div>
                             </div>
-                            <div class="art-block">
-                                <div class="art-block-body">
-                                            <div class="art-blockheader">
-                                                <div class="l"></div>
-                                                <div class="r"></div>
-                                                 <div class="t">Highlights</div>
-                                            </div>
-                                            <div class="art-blockcontent">
-                                                <div class="art-blockcontent-body">
-                                            <!-- block-content -->
-                                                            <div>
-                                                                              <ul>
-                                                                               <li><a href="#">Home</a></li>
-                                                                               <li><a href="#">Overview</a></li>
-                                                                               <li><a href="#">Demo</a></li>
-                                                                               <li><a href="#">Download</a></li>
-                                                                               <li><a href="#">FAQ</a></li>
-                                                                               <li><a href="#">Hyperlink</a></li>
-                                                                               <li><a href="#" class="visited">Visited link</a></li>
-                                                                               <li><a href="#" class="hover">Hovered link</a></li>
-                                                                              </ul>
-                                                                              
-                                                                              <p><b>Jun 14, 2008</b><br />
-                                                                              Aliquam sit amet felis. Mauris semper,
-                                                                              velit semper laoreet dictum, quam
-                                                                              diam dictum urna, nec placerat elit
-                                                                              nisl in quam. Etiam augue pede,
-                                                                              molestie eget, rhoncus at, convallis
-                                                                              ut, eros. Aliquam pharetra.<br />
-                                                                              <a href="javascript:void(0)">Read more...</a></p>
-                                                            
-                                                                              <p><b>Aug 24, 2008</b><br />
-                                                                              Aliquam sit amet felis. Mauris semper,
-                                                                              velit semper laoreet dictum, quam
-                                                                              diam dictum urna, nec placerat elit
-                                                                              nisl in quam. Etiam augue pede,
-                                                                              molestie eget, rhoncus at, convallis
-                                                                              ut, eros. Aliquam pharetra.<br />
-                                                                              <a href="javascript:void(0)">Read more...</a></p>
-                                                                              </div>
-                                            <!-- /block-content -->
-                                            
-                                            		<div class="cleared"></div>
-                                                </div>
-                                            </div>
-                            		<div class="cleared"></div>
-                                </div>
-                            </div>
-                            <div class="art-block">
-                                <div class="art-block-body">
-                                            <div class="art-blockheader">
-                                                <div class="l"></div>
-                                                <div class="r"></div>
-                                                 <div class="t">Contact Info</div>
-                                            </div>
-                                            <div class="art-blockcontent">
-                                                <div class="art-blockcontent-body">
-                                            <!-- block-content -->
-                                                            <div>
-                                                                  <img src="images/contact.jpg" alt="an image" style="margin: 0 auto;display:block;width:95%" />
-                                                            <br />
-                                                            <b>Company Co.</b><br />
-                                                            Las Vegas, NV 12345<br />
-                                                            Email: <a href="mailto:info@company.com">info@company.com</a><br />
-                                                            <br />
-                                                            Phone: (123) 456-7890 <br />
-                                                            Fax: (123) 456-7890
-                                                            </div>
-                                            <!-- /block-content -->
-                                            
-                                            		<div class="cleared"></div>
-                                                </div>
-                                            </div>
-                            		<div class="cleared"></div>
-                                </div>
-                            </div>
+                            <%= render :partial => 'highlights' %>
+                            <%= render :partial => '/shared/contact_info' %>
                         </div>
                     </div>
                 </div>
-                <div class="cleared"></div><div class="art-footer">
+                <div class="cleared"></div>
+                <div class="art-footer">
                     <div class="art-footer-t"></div>
                     <div class="art-footer-l"></div>
                     <div class="art-footer-b"></div>
@@ -371,7 +297,7 @@
  <%= javascript_include_tag "rails",:cache => true %>
  <%= javascript_include_tag 'application' %>
  <%= javascript_include_tag 'script' %>
- <%= yield(:myjavascript) || render(:partial => '/shared/livefilter') %>
+ <%= content_for?(:myjavascript) ? yield(:myjavascript) : render(:partial => '/shared/livefilter') %>
  <%= csrf_meta_tag %>
 
 <!-- End of javascript part -->
