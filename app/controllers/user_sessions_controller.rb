@@ -22,11 +22,12 @@ class UserSessionsController < ApplicationController
     # @user_session = UserSession.new(params[:user])
     respond_to do |format|
       if @user_session.save
-        format.html { redirect_to(:users, :notice => 'Login Successful') }
-        format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
+      #flash[:notice] = "Login successful!"
+      #redirect_back_or_default users_url
+
+      format.html { redirect_to(:users, :notice => 'Login Successful') }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @user_session.errors, :status => :unprocessable_entity }
       end
     end
   end

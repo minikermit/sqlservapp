@@ -1,8 +1,8 @@
 class TasklistsController < ApplicationController
 
-  # before_filter :require_user, :only => [:edit, :update]
+  before_filter :require_user, :only => [:create, :edit, :update]
   before_filter :set_current_user
-
+  
   respond_to :html, :xml, :json
 
   layout :choose_layout
