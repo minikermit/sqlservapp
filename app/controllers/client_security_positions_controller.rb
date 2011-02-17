@@ -4,7 +4,6 @@ class ClientSecurityPositionsController < ApplicationController
   # GET /client_security_positions.xml
   def index
     @client_security_positions = ClientSecurityPosition.paginate(:page => params[:page], :order => 'Load_Date DESC')
-  # ClientSecurityPosition.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -43,13 +43,13 @@ class TasklistsController < ApplicationController
   
   def new
     @tasklist = Tasklist.new
-    @projects = Project.find(:all)
-    @users = User.find(:all)
+    @projects = Project.all
+    @users = User.all
   end
   
   def create
-    @users = User.find(:all)
-    @projects = Project.find(:all)
+    @users = User.all
+    @projects = Project.all
     @tasklist = Tasklist.new(params[:tasklist])
 
     respond_to do |format|
@@ -64,13 +64,13 @@ class TasklistsController < ApplicationController
   end
 
   def edit
-    @users = User.find(:all)
+    @users = User.all
     @tasklist = Tasklist.find(params[:id])
   end
   
   def update
-    @users = User.find(:all)
-    @projects = Project.find(:all)
+    @users = User.all
+    @projects = Project.all
     @tasklist = Tasklist.find(params[:id])
     #Tasklist.user_id = current_user.id
     if @tasklist.update_attributes(params[:tasklist])

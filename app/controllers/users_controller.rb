@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.find(:all)
+    @users = User.all
 
     respond_to do |format|
       format.html # index.html.erb

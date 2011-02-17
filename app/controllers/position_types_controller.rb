@@ -2,7 +2,7 @@ class PositionTypesController < ApplicationController
   # GET /position_types
   # GET /position_types.xml
   def index
-    @position_types = PositionType.find(:all)
+    @position_types = PositionType.all
 
     respond_to do |format|
       format.html # index.html.erb

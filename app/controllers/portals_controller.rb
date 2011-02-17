@@ -6,7 +6,7 @@ class PortalsController < ApplicationController
   # GET /portals
   # GET /portals.xml
   def index
-    @portals = Portal.find(:all)
+    @portals = Portal.all
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @portals }

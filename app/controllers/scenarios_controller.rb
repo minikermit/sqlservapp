@@ -2,7 +2,7 @@ class ScenariosController < ApplicationController
   # GET /scenarios
   # GET /scenarios.xml
   def index
-    @scenarios = Scenario.find(:all)
+    @scenarios = Scenario.all
 
     respond_to do |format|
       format.html # index.html.erb

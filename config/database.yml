@@ -25,5 +25,14 @@ test:
   password: mysuperpasswordishidden
   socket: /var/run/mysqld/mysqld.sock
 
+production:
+  adapter: sqlserver
+  mode: dblib
+  dataserver: 192.168.0.130
+  database: Singapore_Reporting
+  username: testsql
+  password: testsql
+  timeout: 5000
+
 cucumber:
   <<: *test

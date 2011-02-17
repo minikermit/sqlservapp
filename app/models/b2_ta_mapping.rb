@@ -24,7 +24,6 @@
 
 class B2TaMapping < ActiveRecord::Base
 	set_table_name "b2_ta_mapping"
-	# named_scope :recent, {:limit => 30, :order => 'created_at desc'}
 	scope :recent, lambda { {:limit => 30, :conditions => ['created_at > ?', 8.weeks.ago] } }
 	scope :currency, lambda { {:limit => 30, :conditions => ['information_mapped = ?', 'Currency'] } }
 	scope :country, lambda { {:limit => 30, :conditions => ['information_mapped = ?', 'Country'] } }

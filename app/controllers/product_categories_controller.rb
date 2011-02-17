@@ -2,7 +2,7 @@ class ProductCategoriesController < ApplicationController
   # GET /product_categories
   # GET /product_categories.xml
   def index
-    @product_categories = ProductCategory.find(:all)
+    @product_categories = ProductCategory.all
 
     respond_to do |format|
       format.html # index.html.erb

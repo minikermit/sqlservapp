@@ -7,6 +7,7 @@ gem 'rails', '3.0.1'
 
 gem 'mysql2'
 gem 'ruby-odbc'
+gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
 gem 'sqlite3', :require => 'sqlite3'
 

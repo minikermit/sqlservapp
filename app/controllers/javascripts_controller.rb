@@ -1,7 +1,7 @@
 class JavascriptsController < ApplicationController
 
 	def dynamic_entities
-	@entities = Entity.find(:all)
+	@entities = Entity.all
 		
 	end
 

@@ -35,7 +35,7 @@ class ReportLinesController < ApplicationController
   # GET /report_lines/new.xml
   def new
     @report_line = ReportLine.new
-    @reports = Report.find(:all)
+    @reports = Report.all
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @report_line }
@@ -45,7 +45,7 @@ class ReportLinesController < ApplicationController
   # GET /report_lines/1/edit
   def edit
     @report_line = ReportLine.find(params[:id])
-    @reports = Report.find(:all)
+    @reports = Report.all
   end
 
   # POST /report_lines

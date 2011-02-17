@@ -2,7 +2,7 @@ class TimebandsController < ApplicationController
   # GET /timebands
   # GET /timebands.xml
   def index
-    @timebands = Timeband.find(:all)
+    @timebands = Timeband.all
 
     respond_to do |format|
       format.html # index.html.erb

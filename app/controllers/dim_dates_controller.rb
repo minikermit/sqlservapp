@@ -2,7 +2,7 @@ class DimDatesController < ApplicationController
   # GET /dim_dates
   # GET /dim_dates.xml
   def index
-    @dim_dates = DimDate.find(:all)
+    @dim_dates = DimDate.all
 
     respond_to do |format|
       format.html # index.html.erb
