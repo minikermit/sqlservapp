@@ -34,5 +34,22 @@ validates_presence_of :report_category
 validates_numericality_of :reference
 validates_associated :report_lines
 
+  default_value_for :created_at do
+    Time.now
+  end
+
+  default_value_for :created_by   do
+    '1'
+  end
+
+  default_value_for :record_validity do
+    '1'
+  end
+
+  default_value_for :record_visibility do
+    '1'
+  end
+
+
 end
 

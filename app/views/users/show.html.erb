@@ -1,8 +1,8 @@
 <p class="notice"><%= notice %></p>
 
 <p>
-  <b>Username:</b>
-  <%= @user.name %>
+  <b>Login:</b>
+  <%= @user.login %>
 </p>
 
 <p>
@@ -10,13 +10,15 @@
   <%= @user.email %>
 </p>
 
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
 
  <hr />
 
 <h4>This user has the following roles:</h4>
 
-  <% for role in user.roles %>
+  <% for role in User.roles %>
     <p class="commenttext"> <%= role.name %> </p>
   <% end %>
