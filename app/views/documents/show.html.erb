@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @document.type %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @document.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @document.description %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @document.position %>
+</p>
+
+<p>
+  <b>Link url:</b>
+  <%= @document.link_url %>
+</p>
+
+<p>
+  <b>Document:</b>
+  <%= @document.document %>
+</p>
+
+<p>
+  <b>Draft:</b>
+  <%= @document.draft %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

@@ -15,6 +15,7 @@ gem 'haml'
 gem 'sass'
 
 gem "meta_search"  #  <%= f.sort_link :title %>
+gem "meta_where"
 gem 'will_paginate', '3.0.pre2'
 gem 'jquery-rails'
 gem 'rails3-jquery-autocomplete' # rails g autocomplete
@@ -41,6 +42,7 @@ gem 'capistrano'
 # gem 'bj'
 gem 'nokogiri'
 gem 'paperclip'
+gem 'carrierwave'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to

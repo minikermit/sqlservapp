@@ -12,6 +12,41 @@
 
 <% content_for :article1 do %>
 
+<!-- This is the search form -->
+
+<%= link_to image_tag 'icons/folder_magnify.png', :id => "toggleButton" %>
+
+<div id="toggleSection">
+ <fieldset>
+  <legend>Search form</legend>
+  <div id="selection">
+  <% form_for @search do |f| %>
+
+    <h2>Choose your search criteria</h2>
+        <!--
+            Setting all the checkbox names to "source[] helps us build the array on submit"
+            We're also adding the RSS feed url to the checkbox value so we can save it in the array values
+
+        -->
+  <ul>
+    <li> <%= f.label :account_id_like, 'Id' %> </li>
+    <li> <%= f.text_field :account_id_like, :class => 'text' %></li>
+    <li> <%= f.label :name_like, "Name " %> </li>
+    <li> <%= f.text_field :name_like, :class => 'text' %></li>
+    <li> <%= f.label :entity_id_equals, "Entity id " %> </li>
+    <li> <%= f.text_field :entity_id_equals, :class => 'text' %></li>
+  </ul>
+
+  <!-- Setting the submit name to "btn" -->
+  <%= f.submit "Search" %>
+  <% end %>
+   </div>
+ </fieldset>
+</div>
+
+
+<!-- This is the list part of the index page -->
+
 <h2 class="art-postheader">
   Listing account plan
 </h2>

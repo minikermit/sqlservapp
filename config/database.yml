@@ -7,7 +7,7 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 
 
-development:
+production:
   adapter: sqlserver
   mode: odbc
   dsn: 192.168.0.130
@@ -25,7 +25,7 @@ test:
   password: mysuperpasswordishidden
   socket: /var/run/mysqld/mysqld.sock
 
-production:
+development:
   adapter: sqlserver
   mode: dblib
   dataserver: 192.168.0.130

@@ -1,15 +1,28 @@
-<a href="#" onclick="AppearEffect('show_search')" class ='a'>		
-	<span class="ss_sprite ss_add">
-		 		<img src="/images/iconmini/search-icon-blue.gif" />
-	 </span>	
-</a><br />	
+<% content_for :breadcrumb do %>
 
-  
-<div id="show_search" style="display:none" >
-   <div class="column span-10 append-12 prepend-2 last">
-	<fieldset  class="span-8">
-		<legend>Search</legend> 
-	<% form_for @search do |f| %>  
+	<ul id="crumbs">
+ 		<li><%= link_to  "Home" , homes_path %></li>
+ 		<li><a href="#">Basel II</a></li>
+ 		<li>You are on the list of validation rules page</li>
+	</ul>
+
+<% end %>
+
+<!-- This is the list part -->
+
+<% content_for :article1 do %>
+
+<!-- This is the search form -->
+
+<%= link_to image_tag 'icons/folder_magnify.png', :id => "toggleButton" %>
+
+<div id="toggleSection">
+ <fieldset>
+  <legend>Search form</legend>
+  <div id="selection">
+  <% form_for @search do |f| %>
+
+    <h2>Choose your search criteria</h2>
  
       <div class="column span-2">
         <%= f.label :rule_identification_like, "Rule" %>
@@ -48,12 +61,12 @@
         <!--%= f.text_field :OutputFile_equals , :class => 'text' %--> 
       </div>
 
-      <div class="column span-6 prepend-2 last">
-        <%= f.submit "Apply filters" %> 
-      </div>
-    <% end %> 
-	</fieldset>
-  </div>
+    <div class="column span-8 prepend-2 last">
+      <%= f.submit "Apply filters", :class => "button" %>
+    </div>
+  <% end %>
+   </div>
+ </fieldset>
 </div>
 
 <span class="myapptitle">Listing validation rules</span>
@@ -104,3 +117,6 @@
 
 
 <%= link_to 'Add a validation rule', new_validationrule_path, :align => 'right' %>
+
+
+<% end %>

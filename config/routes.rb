@@ -1,6 +1,8 @@
 Sqlservapp::Application.routes.draw do
 
 
+  resources :documents
+
   resources :activity_logs
   resources :issues
   resources :invoices
