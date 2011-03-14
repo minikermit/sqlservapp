@@ -1,6 +1,8 @@
 Sqlservapp::Application.routes.draw do
 
 
+  resources :bookmarks
+
   resources :documents
 
   resources :activity_logs
