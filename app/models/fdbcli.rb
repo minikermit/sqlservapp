@@ -1,5 +1,5 @@
 class Fdbcli < ActiveRecord::Base
-	set_table_name  "FIMIS_TA_SRC_OLY_C_Clients_FDBCLI"
+	set_table_name  "FIMIS_TA_SRC_OLY_A_Clients_FDBCLI"
 end
 
 # == Schema Information
