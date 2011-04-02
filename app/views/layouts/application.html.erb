@@ -197,6 +197,7 @@
  <%= javascript_include_tag "jquery.1.4.4.min",:cache => true %>
  <%= javascript_include_tag "jquery-ui.min",:cache => true %>
  <%= javascript_include_tag "rails",:cache => true %>
+ <%= javascript_include_tag "rails.validations", :cache => true  %>
  <%= javascript_include_tag 'application' %>
  <%= javascript_include_tag 'script' %>
  <%= content_for?(:myjavascript) ? yield(:myjavascript) : render(:partial => '/shared/livefilter') %>

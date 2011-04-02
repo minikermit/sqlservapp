@@ -19,6 +19,8 @@ gem "meta_where"
 gem 'will_paginate', '3.0.pre2'
 gem 'jquery-rails'
 gem 'rails3-jquery-autocomplete' # rails g autocomplete
+gem 'client_side_validations' #	rails g client_side_validations:install
+
 
 gem 'acts_as_list'
 gem 'acts_as_tree'

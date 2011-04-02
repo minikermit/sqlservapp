@@ -7,13 +7,24 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 
 
-production:
+staging::
   adapter: sqlserver
   mode: odbc
   dsn: 192.168.0.130
   username: testsql
   password: testsql
   host: UMPC
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: finance_test
+  pool: 5
+  username: root
+  password: "*sys64738"
+  socket: /var/run/mysqld/mysqld.sock
+
 
 test:
   adapter: mysql2
@@ -22,10 +33,10 @@ test:
   database: finance_test
   pool: 5
   username: root
-  password: mysuperpasswordishidden
+  password: "*hapoalim2005"
   socket: /var/run/mysqld/mysqld.sock
 
-development:
+production:
   adapter: sqlserver
   mode: dblib
   dataserver: 192.168.0.130
